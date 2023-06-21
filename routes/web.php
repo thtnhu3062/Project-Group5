@@ -24,6 +24,9 @@ Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus'
 Route::get('/product/{slug}', [HomeController::class, 'productDetails']);
 
 Route::get('/createAccount', [HomeController::class, 'createAccount'])->name('create');
+
+Route::get('/blog' , [HomeController::class, 'blog'])->name('blog');
+
 Route::get('/admin', [DashboardController::class, 'home'])->name('admin');
 
 

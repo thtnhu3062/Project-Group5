@@ -62,5 +62,8 @@ return view('fe.index') ;
     {
         return view('fe.contactus');
     }
-
+    public function blog() 
+    { 
+        return view('fe.blog') ; 
+    }
 }
