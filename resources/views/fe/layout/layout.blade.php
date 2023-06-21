@@ -1,28 +1,30 @@
+
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <!-- belle/index.html   11 Nov 2019 12:16:10 GMT -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Belle Multipurpose Bootstrap 4 Html Template</title>
-<meta name="description" content="description">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Favicon -->
-<link rel="shortcut icon" href=" {{asset('/fe/images/favicon.png') }}" />
-<!-- Plugins CSS -->
-<link rel="stylesheet" href="{{ asset('/fe/css/plugins.css') }}">
-<!-- Bootstap CSS -->
-<link rel="stylesheet" href="{{ asset('/fe/css/bootstrap.min.css')}}">
-<!-- Main Style CSS -->
-<link rel="stylesheet" href="{{ asset('/fe/css/style.css') }}">
-<link rel="stylesheet" href="{{ asset('/fe/css/responsive.css' ) }} ">
-</head>
+   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fendi Perfume</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Favicon -->
+    <link rel="shortcut icon" href=" {{asset('/fe/images/favicon.png') }}" />
+    <!-- Plugins CSS -->
+     <link rel="stylesheet" href="{{ asset('/fe/css/plugins.css') }}">
+    <!-- Bootstap CSS -->
+     <link rel="stylesheet" href="{{ asset('/fe/css/bootstrap.min.css')}}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{{ asset('/fe/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/fe/css/responsive.css' ) }} ">
+ </head>
 <body class="template-index belle template-index-belle home2-default">
-<div id="pre-loader">
+   <div id="pre-loader">
     <img src="{{ asset('/feassets/images/loader.gif' ) }}" alt="Loading..." />
-</div>
-<div class="pageWrapper">
+   </div>
+   <div class="pageWrapper">
 	<!--Search Form Drawer-->
 	<div class="search">
         <div class="search__form">
@@ -32,9 +34,7 @@
             </form>
             <button type="button" class="search-trigger close-btn"><i class="anm anm-times-l"></i></button>
         </div>
-    </div>
-    <!--End Search Form Drawer-->
-    <!--Top Header-->
+  </div>
     <div class="top-header">
         <div class="container-fluid">
             <div class="row">
@@ -81,7 +81,7 @@
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                     <a href="index.html">
-                    	<img src="{{ asset('/fe/images/logo.svg ' ) }}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                    	<img src="{{ asset('/fe/images/logoss.png ' ) }}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                     </a>
                 </div>
                 <!--End Desktop Logo-->
@@ -96,58 +96,7 @@
                 	<nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="#">Home <i class="anm anm-angle-down-l"></i></a>
-                                <div class="megamenu style1">
-                                    <ul class="grid mmWrapper">
-                                        <li class="grid__item large-up--one-whole">
-                                            <ul class="grid">
-                                                <li class="grid__item lvl-1 col-md-3 col-lg-3"><a href="#" class="site-nav lvl-1">Home Group 1</a>
-                                                    <ul class="subLinks">
-                                                      <li class="lvl-2"><a href="index.html" class="site-nav lvl-2">Home 1 - Classic</a></li>
-                                                      <li class="lvl-2"><a href="home2-default.html" class="site-nav lvl-2">Home 2 - Default</a></li>
-                                                      <li class="lvl-2"><a href="home15-funiture.html" class="site-nav lvl-2">Home 15 - Furniture <span class="lbl nm_label1">New</span></a></li>
-                                                      <li class="lvl-2"><a href="home3-boxed.html" class="site-nav lvl-2">Home 3 - Boxed</a></li>
-                                                      <li class="lvl-2"><a href="home4-fullwidth.html" class="site-nav lvl-2">Home 4 - Fullwidth</a></li>
-                                                      <li class="lvl-2"><a href="home5-cosmetic.html" class="site-nav lvl-2">Home 5 - Cosmetic</a></li>
-                                                      <li class="lvl-2"><a href="home6-modern.html" class="site-nav lvl-2">Home 6 - Modern</a></li>
-                                                      <li class="lvl-2"><a href="home7-shoes.html" class="site-nav lvl-2">Home 7 - Shoes</a></li>
-                                                    </ul>
-                                                  </li>
-                                                <li class="grid__item lvl-1 col-md-3 col-lg-3"><a href="#" class="site-nav lvl-1">Home Group 2</a>
-                                                    <ul class="subLinks">
-                                                        <li class="lvl-2"><a href="home8-jewellery.html" class="site-nav lvl-2">Home 8 - Jewellery</a></li>
-                                                        <li class="lvl-2"><a href="home9-parallax.html" class="site-nav lvl-2">Home 9 - Parallax</a></li>
-                                                        <li class="lvl-2"><a href="home10-minimal.html" class="site-nav lvl-2">Home 10 - Minimal</a></li>
-                                                        <li class="lvl-2"><a href="home11-grid.html" class="site-nav lvl-2">Home 11 - Grid</a></li>
-                                                        <li class="lvl-2"><a href="home12-category.html" class="site-nav lvl-2">Home 12 - Category</a></li>
-                                                        <li class="lvl-2"><a href="home13-auto-parts.html" class="site-nav lvl-2">Home 13 - Auto Parts</a></li>
-                                                        <li class="lvl-2"><a href="home14-bags.html" class="site-nav lvl-2">Home 14 - Bags <span class="lbl nm_label1">New</span></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="grid__item lvl-1 col-md-3 col-lg-3"><a href="#" class="site-nav lvl-1">New Sections</a>
-                                                    <ul class="subLinks">
-                                                        <li class="lvl-2"><a href="home11-grid.html" class="site-nav lvl-2">Image Gallery</a></li>
-                                                        <li class="lvl-2"><a href="home5-cosmetic.html" class="site-nav lvl-2">Featured Product</a></li>
-                                                        <li class="lvl-2"><a href="home7-shoes.html" class="site-nav lvl-2">Columns with Items</a></li>
-                                                        <li class="lvl-2"><a href="home6-modern.html" class="site-nav lvl-2">Text columns with images</a></li>
-                                                        <li class="lvl-2"><a href="home2-default.html" class="site-nav lvl-2">Products Carousel</a></li>
-                                                        <li class="lvl-2"><a href="home9-parallax.html" class="site-nav lvl-2">Parallax Banner</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="grid__item lvl-1 col-md-3 col-lg-3"><a href="#" class="site-nav lvl-1">New Features</a>
-                                                    <ul class="subLinks">
-                                                        <li class="lvl-2"><a href="home13-auto-parts.html" class="site-nav lvl-2">Top Information Bar <span class="lbl nm_label1">New</span></a></li>
-                                                        <li class="lvl-2"><a href="#" class="site-nav lvl-2">Age Varification <span class="lbl nm_label1">New</span></a></li>
-                                                        <li class="lvl-2"><a href="#" class="site-nav lvl-2">Footer Blocks</a></li>
-                                                        <li class="lvl-2"><a href="#" class="site-nav lvl-2">2 New Megamenu style</a></li>
-                                                        <li class="lvl-2"><a href="#" class="site-nav lvl-2">Show Total Savings <span class="lbl nm_label3">Hot</span></a></li>
-                                                        <li class="lvl-2"><a href="#" class="site-nav lvl-2">New Custom Icons</a></li>
-                                                        <li class="lvl-2"><a href="#" class="site-nav lvl-2">Auto Currency</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+                              
                             </li>
                             <li class="lvl1 parent megamenu"><a href="#">Shop <i class="anm anm-angle-down-l"></i></a>
                             	<div class="megamenu style4">
@@ -365,7 +314,7 @@
     </div>
     <!--End Header-->
     <!--Mobile Menu-->
-    <div class="mobile-nav-wrapper" role="navigation">
+  <div class="mobile-nav-wrapper" role="navigation">
 		<div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
         <ul id="MobileNav" class="mobile-nav">
         	<li class="lvl1 parent megamenu"><a href="index.html">Home <i class="anm anm-plus-l"></i></a>
@@ -582,8 +531,8 @@
                             <ul>
                             	<li><a href="#">Women</a></li>
                                 <li><a href="#">Men</a></li>
+                                <li><a href="#">Unisex</a></li>
                                 <li><a href="#">Kids</a></li>
-                                <li><a href="#">Sportswear</a></li>
                                 <li><a href="#">Sale</a></li>
                             </ul>
                         </div>
@@ -610,9 +559,9 @@
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
                         	<h4 class="h4">Contact Us</h4>
                             <ul class="addressFooter">
-                            	<li><i class="icon anm anm-map-marker-al"></i><p>55 Gallaxy Enque,<br>2568 steet, 23568 NY</p></li>
-                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(440) 000 000 0000</p></li>
-                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>sales@yousite.com</p></li>
+                            	<li><i class="icon anm anm-map-marker-al"></i><p>Cach Mang Thang 8<br>Phuong 11, Quan 3</p></li>
+                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(+84) xxxxxxxxxxx</p></li>
+                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>fpt@gmail.com</p></li>
                             </ul>
                         </div>
                     </div>
@@ -622,7 +571,7 @@
                 <div class="footer-bottom">
                 	<div class="row">
                     	<!--Footer Copyright-->
-	                	<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> <a href="templateshub.net">Templates Hub</a></div>
+	                	<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> </div>
                         <!--End Footer Copyright-->
                         <!--Footer Payment Icon-->
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
@@ -764,39 +713,9 @@
     <!--End Quick View popup-->
     
     <!-- Newsletter Popup -->
-	<div class="newsletter-wrap" id="popup-container">
-      <div id="popup-window">
-        <a class="btn closepopup"><i class="icon icon anm anm-times-l"></i></a>
-        <!-- Modal content-->
-        <div class="display-table splash-bg">
-          <div class="display-table-cell width40"><img src="assets/images/newsletter-img.jpg" alt="Join Our Mailing List" title="Join Our Mailing List" /> </div>
-          <div class="display-table-cell width60 text-center">
-            <div class="newsletter-left">
-              <h2>Join Our Mailing List</h2>
-              <p>Sign Up for our exclusive email list and be the first to know about new products and special offers</p>
-              <form action="#" method="post">
-                <div class="input-group">
-                  <input type="email" class="input-group__field newsletter__input" name="EMAIL" value="" placeholder="Email address" required="">
-                      <span class="input-group__btn">
-                      	<button type="submit" class="btn newsletter__submit" name="commit" id="subscribeBtn"> <span class="newsletter__submit-text--large">Subscribe</span> </button>
-                      </span>
-                  </div>
-              </form>
-              <ul class="list--inline site-footer__social-icons social-icons">
-                <li><a class="social-icons__link" href="#" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                <li><a class="social-icons__link" href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a class="social-icons__link" href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                <li><a class="social-icons__link" href="#" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a class="social-icons__link" href="#" title="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                <li><a class="social-icons__link" href="#" title="Vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+	
 	<!-- End Newsletter Popup -->
-      
+  </div>  
      <!-- Including Jquery -->
      <script src="{{ asset('/fe/js/vendor/jquery-3.3.1.min.js') }}"></script>
      <script src="{{ asset('/fe/js/vendor/modernizr-3.6.0.min.js') }}"></script>
@@ -808,10 +727,13 @@
      <script src="{{ asset('/fe/js/popper.min.js') }}"></script>
      <script src="{{ asset('/fe/js/lazysizes.js') }}"></script>
      <script src="{{ asset('/fe/js/main.js ' ) }}"></script>
+  
      <!--For Newsletter Popup-->
-     @yield('myjs')
-     
-        
-     </body>
-     </html>
+
+  @yield('myjs')
+    
+
+  
+</body>
+</html>
 

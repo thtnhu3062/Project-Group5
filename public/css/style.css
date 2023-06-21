@@ -54,7 +54,7 @@ General
 ---------------------------------------------------------------------*/
 *::-moz-selection { background: var(--iq-primary); color: var(--iq-white); text-shadow: none; }
 ::-moz-selection { background: var(--iq-primary); color: var(--iq-white); text-shadow: none; }
-::selection { background: #ff9273; color: black; text-shadow: none; }
+::selection { background: var(--iq-primary); color: black; text-shadow: none; }
 
 /* Definition Lists */
 dl dd { margin-bottom: 15px; }
@@ -196,7 +196,7 @@ Sign In
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 color: #8e8888 !important; opacity: 1; /* Firefox */ }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-color: #000 !important; }
+color: #d9d5d5 !important; }
 ::-ms-input-placeholder { /* Microsoft Edge */
 color: #d9d5d5 !important; }
 .f-link:hover { color: var(--iq-primary); }
@@ -589,9 +589,9 @@ img.summary-image-top { width: 35px; }
 .data-tables td p { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
 div.dataTables_wrapper div.dataTables_paginate ul.pagination { margin: 15px 0 0; }
 div.dataTables_wrapper div.dataTables_info { padding-top: 20px; }
-.movie_table tbody tr { border-bottom: 5px solid #ff9273; background-color: var(--iq-body-bg); }
+.movie_table tbody tr { border-bottom: 5px solid #983232; background-color: var(--iq-body-bg); }
 .movie_table tbody td { background-color: transparent; border: 0px solid transparent; text-align: center; }
-.movie_table thead th { font-size: 14px; color: #000; font-weight: 400; padding: 0 15px 15px 15px; line-height: 100%; margin-bottom: 0; border: none; text-transform: uppercase; text-align: center; }
+.movie_table thead th { font-size: 14px; color: rgba(255, 255, 255, 0.5); font-weight: 300; padding: 0 15px 15px 15px; line-height: 100%; margin-bottom: 0; border: none; text-transform: uppercase; text-align: center; }
 table.dataTable { border-collapse: collapse !important; }
 .select2-container--default .select2-selection--multiple { background-color: #ffffff; border: 1px solid #ffffff; }
 .select2-container--default .select2-selection--multiple .select2-selection__choice { background-color: var(--iq-light-card); }

@@ -38,8 +38,8 @@ class HomeController extends Controller
         $role2->users()->attach($user2);
 
 */
- 
-    return view('fe.index') ;
+
+return view('fe.index') ;
 
     }
 
