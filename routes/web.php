@@ -15,15 +15,16 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 
 Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
 
-Route::get('/createaccount', [HomeController::class, 'createAccount'])->name('create');
+Route::get('/createAccount', [HomeController::class, 'createaccount'])->name('create');
 
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 
 Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus');
 
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+
 Route::get('/product/{slug}', [HomeController::class, 'productDetails']);
 
-Route::get('/createAccount', [HomeController::class, 'createAccount'])->name('create');
 Route::get('/admin', [DashboardController::class, 'home'])->name('admin');
 
 

@@ -48,7 +48,7 @@ return view('fe.index') ;
         return view('fe.login');
     }
 
-    public function createAccount()
+    public function createaccount()
     {
         return view('fe.createAccount');
     }
@@ -61,6 +61,11 @@ return view('fe.index') ;
     public function contactus()
     {
         return view('fe.contactus');
+    }
+
+    public function faq()
+    {
+        return view('fe.faq');
     }
 
 }
