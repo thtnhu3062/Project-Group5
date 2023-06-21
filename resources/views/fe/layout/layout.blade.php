@@ -81,7 +81,7 @@
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                     <a href="index.html">
-                    	<img src="{{ asset('/fe/images/logoss.png ' ) }}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                    	<img src="{{ asset('/fe/images/logo.svg ' ) }}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                     </a>
                 </div>
                 <!--End Desktop Logo-->
@@ -213,13 +213,7 @@
                           </ul>
                         </li>
                         <li class="lvl1 parent dropdown"><a href="#">Blog <i class="anm anm-angle-down-l"></i></a>
-                          <ul class="dropdown">
-                            <li><a href="blog-left-sidebar.html" class="site-nav">Left Sidebar</a></li>
-                            <li><a href="blog-right-sidebar.html" class="site-nav">Right Sidebar</a></li>
-                            <li><a href="blog-fullwidth.html" class="site-nav">Fullwidth</a></li>
-                            <li><a href="blog-grid-view.html" class="site-nav">Gridview</a></li>
-                            <li><a href="blog-article.html" class="site-nav">Article</a></li>
-                          </ul>
+                        
                         </li>
                         <li class="lvl1"><a href="#"><b>Buy Now!</b> <i class="anm anm-angle-down-l"></i></a></li>
                       </ul>

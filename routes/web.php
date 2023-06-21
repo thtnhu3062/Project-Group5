@@ -25,6 +25,10 @@ Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
 Route::get('/product/{slug}', [HomeController::class, 'productDetails']);
 
+Route::get('/createAccount', [HomeController::class, 'createAccount'])->name('create');
+
+Route::get('/blog' , [HomeController::class, 'blog'])->name('blog');
+
 Route::get('/admin', [DashboardController::class, 'home'])->name('admin');
 
 
