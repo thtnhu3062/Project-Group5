@@ -81,7 +81,7 @@
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                     <a href="index.html">
-                    	<img src="{{ asset('/fe/images/logoss.png ' ) }}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                    	<img src="{{ asset('/fe/images/logo.svg ' ) }}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                     </a>
                 </div>
                 <!--End Desktop Logo-->
@@ -95,7 +95,7 @@
                 	<!--Desktop Menu-->
                 	<nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="#">Home <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent megamenu"><a href="{{ Route('home') }}">Home <i class="anm anm-angle-down-l"></i></a>
                               
                             </li>
                             <li class="lvl1 parent megamenu"><a href="#">Shop <i class="anm anm-angle-down-l"></i></a>
@@ -201,7 +201,7 @@
 							<li><a href="checkout.html" class="site-nav">Checkout</a></li>
                             <li><a href="{{ Route('aboutus') }}" class="site-nav">About Us <span class="lbl nm_label1">New</span> </a></li>
                             <li><a href="{{ Route('contactus') }}" class="site-nav">Contact Us</a></li>
-                            <li><a href="faqs.html" class="site-nav">FAQs</a></li>
+                            <li><a href="{{ Route('faq') }}" class="site-nav">FAQs</a></li>
                             <li><a href="lookbook1.html" class="site-nav">Lookbook<i class="anm anm-angle-right-l"></i></a>
                               <ul>
                                 <li><a href="lookbook1.html" class="site-nav">Style 1</a></li>
@@ -213,13 +213,7 @@
                           </ul>
                         </li>
                         <li class="lvl1 parent dropdown"><a href="#">Blog <i class="anm anm-angle-down-l"></i></a>
-                          <ul class="dropdown">
-                            <li><a href="blog-left-sidebar.html" class="site-nav">Left Sidebar</a></li>
-                            <li><a href="blog-right-sidebar.html" class="site-nav">Right Sidebar</a></li>
-                            <li><a href="blog-fullwidth.html" class="site-nav">Fullwidth</a></li>
-                            <li><a href="blog-grid-view.html" class="site-nav">Gridview</a></li>
-                            <li><a href="blog-article.html" class="site-nav">Article</a></li>
-                          </ul>
+                        
                         </li>
                         <li class="lvl1"><a href="#"><b>Buy Now!</b> <i class="anm anm-angle-down-l"></i></a></li>
                       </ul>
@@ -457,7 +451,7 @@
             <li><a href="checkout.html" class="site-nav">Checkout</a></li>
             <li><a href="{{ Route('aboutus') }}" class="site-nav">About Us<span class="lbl nm_label1">New</span></a></li>
             <li><a href="{{ Route('contactus') }}" class="site-nav">Contact Us</a></li>
-            <li><a href="faqs.html" class="site-nav">FAQs</a></li>
+            <li><a href="{{ Route('faq') }}" class="site-nav">FAQs</a></li>
             <li><a href="lookbook1.html" class="site-nav">Lookbook<i class="anm anm-plus-l"></i></a>
               <ul>
                 <li><a href="lookbook1.html" class="site-nav">Style 1</a></li>
@@ -550,7 +544,7 @@
                         	<h4 class="h4">Customer Services</h4>
                             <ul>
                             	<li><a href="#">Request Personal Data</a></li>
-                                <li><a href="#">FAQ's</a></li>
+                                <li><a href="{{ Route('faq') }}">FAQ's</a></li>
                                 <li><a href="{{ Route('contactus') }}">Contact Us</a></li>
                                 <li><a href="#">Orders and Returns</a></li>
                                 <li><a href="#">Support Center</a></li>
@@ -559,7 +553,7 @@
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
                         	<h4 class="h4">Contact Us</h4>
                             <ul class="addressFooter">
-                            	<li><i class="icon anm anm-map-marker-al"></i><p>Cach Mang Thang 8<br>Phuong 11, Quan 3</p></li>
+                            	<li><i class="icon anm anm-map-marker-al"></i><p>Cach Mang Thang 8<br>Ward 11, District 3</p></li>
                                 <li class="phone"><i class="icon anm anm-phone-s"></i><p>(+84) xxxxxxxxxxx</p></li>
                                 <li class="email"><i class="icon anm anm-envelope-l"></i><p>fpt@gmail.com</p></li>
                             </ul>

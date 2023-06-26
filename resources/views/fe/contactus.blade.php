@@ -6,7 +6,7 @@
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width" style="margin-top:3%;">Contact Us</h1></div>
+        		<div class="wrapper"><h1 class="page-width" style="margin-top:5%;">Contact Us</h1></div>
       		</div>
 		</div>
         <div class="bredcrumbWrap">
@@ -16,8 +16,38 @@
         </div>
         <!--End Page Title-->
         <div class="map-section map">
-        	<!--<iframe src="{{ asset('fe/images/perfumeshop1.jpg') }}" height="350" allowfullscreen></iframe><!-->
-            <img src="{{ asset('/fe/images/perfumeshop1.jpg') }}"  height="550" width="1500" alt="">
+        <div class="slideshow slideshow-wrapper pb-section sliderFull">
+        	<div class="home-slideshow">
+            	<div class="slide">
+                	<div class="blur-up lazyload bg-size">
+                        <img class="blur-up lazyload bg-img" data-src="{{ asset('/fe/images/perfume1.jpg') }}" src="{{ asset('/fe/images/perfume1.jpg') }}" alt="Shop Our New Collection" title="Our Shop" />
+                        <div class="slideshow__text-wrap slideshow__overlay classic bottom">
+                            <div class="slideshow__text-content bottom">
+                                <div class="wrap-caption center">
+                                        <h2 class="h1 mega-title slideshow__title">Our Shop</h2>
+                                        <a href="{{ Route('home') }}"><span class="btn">Shop Now</span></a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                	<div class="blur-up lazyload bg-size">
+                        <img class="blur-up lazyload bg-img"data-src="{{ asset('/fe/images/perfume.jpg') }}" src="{{ asset('/fe/images/perfume.jpg') }}" alt="Shop Our New Collection" title="Shop Our New Collection" />
+                        <div class="slideshow__text-wrap slideshow__overlay classic bottom">
+                            <div class="slideshow__text-content bottom">
+                                <div class="wrap-caption center">
+                                    <h2 class="h1 mega-title slideshow__title">Bringing Great Experiences</h2>
+                                    <span class="mega-subtitle slideshow__subtitle">Save up to 50% off this weekend only</span>
+                                    <a href="{{ Route('home') }}"><span class="btn">Shop Now</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
             <div class="container">
             	<div class="row">
                 	<div class="map-section__overlay-wrapper">
@@ -35,9 +65,9 @@
                              <div>
                              <tr>
                                 <h3>Our address</h3>
-                                <td><p>55 Gallaxy Enque, 2568 steet, 23568 NY</p></td>
-                                <td><p>(440) 000 000 0000</p></td>
-                                <td><p>sales@yousite.com</p></td>
+                                <td><p>Cach Mang Thang Tam Ward 11 District 3</p></td>
+                                <td><p>(+84) xxxxxxxxxxx</p></td>
+                                <td><p>fpt@gmail.com</p></td>
                             </tr>
                             </div>
                             </div>
