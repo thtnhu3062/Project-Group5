@@ -57,7 +57,7 @@
                                 <div class="product-details text-center">
                                     <!-- product name -->
                                     <div class="product-name">
-                                        <a href="product-layout-1.html">Edna Dress</a>
+                                        <a href="product-layout-1.html">dabdbd</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
