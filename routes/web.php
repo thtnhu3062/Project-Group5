@@ -14,7 +14,9 @@ Route::get('/', [HomeController::class, 'index'])->name('homeshop');
 
 //frontend
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
+
 Route::get('/category/{category_id}', [HomeController::class, 'showCategory'])->name('showCategory');
 Route::get('/brand/{brand_id}', [HomeController::class, 'showBrand'])->name('showBrand');
 Route::get('/details/{product_id}', [HomeController::class, 'detailsProduct'])->name('detailsProduct');
