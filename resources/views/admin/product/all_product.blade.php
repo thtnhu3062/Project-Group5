@@ -68,8 +68,6 @@
                                              class="btn btn-primary btn-rounded btn-sm my-0">Remove</button>
                                              </a>
                                        </td>
-                                       
-                                       
                                     </tr>
                                     @endforeach
                                  </tbody>
