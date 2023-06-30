@@ -80,9 +80,24 @@ class HomeController extends Controller
 */
 
 
-    public function checkout() 
+    public function blog() 
     { 
-        return view('fe.checkout') ; 
+        return view('fe.blog') ; 
+    }
+
+    public function aboutus() 
+    { 
+        return view('fe.aboutus') ; 
+    }
+
+    public function contactus() 
+    { 
+        return view('fe.contactus') ; 
+    }
+
+    public function faq() 
+    { 
+        return view('fe.faq') ; 
     }
  
 
