@@ -84,6 +84,6 @@ class HomeController extends Controller
     { 
         return view('fe.checkout') ; 
     }
-
+ 
 
 }
