@@ -3,15 +3,16 @@
 <div class="col-12 col-sm-9 col-md-9 col-lg-9 main-col">
 @foreach($category_name as $key => $name)
                     <h2>{{$name->category_name}}</h2>
-                    @foreach($category_by_id as $key => $product)
+                 
                 	<div class="productList product-load-more">
                     	<!--Toolbar-->
              
                         <!--End Toolbar-->
                        
                         <div class="grid-products grid--view-items">
+
                             <div class="row">
-                           
+                              @foreach($category_by_id as $key => $product)
                                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 item">
                                     <!-- start product image -->
                                     <div class="product-image">
@@ -73,11 +74,12 @@
                                     </div>
                                     <!-- End product details -->
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                        
                     </div>
-                    @endforeach
+                   
 
                 <!--End Main Content-->
         

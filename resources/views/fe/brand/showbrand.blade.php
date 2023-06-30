@@ -4,7 +4,7 @@
 @foreach($brand_name as $key => $name_brand)
                     <h2>{{$name_brand->brand_name}}</h2>
                     <hr>
-                    @foreach($brand_by_id as $key => $product)
+                   
                 	<div class="productList product-load-more">
                     	<!--Toolbar-->
              
@@ -12,7 +12,7 @@
                        
                         <div class="grid-products grid--view-items">
                             <div class="row">
-                           
+                            @foreach($brand_by_id as $key => $product)
                                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 item">
                                     <!-- start product image -->
                                     <div class="product-image">
@@ -74,11 +74,12 @@
                                     </div>
                                     <!-- End product details -->
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                        
                     </div>
-                    @endforeach
+                    
 
         @endforeach
     </div>
