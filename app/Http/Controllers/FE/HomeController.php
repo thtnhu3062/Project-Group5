@@ -4,7 +4,9 @@ namespace App\Http\Controllers\FE;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use DB;
+use Session;
+use Illuminate\Support\Facades\Redirect;
 class HomeController extends Controller
 {
     public function index()
@@ -73,5 +75,11 @@ return view('fe.index') ;
     { 
         return view('fe.blog') ; 
     }
+
+    public function checkout() 
+    { 
+        return view('fe.checkout') ; 
+    }
+
 
 }

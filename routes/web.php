@@ -7,7 +7,7 @@ use App\Http\Controllers\FE\HomeController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BrandController;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('homeshop');
 
 Route::get('/product/{slug}', [HomeController::class, 'productDetails'])
 
@@ -29,6 +29,10 @@ Route::get('/product/{slug}', [HomeController::class, 'productDetails']);
 
 Route::get('/createAccount', [HomeController::class, 'createAccount'])->name('create');
 
+
+Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
+
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 
 
 //backend

@@ -95,7 +95,7 @@
                 	<!--Desktop Menu-->
                 	<nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="{{ Route('home') }}">Home <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent megamenu"><a href="{{ Route('homeshop') }}">Home <i class="anm anm-angle-down-l"></i></a>
                               
                             </li>
                             <li class="lvl1 parent megamenu"><a href="#">Shop <i class="anm anm-angle-down-l"></i></a>
@@ -198,21 +198,21 @@
                                     <li><a href="compare-variant2.html" class="site-nav">Compare Variant2</a></li>
                                  </ul>
                             </li>
-							<li><a href="checkout.html" class="site-nav">Checkout</a></li>
+							              <li><a href="" class="site-nav">Checkout</a></li>
                             <li><a href="{{ Route('aboutus') }}" class="site-nav">About Us <span class="lbl nm_label1">New</span> </a></li>
                             <li><a href="{{ Route('contactus') }}" class="site-nav">Contact Us</a></li>
                             <li><a href="{{ Route('faq') }}" class="site-nav">FAQs</a></li>
-                            <li><a href="lookbook1.html" class="site-nav">Lookbook<i class="anm anm-angle-right-l"></i></a>
+                            <li><a href="" class="site-nav">Lookbook<i class="anm anm-angle-right-l"></i></a>
                               <ul>
-                                <li><a href="lookbook1.html" class="site-nav">Style 1</a></li>
-                                <li><a href="lookbook2.html" class="site-nav">Style 2</a></li>
+                                <li><a href="" class="site-nav">Style 1</a></li>
+                                <li><a href="" class="site-nav">Style 2</a></li>
                               </ul>
                             </li>
-                            <li><a href="404.html" class="site-nav">404</a></li>
-                            <li><a href="coming-soon.html" class="site-nav">Coming soon <span class="lbl nm_label1">New</span> </a></li>
+                            <li><a href="" class="site-nav">404</a></li>
+                            <li><a href="" class="site-nav">Coming soon <span class="lbl nm_label1">New</span> </a></li>
                           </ul>
                         </li>
-                        <li class="lvl1 parent dropdown"><a href="#">Blog <i class="anm anm-angle-down-l"></i></a>
+                        <li class="lvl1 parent dropdown"><a href="{{ Route('blog') }}">Blog <i class="anm anm-angle-down-l"></i></a>
                         
                         </li>
                         <li class="lvl1"><a href="#"><b>Buy Now!</b> <i class="anm anm-angle-down-l"></i></a></li>
@@ -233,20 +233,20 @@
                 	<div class="site-cart">
                     	<a href="#;" class="site-header__cart" title="Cart">
                         	<i class="icon anm anm-bag-l"></i>
-                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">0</span>
                         </a>
                         <!--Minicart Popup-->
                         <div id="header-cart" class="block block-cart">
                         	<ul class="mini-products-list">
                                 <li class="item">
                                 	<a class="product-image" href="#">
-                                    	<img src="assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                    	<img src="assets/images/product-images/cape-dress-1.jpg" alt="" title="" />
                                     </a>
                                     <div class="product-details">
                                     	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
                                         <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Sleeve Kimono Dress</a>
-                                        <div class="variant-cart">Black / XL</div>
+                                        <a class="pName" href="cart.html"></a>
+                                        <div class="variant-cart"></div>
                                         <div class="wrapQtyBtn">
                                             <div class="qtyField">
                                             	<span class="label">Qty:</span>
@@ -257,20 +257,20 @@
                                         </div>
                                         <div class="priceRow">
                                         	<div class="product-price">
-                                            	<span class="money">$59.00</span>
+                                            	<span class="money"></span>
                                             </div>
                                          </div>
 									</div>
                                 </li>
                                 <li class="item">
                                 	<a class="product-image" href="#">
-                                    	<img src="assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
+                                    	<img src="assets/images/product-images/cape-dress-2.jpg" alt="" title="" />
                                     </a>
                                     <div class="product-details">
                                     	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
                                         <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Elastic Waist Dress</a>
-                                        <div class="variant-cart">Gray / XXL</div>
+                                        <a class="pName" href="cart.html"></a>
+                                        <div class="variant-cart"></div>
                                         <div class="wrapQtyBtn">
                                             <div class="qtyField">
                                             	<span class="label">Qty:</span>
@@ -281,7 +281,7 @@
                                         </div>
                                        	<div class="priceRow">
                                             <div class="product-price">
-                                                <span class="money">$99.00</span>
+                                                <span class="money"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -289,7 +289,7 @@
                             </ul>
                             <div class="total">
                             	<div class="total-in">
-                                	<span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
+                                	<span class="label">Cart Subtotal:</span><span class="product-price"><span class="money"></span></span>
                                 </div>
                                  <div class="buttonSet text-center">
                                     <a href="cart.html" class="btn btn-secondary btn--small">View Cart</a>
@@ -433,7 +433,7 @@
             </li>
           </ul>
         </li>
-        	<li class="lvl1 parent megamenu"><a href="about-us.html">Pages <i class="anm anm-plus-l"></i></a>
+        	<li class="lvl1 parent megamenu"><a href="">Pages <i class="anm anm-plus-l"></i></a>
           <ul>
           	<li><a href="cart-variant1.html" class="site-nav">Cart Page <i class="anm anm-plus-l"></i></a>
                 <ul class="dropdown">
@@ -447,7 +447,7 @@
                     <li><a href="compare-variant2.html" class="site-nav">Compare Variant2</a></li>
                  </ul>
             </li>
-			<li><a href="checkout.html" class="site-nav">Checkout</a></li>
+			      <li><a href="checkout.html" class="site-nav">Checkout</a></li>
             <li><a href="checkout.html" class="site-nav">Checkout</a></li>
             <li><a href="{{ Route('aboutus') }}" class="site-nav">About Us<span class="lbl nm_label1">New</span></a></li>
             <li><a href="{{ Route('contactus') }}" class="site-nav">Contact Us</a></li>
@@ -462,16 +462,8 @@
             <li><a href="coming-soon.html" class="site-nav">Coming soon<span class="lbl nm_label1">New</span></a></li>
           </ul>
         </li>
-        	<li class="lvl1 parent megamenu"><a href="blog-left-sidebar.html">Blog <i class="anm anm-plus-l"></i></a>
-          <ul>
-            <li><a href="blog-left-sidebar.html" class="site-nav">Left Sidebar</a></li>
-            <li><a href="blog-right-sidebar.html" class="site-nav">Right Sidebar</a></li>
-            <li><a href="blog-fullwidth.html" class="site-nav">Fullwidth</a></li>
-            <li><a href="blog-grid-view.html" class="site-nav">Gridview</a></li>
-            <li><a href="blog-article.html" class="site-nav">Article</a></li>
-          </ul>
-        </li>
-        	<li class="lvl1"><a href="#"><b>Buy Now!</b></a>
+        <li><a href="{{ Route('blog') }}" class="site-nav">Blog</a></li>
+  	<li class="lvl1"><a href="#"><b>Buy Now!</b></a>
         </li>
       </ul>
 	</div>
@@ -534,20 +526,9 @@
                         	<h4 class="h4">Informations</h4>
                             <ul>
                             	<li><a href="{{ Route('aboutus') }}">About us</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Terms &amp; condition</a></li>
-                                <li><a href="#">My Account</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                        	<h4 class="h4">Customer Services</h4>
-                            <ul>
-                            	<li><a href="#">Request Personal Data</a></li>
-                                <li><a href="{{ Route('faq') }}">FAQ's</a></li>
-                                <li><a href="{{ Route('contactus') }}">Contact Us</a></li>
-                                <li><a href="#">Orders and Returns</a></li>
-                                <li><a href="#">Support Center</a></li>
+                              <li><a href="{{ Route('faq') }}">FAQ's</a></li>
+                              <li><a href="{{ Route('contactus') }}">Contact Us</a></li>
+                              <li><a href="{{ Route('blog') }}">Blog</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
@@ -558,17 +539,12 @@
                                 <li class="email"><i class="icon anm anm-envelope-l"></i><p>fpt@gmail.com</p></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <!--End Footer Links-->
-                <hr>
-                <div class="footer-bottom">
+                        <div class="footer-bottom">
                 	<div class="row">
                     	<!--Footer Copyright-->
 	                	<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> </div>
                         <!--End Footer Copyright-->
                         <!--Footer Payment Icon-->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
                         	<ul class="payment-icons list--inline">
                         		<li><i class="icon fa fa-cc-visa" aria-hidden="true"></i></li>
                                 <li><i class="icon fa fa-cc-mastercard" aria-hidden="true"></i></li>
@@ -577,10 +553,15 @@
                                 <li><i class="icon fa fa-cc-amex" aria-hidden="true"></i></li>
                                 <li><i class="icon fa fa-credit-card" aria-hidden="true"></i></li>
                             </ul>
-                        </div>
                         <!--End Footer Payment Icon-->
                     </div>
                 </div>
+
+                    </div>
+                </div>
+                <!--End Footer Links-->
+              
+                
             </div>
         </div>
     </footer>
@@ -721,13 +702,8 @@
      <script src="{{ asset('/fe/js/popper.min.js') }}"></script>
      <script src="{{ asset('/fe/js/lazysizes.js') }}"></script>
      <script src="{{ asset('/fe/js/main.js ' ) }}"></script>
-  
      <!--For Newsletter Popup-->
-
-  @yield('myjs')
-    
-
-  
+     @yield('myjs')
 </body>
 </html>
 
