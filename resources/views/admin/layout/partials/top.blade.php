@@ -10,7 +10,7 @@
                      <a href="#" class="header-logo">
                         <img src="{{ asset('/images/logo.png') }}" class="img-fluid rounded-normal" alt="">
                         <div class="logo-title">
-                           <span class="text-primary text-uppercase">endi</span>
+                           <span class="text-primary text-uppercase">Fendi</span>
                         </div>
                      </a>
                   </div>
@@ -121,28 +121,8 @@
                                        </div>
                                     </div>
                                  </a>
-                                 <a href="account-setting.html" class="iq-sub-card iq-bg-primary-hover">
-                                    <div class="media align-items-center">
-                                       <div class="rounded iq-card-icon iq-bg-primary">
-                                          <i class="ri-account-box-line"></i>
-                                       </div>
-                                       <div class="media-body ml-3">
-                                          <h6 class="mb-0 ">Account settings</h6>
-                                          <p class="mb-0 font-size-12">Manage your account parameters.</p>
-                                       </div>
-                                    </div>
-                                 </a>
-                                 <a href="privacy-setting.html" class="iq-sub-card iq-bg-primary-hover">
-                                    <div class="media align-items-center">
-                                       <div class="rounded iq-card-icon iq-bg-primary">
-                                          <i class="ri-lock-line"></i>
-                                       </div>
-                                       <div class="media-body ml-3">
-                                          <h6 class="mb-0 ">Privacy Settings</h6>
-                                          <p class="mb-0 font-size-12">Control your privacy parameters.</p>
-                                       </div>
-                                    </div>
-                                 </a>
+                                 
+                                 
                                  <div class="d-inline-block w-100 text-center p-3">
                                     <a class="bg-primary iq-sign-btn" href="sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                  </div>

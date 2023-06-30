@@ -76,7 +76,7 @@
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                     <a href="index.html">
-                    	<img src="{{ asset('/fe/images/logo.svg ' ) }}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                    	<img src="{{ asset('/fe/images/loggo.png ' ) }} " style="width:auto ; height:auto; "    />
                     </a>
                 </div>
                 <!--End Desktop Logo-->
@@ -117,7 +117,18 @@
                     </nav>
                     <!--End Desktop Menu-->
                 </div>
+<<<<<<< HEAD
                 
+=======
+                  <!--Mobile Logo-->
+                  <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
+                	<div class="logo">
+                        <a href="index.html">
+                            <img src="{{ asset('/fe/images/loggo.png ' ) }}" style="witdh:auto ; height:auto" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                        </a>
+                    </div>
+                </div>
+>>>>>>> 8957391e5f9dc67c6c29038533c0053540b730ca
                 <!--Mobile Logo-->
                 
                 <div class="col-4 col-sm-3 col-md-3 col-lg-2">

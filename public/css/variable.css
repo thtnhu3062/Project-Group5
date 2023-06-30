@@ -4,7 +4,7 @@
   --iq-title-text: #ffffff;
   --iq-body-text: #000;
   --iq-body-bg : #ffffff;
-  --iq-primary: #e20e02;
+  --iq-primary: #fafafa;
   --iq-secondary:#83878a;
   --iq-success: #14e788;
   --iq-warning: #f68a04;
@@ -16,7 +16,7 @@
   --iq-black: #ffffff;
   --iq-gray: #b1b1b1;
   --iq-dark1:#a2a4af;
-  --iq-light-primary: rgba(226,14,2,0.2);
+  --iq-light-primary: rgb(0 0 0 / 20%);
   --iq-light-secondary: rgba(131,135,138,0.2);
   --iq-light-success: rgba(20,231,136,0.2);
   --iq-light-danger:rgba(84,94,117,0.2);

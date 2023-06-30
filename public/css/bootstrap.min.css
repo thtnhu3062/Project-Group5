@@ -5317,7 +5317,7 @@ input[type=submit].btn-block {
 
 .page-item.active .page-link {
 	z-index: 3;
-	color: #fff;
+	color: #000;
 	background-color: #50b5ff;
 	border-color: #50b5ff
 }
