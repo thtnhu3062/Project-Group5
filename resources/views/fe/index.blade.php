@@ -8,7 +8,8 @@
 
 
 @include('fe.index.slide')
-
+@include('fe.index.weekly')
+@include('fe.index.parallax')
 @include('fe.index.logoslider')
 
 
