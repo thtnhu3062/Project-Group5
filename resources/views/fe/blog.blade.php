@@ -14,7 +14,7 @@
         <!--End Page Title-->
 	    <div class="bredcrumbWrap">
             <div class="container breadcrumbs">
-                <a href="{{ Route('homeshop') }}" title="Back to the home page">Home</a><span>></span><span>Blog Perfume</span>
+                <a href="{{ Route('home') }}" title="Back to the home page">Home</a><span>></span><span>Blog Perfume</span>
             </div>
         </div>
         <div class="container">
