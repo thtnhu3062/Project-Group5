@@ -28,8 +28,8 @@
                               <div class="form-group">
                                  <label for="exampleFormControlSelect1">Hiển thị</label>
                                  <select class="form-control" id="exampleFormControlSelect1" name="brand_product_status">
-                                    <option value ="0">Ẩn</option>
-                                    <option value ="1">Hiện</option>
+                                    <option value ="0">Hiện</option>
+                                    <option value ="1">Ẩn</option>
                                  </select>
                               </div>
                               <button type="submit" name="add_brand_product" class="btn btn-primary">Thêm Thương Hiệu</button>

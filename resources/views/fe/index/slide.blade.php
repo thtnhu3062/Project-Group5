@@ -24,7 +24,8 @@
                                 <div class="wrap-caption center">
                                     <h2 class="h1 mega-title slideshow__title">Bringing Great Experiences</h2>
                                     <span class="mega-subtitle slideshow__subtitle">Save up to 50% off this weekend only</span>
-                                    <span class="btn">Shop now</span>
+                                   <a href="{{URL::to('/shop')}}"> <span class="btn">Shop now</span></a>
+                                   
                                 </div>
                             </div>
                         </div>

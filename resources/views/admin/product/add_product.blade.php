@@ -1,5 +1,4 @@
 @extends('admin.layout.layout')
-
 @section('contents')
 <div id="content-page" class="content-page">
             <div class="container-fluid">
@@ -12,7 +11,6 @@
                            </div>
                         </div>
                         <div class="card-title">
-                         
                         </div>
                         <div class="iq-card-body">
                            <form action="{{URL::to('/save-product')}}" method="post" enctype="multipart/form-data">
@@ -56,8 +54,8 @@
                               <div class="form-group">
                                  <label for="exampleFormControlSelect1">Hiển Thị</label>
                                  <select class="form-control" id="exampleFormControlSelect1" name="product_status">
-                                    <option value ="0">Ẩn</option>
-                                    <option value ="1">Hiện</option>
+                                    <option value ="0">Hiện</option>
+                                    <option value ="1">Ẩn</option>
                                  </select>
                               </div>
                               <button type="submit" name="add_category_product" class="btn btn-primary">Thêm Sản phẩm</button>
@@ -65,11 +63,9 @@
                            </form>
                         </div>
                      </div>
-            
-  
+
                      </div>
                   </div>
-                  
                </div>
             </div>
          </div>
