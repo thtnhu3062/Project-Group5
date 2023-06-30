@@ -141,7 +141,7 @@
                 <div class="col-4 col-sm-3 col-md-3 col-lg-2">
                 <a href="{{URL::to('/show-cart')}}" class="site-header__cart" title="Cart">
                 	<!-- <div class="site-cart"> -->
-                        	<i class="icon anm anm-bag-l"></i>
+                        	<i class="icon anm anm-bag-l" style="margin-left:95% ; margin-right:auto"></i>
 
                             <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">0</span>
                         </a>
