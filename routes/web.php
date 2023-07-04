@@ -4,36 +4,39 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\FE\HomeController;
+use App\Http\Controllers\FE\CartController;
+use App\Http\Controllers\FE\CheckoutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BrandController;
 
-//Frontend
-Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/product/{slug}', [HomeController::class, 'productDetails'])
 
-    ->name('productDetails');
-    
-Route::get('/login', [HomeController::class, 'login'])->name('login');
 
-Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
-
-Route::get('/createAccount', [HomeController::class, 'createaccount'])->name('create');
-
+//frontend
+Route::get('/', [HomeController::class, 'index'])->name('homeshop');
+Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
+Route::get('/category/{category_id}', [HomeController::class, 'showCategory'])->name('showCategory');
+Route::get('/brand/{brand_id}', [HomeController::class, 'showBrand'])->name('showBrand');
+Route::get('/details/{product_id}', [HomeController::class, 'detailsProduct'])->name('detailsProduct');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
-
 Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus');
-
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
-
-Route::get('/product/{slug}', [HomeController::class, 'productDetails']);
-
-Route::get('/createAccount', [HomeController::class, 'createAccount'])->name('create');
-
-
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+//frontend-cart
+Route::post('/update-quantity', [CartController::class, 'updateQuantity'])->name('updateQuantity');
+Route::post('/save-cart', [CartController::class, 'saveCart'])->name('saveCart');
+Route::get('/show-cart', [CartController::class, 'showCart'])->name('showCart');
+Route::get('/delete-cart/{rowId}', [CartController::class, 'deleteCart'])->name('deleteCart');
+//check-out
+Route::get('/register', [CheckoutController::class, 'register'])->name('register');
+Route::get('/login-checkout', [CheckoutController::class, 'loginCheckout'])->name('loginCheckout');
+Route::get('/logout-checkout', [CheckoutController::class, 'logoutCheckout'])->name('logoutCheckout');
+Route::post('/login-customer', [CheckoutController::class, 'loginCustomer'])->name('loginCustomer');
+Route::post('/add-customer', [CheckoutController::class, 'addCustomer'])->name('addCustomer');
+Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
+Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name('saveCheckout');
 
 //backend
-Route::get('/myadmin', [DashboardController::class, 'myadmin'])->name('myhome');
 Route::get('/admin', [DashboardController::class, 'home'])->name('home');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('index');
 //Category
@@ -63,4 +66,3 @@ Route::get('/unactive-product/{product_id}', [ProductController::class, 'unactiv
 Route::get('/active-product/{product_id}', [ProductController::class, 'activeProduct'])->name('activeProduct');
 Route::post('/save-product', [ProductController::class, 'saveProduct'])->name('saveProduct');
 Route::post('/update-product/{product_id}', [ProductController::class, 'updateProduct'])->name('updateProduct');
-
