@@ -13,11 +13,8 @@ use App\Http\Controllers\Admin\BrandController;
 
 
 //frontend
-
 Route::get('/', [HomeController::class, 'index'])->name('homeshop');
-
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
-
 Route::get('/category/{category_id}', [HomeController::class, 'showCategory'])->name('showCategory');
 Route::get('/brand/{brand_id}', [HomeController::class, 'showBrand'])->name('showBrand');
 Route::get('/details/{product_id}', [HomeController::class, 'detailsProduct'])->name('detailsProduct');
@@ -39,13 +36,6 @@ Route::post('/add-customer', [CheckoutController::class, 'addCustomer'])->name('
 Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
 Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name('saveCheckout');
 
-
-
-
-
-Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
-
-Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 
 
 //backend

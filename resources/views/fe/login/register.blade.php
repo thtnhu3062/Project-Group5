@@ -24,7 +24,7 @@
                 	<div class="mb-4">
                        <form method="post" action="{{URL::to('/add-customer')}}" id="CustomerLoginForm" accept-charset="UTF-8" class="contact-form">	
                           @csrf
-                       <div class="row">
+                           <div class="row">
 	                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="FirstName">Name</label>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
-                                    <label for="LastName">phone</label>
+                                    <label for="LastName">Phone</label>
                                     <input type="text" name="customer_phone" placeholder="" id="LastName">
                                 </div>
                                </div>
