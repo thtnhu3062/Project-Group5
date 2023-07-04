@@ -39,6 +39,8 @@ Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name
 //backend
 Route::get('/admin', [DashboardController::class, 'home'])->name('home');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('index');
+Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
+Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
 //Category
 Route::get('/add-category-product', [CategoryController::class, 'addCategory'])->name('addCategory');
 Route::get('/edit-category-product/{category_product_id}', [CategoryController::class, 'editCategory'])->name('editCategory');
