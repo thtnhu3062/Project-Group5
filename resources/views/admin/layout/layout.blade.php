@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Fendi - Group 5</title>
+    <title>Fendi - Admin</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('/images/favicon1.ico') }}" />
     <!-- Bootstrap CSS -->
