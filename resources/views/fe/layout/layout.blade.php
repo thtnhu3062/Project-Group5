@@ -75,7 +75,7 @@
             <div class="row align-items-center">
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="index.html">
+                    <a href="{{URL::to('/')}}">
                     	<img src="{{ asset('/fe/images/loggo.png ' ) }} " style="width:auto ; height:auto; "    />
                     </a>
                 </div>
@@ -137,19 +137,21 @@
                 </div> -->
 
                 <!--Mobile Logo-->
+             
                 
                 <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+
                 <a href="{{URL::to('/show-cart')}}" class="site-header__cart" title="Cart">
-                	<!-- <div class="site-cart"> -->
-                        	<i class="icon anm anm-bag-l" style="margin-left:95% ; margin-right:auto"></i>
+                	 <div class="site-cart"> 
+                        	<i class="icon anm anm-bag-l"></i>
 
                             <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">0</span>
                         </a>
-
-                            <!-- <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span> -->
+            
+                         <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span> 
 
                         <!--Minicart Popup-->
-                        <!-- <div id="header-cart" class="block block-cart">
+                         <div id="header-cart" class="block block-cart">
                         	<ul class="mini-products-list">
                                 <li class="item">
                                 	<a class="product-image" href="#">
@@ -209,13 +211,13 @@
                                     <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
                                 </div>
                             </div>
-                        </div> -->
+                        </div> 
                         <!--EndMinicart Popup-->
-                    <!-- </div> -->
+                     </div> 
                     </a>
-                    <!-- <div class="site-header__search">
+                 <div class="site-header__search">
                     	<button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
-                    </div> -->
+                    </div> 
                 </div>
                 
         	</div>
@@ -223,9 +225,27 @@
     </div>
     <!--End Header-->
     <!--Mobile Menu-->
-
-  
-
+    <div class="mobile-nav-wrapper" role="navigation">
+		<div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
+        <ul id="MobileNav" class="mobile-nav">
+        	<li class="lvl1 parent megamenu"><a href="index.html">Home <i class="anm"></i></a>
+        </li>
+        	<li class="lvl1 parent megamenu"><a href="#">Shop <i class="anm"></i></a>
+        
+        </li>
+        
+       
+      
+        
+         
+        </li>
+        	<li class="lvl1 parent megamenu"><a href="#">Blog <i class="anm"></i></a>
+        
+        </li>
+        	<li class="lvl1"><a href="#"><b>Buy Now!</b></a>
+        </li>
+      </ul>
+	</div>
 	<!--End Mobile Menu-->
     @yield('contents')
      <!--Footer-->
