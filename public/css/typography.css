@@ -69,10 +69,10 @@ General
 body { font-family: 'Roboto', sans-serif; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.8; padding: 0; margin: 0; color: var(--iq-body-text); background: var(--iq-body-bg); }
 a, .btn { -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; }
 a, button, input, btn { outline: medium none !important; }
-a { color: var(--iq-primary); }
+a { color: #000000; }
 a:hover { color: var(--iq-primary-hover); }
 hr { border-color: var(--iq-border-light); }
-h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0px; line-height: 1.5; color: #000000; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0px; line-height: 1.5; color: #ffffff; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 label { font-weight: normal; }
 h1 { font-size: 3.052em; }
