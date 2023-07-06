@@ -99,7 +99,7 @@
                             <li class="lvl1 parent megamenu"><a href="{{URL::to('/')}}">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class=""><a href="{{URL::to('/shop')}}">Shop <i class="anm anm-angle-down-l"></i></a>
 
-                            <li class="lvl1 parent dropdown"><a href="#">Blog <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent dropdown"><a href="{{URL::to('/show-cart')}}">Cart <i class="anm anm-angle-down-l"></i></a></li>
 
                             <li class="lvl1 parent dropdown"><a href="{{ Route('blog') }}">Blog <i class="anm anm-angle-down-l"></i></a></li>
 

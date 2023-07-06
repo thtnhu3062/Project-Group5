@@ -42,7 +42,7 @@
                                 <h2 class="login-title mb-3">Billing details</h2>
                                 <div class="row">
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                        <label for="input-firstname"><span class="required-f">*</span></label>
+                                        <label for="input-firstname"><span class="required-f">Full name</span>*</label>
                                         <input name="shipping_name" value=" " id="input-firstname" type="text">
                                     </div>
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
@@ -97,7 +97,7 @@
                                    
                                         <tr>
                                             <td class="text-left">{{$cart->name}}</td>
-                                            <td>{{$cart->price}}</td>
+                                            <td>{{$cart->price}}$</td>
                                       
                                             <td>{{$cart->qty}}</td>
                                             <td>
