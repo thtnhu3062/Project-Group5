@@ -18,8 +18,14 @@
                                     </div>
 
                                     <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
-                                    	<span class="filters-toolbar__product-count"><h2>New Product</h2></span>
+                                    	<span class="filters-toolbar__product-count"><h2>Kết Quả Tìm Kiếm</h2></span>
                                     </div>
+                                   <div class="custom-search">
+                        <form action="http://annimexweb.com/search" method="get" class="input-group search-header search" role="search" style="position: relative;">
+                            <input class="search-header__input search__input input-group__field" type="search" name="q" placeholder="Search" aria-label="Search" autocomplete="off">
+                            <span class="input-group__btn"><button class="btnSearch" type="submit"> <i class="icon anm anm-search-l"></i> </button></span>
+                        </form>
+                    </div>
                                     <div class="col-4 col-md-4 col-lg-4 text-right">
                                     	<div class="filters-toolbar__item">
                                       		<!-- <label for="SortBy" class="hidden">Sort</label>
@@ -37,7 +43,7 @@
                         <!--End Toolbar-->
                         <div class="grid-products grid--view-items">
                             <div class="row">
-                            @foreach($all_product as $key => $product)
+                            @foreach($search_product as $key => $product)
                                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 item">
                                     <!-- start product image -->
                                     <div class="product-image">
@@ -50,7 +56,7 @@
                                             <img class="hover blur-up lazyload" data-src="{{URL::to('public/uploads/product/'.$product->product_image)}}" src="{{URL::to('public/uploads/product/'.$product->product_image)}}" alt="image" title="product">
                                             <!-- End hover image -->
                                             <!-- product label -->
-                                            <div class="product-labels rectangular"><span class="lbl on-sale">-30%</span> <span class="lbl pr-label1">new</span></div>
+                                            <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
                                             <!-- End product label -->
                                         </a>
                                         <!-- end product image -->
@@ -64,7 +70,7 @@
                                 @csrf
                                         <button class="btn btn-add-to-cart" name="add-to-cart"type="sunmit" type="button">Add To Cart</button>
                                         </form>
-                                        <!-- <div class="button-set">
+                                        <div class="button-set">
                                             <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
                                                 <i class="icon anm anm-search-plus-r"></i>
                                             </a>
@@ -78,7 +84,7 @@
                                                     <i class="icon anm anm-random-r"></i>
                                                 </a>
                                             </div>
-                                        </div> -->
+                                        </div>
                                         <!-- end product button -->
                                     </div>
                                     <!-- end product image -->
@@ -93,12 +99,8 @@
                                         <!-- End product name -->
                                         <!-- product price -->
                                         <div class="product-price">
-                                            
-                                            <span class="old-price">   <?php
-                                            $subtotal = $product->product_price * 130/100;
-                                            echo $subtotal;
-                                            ?></span>
-                                            <span class="price">{{$product->product_price.''.'$'}}</span>
+                                            <span class="old-price">{{number_format($product->product_price).''.'$'}}</span>
+                                            <span class="price">{{number_format($product->product_price).''.'$'}}</span>
                                         </div>
                                         <!-- End product price -->
                                         
@@ -106,8 +108,8 @@
                                             <i class="font-13 fa fa-star"></i>
                                             <i class="font-13 fa fa-star"></i>
                                             <i class="font-13 fa fa-star"></i>
-                                            <i class="font-13 fa fa-star"></i>
-                                            <i class="font-13 fa fa-star"></i>
+                                            <i class="font-13 fa fa-star-o"></i>
+                                            <i class="font-13 fa fa-star-o"></i>
                                         </div>
                                         <!-- Variant -->
                                         <!-- <ul class="swatches">

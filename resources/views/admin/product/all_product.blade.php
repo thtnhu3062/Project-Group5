@@ -1,6 +1,6 @@
 @extends('admin.layout.layout')
-
 @section('contents')
+@include('sweetalert::alert')
 <div id="content-page" class="content-page">
             <div class="container-fluid">
                <div class="row">
@@ -64,7 +64,7 @@
                                        
                                        <td>
                                        <a href="{{URL::to('/delete-product/'.$pro->product_id)}}">
-                                          <button type="button" onclick="return confirm('Are you sure detele')"
+                                          <button type="button" 
                                              class="btn btn-primary btn-rounded btn-sm my-0">Remove</button>
                                              </a>
                                        </td>

@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\BrandController;
 
 //frontend
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 Route::get('/category/{category_id}', [HomeController::class, 'showCategory'])->name('showCategory');
 Route::get('/brand/{brand_id}', [HomeController::class, 'showBrand'])->name('showBrand');
@@ -28,6 +29,7 @@ Route::post('/login-customer', [CheckoutController::class, 'loginCustomer'])->na
 Route::post('/add-customer', [CheckoutController::class, 'addCustomer'])->name('addCustomer');
 Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
 Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name('saveCheckout');
+Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('orderplace');
 
 
 
@@ -65,3 +67,6 @@ Route::get('/active-product/{product_id}', [ProductController::class, 'activePro
 Route::post('/save-product', [ProductController::class, 'saveProduct'])->name('saveProduct');
 Route::post('/update-product/{product_id}', [ProductController::class, 'updateProduct'])->name('updateProduct');
 
+//order
+Route::get('/manager-order', [ProductController::class, 'managerOrder'])->name('managerOrder');
+Route::get('/view-order/{orderId}', [ProductController::class, 'viewOrder'])->name('viewOrder');

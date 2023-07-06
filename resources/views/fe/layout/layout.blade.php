@@ -93,6 +93,7 @@
                             <li class="lvl1 parent megamenu"><a href="{{URL::to('/')}}">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class=""><a href="{{URL::to('/shop')}}">Shop <i class="anm anm-angle-down-l"></i></a>
                             <li class="lvl1 parent dropdown"><a href="#">Blog <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class=""><a href="{{URL::to('/show-cart')}}">Cart <i class="icon anm anm-bag-l"></i></a>
                             <?php
                     $customer_id = Session::get('customer_id');
                     $shipping_id = Session::get('shipping_id');
@@ -108,7 +109,7 @@
                      }else{
                         
                         ?>
-                        <li class="lvl1"><a href="{{URL::to('/login-checkout')}}"><b>Buy Now!</b> <i class="anm anm-angle-down-l"></i></a></li>
+                        <li class="lvl1"><a href="{{URL::to('/login-checkout')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
                          <?php
                     }
                     ?>
@@ -134,7 +135,7 @@
                 <div class="col-4 col-sm-3 col-md-3 col-lg-2">
                 <a href="{{URL::to('/show-cart')}}" class="site-header__cart" title="Cart">
                 	<!-- <div class="site-cart"> -->
-                        	<i class="icon anm anm-bag-l"></i>
+                        	<!-- <i class="icon anm anm-bag-l"></i> -->
                             <!-- <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span> -->
                         <!--Minicart Popup-->
                         <!-- <div id="header-cart" class="block block-cart">
@@ -334,13 +335,13 @@
      <script src="{{ asset('/fe/js/popper.min.js') }}"></script>
      <script src="{{ asset('/fe/js/lazysizes.js') }}"></script>
      <script src="{{ asset('/fe/js/main.js ' ) }}"></script>
-  
+     
      <!--For Newsletter Popup-->
 
-  @yield('myjs')
-    
 
-  
+  @yield('myjs')
+
 </body>
+
 </html>
 

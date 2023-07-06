@@ -7,14 +7,25 @@
         		<div class="collection-hero__image"><img class="blur-up lazyload" data-src="{{asset('/fe/images/cat-women.jpg')}}" src="{{asset('/fe/images/cat-women.jpg')}}" alt="Women" title="Women" /></div>
       		</div>
 		</div>
+        
         <!--End Collection Banner-->
         <hr>
+        
         <div class="container">
+            
         	<div class="row">
             	<!--Sidebar-->
             	<div class="col-12 col-sm-12 col-md-3 col-lg-3 sidebar filterbar">
+                    
                 	<div class="closeFilter d-block d-md-none d-lg-none"><i class="icon icon anm anm-times-l"></i></div>
-                	<div class="sidebar_tags">
+                    <div class="custom-search">
+                        <form action="{{URL::to('/search')}}" method="post" class="input-group search-header search" role="search" style="position: relative;">
+                            @csrf
+                        <input class="search-header__input search__input input-group__field" type="search" name="keywords_submit" placeholder="Search" aria-label="Search" autocomplete="off">
+                            <span class="input-group__btn"><button class="btnSearch" type="submit"> <i class="icon anm anm-search-l"></i> </button></span>
+                        </form>
+                    </div>
+                    <div class="sidebar_tags">
                     	<!--Categories-->
                     	<div class="sidebar_widget categories filter-widget">
                             <div class="widget-title"><h2>Categories</h2></div>
@@ -58,7 +69,9 @@
 
                         <!--end Product Tags-->
                     </div>
+                    
                 </div>
+                
                 <!--End Sidebar-->
                 <!--Main Content-->
                 @yield('product')
