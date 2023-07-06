@@ -79,7 +79,11 @@
                      </ul>
                   </li>
                </ul>
+
                <li><a href="{{URL::to('/manager-order')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>Order Management</span></a></li>
+
+               <li><a href="#" class="iq-waves-effect"><i class="las la-user-friends"></i><span>Customer Management</span></a></li>
+
             </nav>
          </div>
       </div>

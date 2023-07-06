@@ -17,4 +17,19 @@ class DashboardController extends Controller
     {
         return view("admin.login");
     }
+
+    public function login()
+    {
+        return view("admin.login");
+    }
+
+    public function profile()
+    {
+        return view("admin.profile.myprofile");
+    }
+
+    public function editprofile()
+    {
+        return view("admin.edit.editprofile");
+    }
 }

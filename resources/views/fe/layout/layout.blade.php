@@ -75,7 +75,7 @@
             <div class="row align-items-center">
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="index.html">
+                    <a href="{{URL::to('/')}}">
                     	<img src="{{ asset('/fe/images/loggo.png ' ) }} " style="width:auto ; height:auto; "    />
                     </a>
                 </div>
@@ -90,10 +90,19 @@
                 	<!--Desktop Menu-->
                 	<nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
+
+                         
+                          
+                      
+                       
+
                             <li class="lvl1 parent megamenu"><a href="{{URL::to('/')}}">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class=""><a href="{{URL::to('/shop')}}">Shop <i class="anm anm-angle-down-l"></i></a>
+
                             <li class="lvl1 parent dropdown"><a href="#">Blog <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class=""><a href="{{URL::to('/show-cart')}}">Cart <i class="icon anm anm-bag-l"></i></a>
+
+                            <li class="lvl1 parent dropdown"><a href="{{ Route('blog') }}">Blog <i class="anm anm-angle-down-l"></i></a></li>
+
                             <?php
                     $customer_id = Session::get('customer_id');
                     $shipping_id = Session::get('shipping_id');
@@ -102,6 +111,7 @@
                      <li class="lvl1"><a href="{{URL::to('/checkout')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
                      <?php
                      }elseif($customer_id!=null & $shipping_id!=null){
+
                         
                         ?>
                         <li class="lvl1"><a href="{{URL::to('/payment')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
@@ -131,24 +141,37 @@
                 </div> -->
 
                 <!--Mobile Logo-->
+             
                 
                 <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+
                 <a href="{{URL::to('/show-cart')}}" class="site-header__cart" title="Cart">
+
                 	<!-- <div class="site-cart"> -->
                         	<!-- <i class="icon anm anm-bag-l"></i> -->
                             <!-- <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span> -->
+
+                	 <div class="site-cart"> 
+                        	<i class="icon anm anm-bag-l"></i>
+
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">0</span>
+                        </a>
+            
+                         <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span> 
+
+
                         <!--Minicart Popup-->
-                        <!-- <div id="header-cart" class="block block-cart">
+                         <div id="header-cart" class="block block-cart">
                         	<ul class="mini-products-list">
                                 <li class="item">
                                 	<a class="product-image" href="#">
-                                    	<img src="assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                    	<img src="assets/images/product-images/cape-dress-1.jpg" alt="" title="" />
                                     </a>
                                     <div class="product-details">
                                     	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
                                         <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Sleeve Kimono Dress</a>
-                                        <div class="variant-cart">Black / XL</div>
+                                        <a class="pName" href="cart.html"></a>
+                                        <div class="variant-cart"></div>
                                         <div class="wrapQtyBtn">
                                             <div class="qtyField">
                                             	<span class="label">Qty:</span>
@@ -159,20 +182,20 @@
                                         </div>
                                         <div class="priceRow">
                                         	<div class="product-price">
-                                            	<span class="money">$59.00</span>
+                                            	<span class="money"></span>
                                             </div>
                                          </div>
 									</div>
                                 </li>
                                 <li class="item">
                                 	<a class="product-image" href="#">
-                                    	<img src="assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
+                                    	<img src="assets/images/product-images/cape-dress-2.jpg" alt="" title="" />
                                     </a>
                                     <div class="product-details">
                                     	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
                                         <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Elastic Waist Dress</a>
-                                        <div class="variant-cart">Gray / XXL</div>
+                                        <a class="pName" href="cart.html"></a>
+                                        <div class="variant-cart"></div>
                                         <div class="wrapQtyBtn">
                                             <div class="qtyField">
                                             	<span class="label">Qty:</span>
@@ -183,7 +206,7 @@
                                         </div>
                                        	<div class="priceRow">
                                             <div class="product-price">
-                                                <span class="money">$99.00</span>
+                                                <span class="money"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -191,20 +214,20 @@
                             </ul>
                             <div class="total">
                             	<div class="total-in">
-                                	<span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
+                                	<span class="label">Cart Subtotal:</span><span class="product-price"><span class="money"></span></span>
                                 </div>
                                  <div class="buttonSet text-center">
                                     <a href="cart.html" class="btn btn-secondary btn--small">View Cart</a>
                                     <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
                                 </div>
                             </div>
-                        </div> -->
+                        </div> 
                         <!--EndMinicart Popup-->
-                    <!-- </div> -->
+                     </div> 
                     </a>
-                    <!-- <div class="site-header__search">
+                 <div class="site-header__search">
                     	<button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
-                    </div> -->
+                    </div> 
                 </div>
                 
         	</div>
@@ -212,7 +235,27 @@
     </div>
     <!--End Header-->
     <!--Mobile Menu-->
-
+    <div class="mobile-nav-wrapper" role="navigation">
+		<div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
+        <ul id="MobileNav" class="mobile-nav">
+        	<li class="lvl1 parent megamenu"><a href="index.html">Home <i class="anm"></i></a>
+        </li>
+        	<li class="lvl1 parent megamenu"><a href="#">Shop <i class="anm"></i></a>
+        
+        </li>
+        
+       
+      
+        
+         
+        </li>
+        	<li class="lvl1 parent megamenu"><a href="#">Blog <i class="anm"></i></a>
+        
+        </li>
+        	<li class="lvl1"><a href="#"><b>Buy Now!</b></a>
+        </li>
+      </ul>
+	</div>
 	<!--End Mobile Menu-->
     @yield('contents')
      <!--Footer-->
@@ -253,30 +296,21 @@
                             	<li><a href="#">Women</a></li>
                                 <li><a href="#">Men</a></li>
                                 <li><a href="#">Unisex</a></li>
-                                <li><a href="#">Kids</a></li>
-                                <li><a href="#">Sale</a></li>
+                           
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                         	<h4 class="h4">Informations</h4>
                             <ul>
-                            	<li><a href="#">About us</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Terms &amp; condition</a></li>
-                                <li><a href="#">My Account</a></li>
+
+                            	<li><a href="{{ Route('aboutus') }}">About us</a></li>
+                              <li><a href="{{ Route('faq') }}">FAQ's</a></li>
+                              <li><a href="{{ Route('contactus') }}">Contact Us</a></li>
+                              <li><a href="{{ Route('blog') }}">Blog</a></li>
+                            	
                             </ul>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                        	<h4 class="h4">Customer Services</h4>
-                            <ul>
-                            	<li><a href="#">Request Personal Data</a></li>
-                                <li><a href="#">FAQ's</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Orders and Returns</a></li>
-                                <li><a href="#">Support Center</a></li>
-                            </ul>
-                        </div>
+                  
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
                         	<h4 class="h4">Contact Us</h4>
                             <ul class="addressFooter">
@@ -285,17 +319,12 @@
                                 <li class="email"><i class="icon anm anm-envelope-l"></i><p>fpt@gmail.com</p></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <!--End Footer Links-->
-                <hr>
-                <div class="footer-bottom">
+                        <div class="footer-bottom">
                 	<div class="row">
                     	<!--Footer Copyright-->
 	                	<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> </div>
                         <!--End Footer Copyright-->
                         <!--Footer Payment Icon-->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
                         	<ul class="payment-icons list--inline">
                         		<li><i class="icon fa fa-cc-visa" aria-hidden="true"></i></li>
                                 <li><i class="icon fa fa-cc-mastercard" aria-hidden="true"></i></li>
@@ -304,10 +333,15 @@
                                 <li><i class="icon fa fa-cc-amex" aria-hidden="true"></i></li>
                                 <li><i class="icon fa fa-credit-card" aria-hidden="true"></i></li>
                             </ul>
-                        </div>
                         <!--End Footer Payment Icon-->
                     </div>
                 </div>
+
+                    </div>
+                </div>
+                <!--End Footer Links-->
+              
+                
             </div>
         </div>
     </footer>
@@ -335,11 +369,14 @@
      <script src="{{ asset('/fe/js/popper.min.js') }}"></script>
      <script src="{{ asset('/fe/js/lazysizes.js') }}"></script>
      <script src="{{ asset('/fe/js/main.js ' ) }}"></script>
+
      
      <!--For Newsletter Popup-->
 
 
   @yield('myjs')
+
+
 
 </body>
 

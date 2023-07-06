@@ -10,7 +10,7 @@
                                 <div class="wrap-caption center">
                                         <h2 class="h1 mega-title slideshow__title">Noble Luxury Perfume</h2>
                                         <span class="mega-subtitle slideshow__subtitle">From high to low, classic or modern.</span>
-                                        <span class="btn">Shop now</span>
+                                        <span class="btn"> Shop now</span> 
                                     </div>
                             </div>
                         </div>

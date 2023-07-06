@@ -15,12 +15,7 @@
                      </a>
                   </div>
                </div>
-               <div class="iq-search-bar ml-auto">
-                  <form action="#" class="searchbox">
-                     <input type="text" class="text search-input" placeholder="Search Here...">
-                     <a class="search-link" href="#"><i class="ri-search-line"></i></a>
-                  </form>
-               </div>
+               
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-label="Toggle navigation">
                   <i class="ri-menu-3-line"></i>
                </button>
@@ -96,10 +91,9 @@
                            <div class="iq-card shadow-none m-0">
                               <div class="iq-card-body p-0 ">
                                  <div class="bg-primary p-3">
-                                    <h5 class="mb-0 text-white line-height">Hello Barry Tech</h5>
-                                    <span class="text-white font-size-12">Available</span>
+                                    <h5 class="mb-0 text-white line-height">Pham Ngoc Hai</h5>
                                  </div>
-                                 <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">
+                                 <a href="{{ Route('profile') }}" class="iq-sub-card iq-bg-primary-hover">
                                     <div class="media align-items-center">
                                        <div class="rounded iq-card-icon iq-bg-primary">
                                           <i class="ri-file-user-line"></i>
@@ -110,7 +104,7 @@
                                        </div>
                                     </div>
                                  </a>
-                                 <a href="profile-edit.html" class="iq-sub-card iq-bg-primary-hover">
+                                 <a href="{{ Route('editprofile') }}" class="iq-sub-card iq-bg-primary-hover">
                                     <div class="media align-items-center">
                                        <div class="rounded iq-card-icon iq-bg-primary">
                                           <i class="ri-profile-line"></i>
@@ -124,7 +118,7 @@
                                  
                                  
                                  <div class="d-inline-block w-100 text-center p-3">
-                                    <a class="bg-primary iq-sign-btn" href="sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
+                                    <a class="bg-primary iq-sign-btn" href="{{ Route('login') }}" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                  </div>
                               </div>
                            </div>

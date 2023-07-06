@@ -9,13 +9,21 @@ use App\Http\Controllers\FE\CheckoutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BrandController;
 
+
+
+
 //frontend
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/search', [HomeController::class, 'search'])->name('search');
+
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 Route::get('/category/{category_id}', [HomeController::class, 'showCategory'])->name('showCategory');
 Route::get('/brand/{brand_id}', [HomeController::class, 'showBrand'])->name('showBrand');
 Route::get('/details/{product_id}', [HomeController::class, 'detailsProduct'])->name('detailsProduct');
+Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 //frontend-cart
 Route::post('/update-quantity', [CartController::class, 'updateQuantity'])->name('updateQuantity');
 Route::post('/save-cart', [CartController::class, 'saveCart'])->name('saveCart');
@@ -31,14 +39,12 @@ Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout
 Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name('saveCheckout');
 Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('orderplace');
 
-
-
-
-
-
 //backend
 Route::get('/admin', [DashboardController::class, 'home'])->name('home');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('index');
+Route::get('/login', [DashboardController::class, 'login'])->name('login'); 
+Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
+Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
 //Category
 Route::get('/add-category-product', [CategoryController::class, 'addCategory'])->name('addCategory');
 Route::get('/edit-category-product/{category_product_id}', [CategoryController::class, 'editCategory'])->name('editCategory');
@@ -65,6 +71,7 @@ Route::get('/all-product', [ProductController::class, 'allProduct'])->name('allP
 Route::get('/unactive-product/{product_id}', [ProductController::class, 'unactiveProduct'])->name('unactiveProduct');
 Route::get('/active-product/{product_id}', [ProductController::class, 'activeProduct'])->name('activeProduct');
 Route::post('/save-product', [ProductController::class, 'saveProduct'])->name('saveProduct');
+
 Route::post('/update-product/{product_id}', [ProductController::class, 'updateProduct'])->name('updateProduct');
 
 //order

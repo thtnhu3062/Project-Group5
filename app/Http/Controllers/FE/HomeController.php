@@ -60,10 +60,8 @@ class HomeController extends Controller
 
 
 
-
-    
-//
-    /*    $role1 = \Sentinel::getRoleRepository()->createModel()->create([
+/*
+   $role1 = \Sentinel::getRoleRepository()->createModel()->create([
             'name' => 'Admin',
             'slug' => 'admin',
         ]);
@@ -89,8 +87,29 @@ class HomeController extends Controller
         $user2 = \Sentinel::create($credentials);
         $activation = \Activation::create($user2);
         $role2->users()->attach($user2);
-
 */
 
+
+
+    public function blog() 
+    { 
+        return view('fe.blog') ; 
+    }
+
+    public function aboutus() 
+    { 
+        return view('fe.aboutus') ; 
+    }
+
+    public function contactus() 
+    { 
+        return view('fe.contactus') ; 
+    }
+
+    public function faq() 
+    { 
+        return view('fe.faq') ; 
+    }
+ 
 
 }

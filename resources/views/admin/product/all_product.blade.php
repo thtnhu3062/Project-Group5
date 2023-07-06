@@ -8,7 +8,7 @@
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Liệt Kê THương hiệu sản phẩm</h4>
+                              <h4 class="card-title">List Product Brand</h4>
                            </div>
                            <?php
                               $message= Session::get('message');
@@ -23,12 +23,12 @@
                               <table class="table table-bordered table-responsive-md table-striped text-center">
                                  <thead>
                                     <tr>
-                                       <th>Tên Sản Phẩm</th>
-                                       <th>Giá Sản Phẩm</th>
-                                       <th>Hình Ảnh Sản Phẩm</th>
-                                       <th>Danh Mục Sản Phẩm</th>
-                                       <th>Thương Hiệu Sản Phẩm</th>
-                                       <th>Hiển Thị</th>
+                                       <th>Product's name</th>
+                                       <th>Product Price</th>
+                                       <th>Product Pictures</th>
+                                       <th>Product Portfolio</th>
+                                       <th>Product Brands</th>
+                                       <th>Display</th>
                                        <th>Edit</th>
                                        <th>Remove</th>
                                     </tr>
