@@ -1,7 +1,4 @@
- <!--Main Content-->
- @extends('fe.layout_shop')
-@section('product')  
- <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 	<div class="productList product-load-more">
                     	<!--Toolbar-->
                         <button type="button" class="btn btn-filter d-block d-md-none d-lg-none"> Product Filters</button>
@@ -17,7 +14,7 @@
                                         </a> -->
                                     </div>
 
-                                    <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
+                                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
                                     	<span class="filters-toolbar__product-count"><h2>New Product</h2></span>
                                     </div>
                                     <div class="col-4 col-md-4 col-lg-4 text-right">
@@ -134,7 +131,3 @@
                      
                     </div>
                 </div>
-              
-
-                <!--End Main Content-->
-@endsection

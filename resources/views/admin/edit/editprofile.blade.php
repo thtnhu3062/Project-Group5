@@ -86,10 +86,7 @@ l<!-- Page Content  -->
                                                     <label class="custom-control-label" for="customRadio7"> Female </label>
                                                 </div>
                                             </div>
-                                            <div class="form-group col-sm-6">
-                                                <label>Date Of Birth:</label>
-                                                <input class="form-control date-input basicFlatpickr" type="text" value="2020-12-18">
-                                            </div>
+
                                             <div class="form-group col-sm-6">
                                                 <label>Marital Status:</label>
                                                 <select class="form-control" id="exampleFormControlSelect1">
@@ -100,16 +97,7 @@ l<!-- Page Content  -->
                                                     <option>Separated </option>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-6">
-                                                <label>Age:</label>
-                                                <select class="form-control" id="exampleFormControlSelect2">
-                                                    <option>12-18</option>
-                                                    <option>19-32</option>
-                                                    <option selected="">33-45</option>
-                                                    <option>46-62</option>
-                                                    <option>63 > </option>
-                                                </select>
-                                            </div>
+
                                             <div class="form-group col-sm-6">
                                                 <label>Country:</label>
                                                 <select class="form-control" id="exampleFormControlSelect3">
@@ -120,23 +108,12 @@ l<!-- Page Content  -->
                                                     <option>Africa</option>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-6">
-                                                <label>State:</label>
-                                                <select class="form-control" id="exampleFormControlSelect4">
-                                                    <option>California</option>
-                                                    <option>Florida</option>
-                                                    <option selected="">Georgia</option>
-                                                    <option>Connecticut</option>
-                                                    <option>Louisiana</option>
-                                                </select>
-                                            </div>
+
                                             <div class="form-group col-sm-12">
                                                 <label>Address:</label>
                                                 <textarea class="form-control" name="address" rows="5" style="line-height: 22px;">
-37 Cardinal Lane
-Petersburg, VA 23803
-United States of America
-Zip Code: 85001
+Cach Mang Thang 8
+Ward 11, District 3, Ho Chi Minh City.
                                           </textarea>
                                             </div>
                                         </div>
@@ -252,11 +229,7 @@ Zip Code: 85001
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email:</label>
-                                            <input type="text" class="form-control" id="email" value="Barryjone@demo.com">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="url">Url:</label>
-                                            <input type="text" class="form-control" id="url" value="https://getbootstrap.com">
+                                            <input type="text" class="form-control" id="email" value="Hai@gmail.com">
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                         <button type="reset" class="btn iq-bg-danger">Cancel</button>

@@ -1,5 +1,6 @@
 @extends('fe.layout.layout')
 @section('contents') 
+@include('sweetalert::alert')
 <div class="collection-header">
 			<div class="collection-hero">
         		<div class="collection-hero__image"><img class="blur-up lazyload" data-src="{{asset('/fe/images/cat-women.jpg')}}" src="{{asset('/fe/images/cat-women.jpg')}}" alt="Women" title="Women" /></div>
@@ -70,16 +71,19 @@
                              
                                     <p class="product-single__price product-single__price-product-template">
                                         <span class="visually-hidden">Regular price</span>
-                                        <s id="ComparePrice-product-template"><span class="money">{{$details->product_price}}</span></s>
+                                        <s id="ComparePrice-product-template"><span class="money"> <?php
+                                            $subtotal = $details->product_price * 130/100;
+                                            echo $subtotal;
+                                            ?></span></s>
                                         <span class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
-                                            <span id="ProductPrice-product-template"><span class="money">{{$details->product_price}}</span></span>
+                                            <span id="ProductPrice-product-template"><span class="money">{{$details->product_price.''.'$'}}</span></span>
                                         </span>
                                         <span class="discount-badge"> <span class="devider">|</span>&nbsp;
                                             <span>You Save</span>
                                             <span id="SaveAmount-product-template" class="product-single__save-amount">
-                                            <span class="money">$100.00</span>
+                                            
                                             </span>
-                                            <span class="off">(<span>16</span>%)</span>
+                                            <span class="off">(<span>30</span>%)</span>
                                         </span>  
                                     </p>
                                 <div class="product-single__description rte">
@@ -98,17 +102,19 @@
                                         <div class="product-form__item--quantity">
                                             <div class="wrapQtyBtn">
                                                 <div class="qtyField">
-                                                    <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                    <input type="text"  name="quantity" value="1" class="product-form__input qty">
-                                                    <input type="hidden"  name="productid_hidden" value="{{$details->product_id}}" class="product-form__input qty">
-                                                    <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
+                                                    <a class="qtyBtn minus"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
+                                                    <input type="text"  name="qty" value="1" class="product-form__input qty"/>
+                                                    <input type="hidden"  name="productid_hidden" value="{{$details->product_id}}">
+                                                    <a class="qtyBtn plus"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
                                                 </div>
+                                                <!-- <input type="number" name="qty" min="1" value="1" >
+                                                <input type="hidden"  name="productid_hidden" value="{{$details->product_id}}"> -->
                                             </div>
                                         </div>      
                                         
                                                         
                                         <div class="product-form__item--submit">
-                                            <button  type="sunmit"type="button" name="add" class="btn product-form__cart-submit">
+                                            <button  type="submit"type="button" name="add" class="btn product-form__cart-submit">
                                                 <span>Add to cart</span>
                                             </button>
                                         </div>

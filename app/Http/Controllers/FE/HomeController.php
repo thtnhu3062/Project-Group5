@@ -9,13 +9,26 @@ use Illuminate\Support\Facades\Redirect;
 class HomeController extends Controller
 {
     public function index(){
-        return view('fe.index');
+        $cate_product = DB::table('tbl_category_product')->where('category_status','0')->orderby('category_id','desc')->get();
+        $brand_product = DB::table('tbl_brand')->where('brand_status','0')->orderby('brand_id', 'desc')->get();
+        $all_product = DB::table('tbl_product')->where('product_status','0')->orderby('product_id', 'desc')->limit(8)->get();
+
+        return view('fe.index')->with('category',$cate_product )->with('brand',$brand_product)->with('all_product',$all_product);
+        
+    }
+    public function search(Request $request){
+        $keywords = $request->keywords_submit;
+        $cate_product = DB::table('tbl_category_product')->where('category_status','0')->orderby('category_id','desc')->get();
+        $brand_product = DB::table('tbl_brand')->where('brand_status','0')->orderby('brand_id', 'desc')->get();
+        $search_product = DB::table('tbl_product')->where('product_name','like','%'.$keywords.'%')->get();
+
+        return view('fe.search_shop')->with('category',$cate_product )->with('brand',$brand_product)->with('search_product', $search_product);
     }
     public function shop()
     {
         $cate_product = DB::table('tbl_category_product')->where('category_status','0')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand')->where('brand_status','0')->orderby('brand_id', 'desc')->get();
-        $all_product = DB::table('tbl_product')->where('product_status','0')->orderby('product_id', 'desc')->limit('10')->get();
+        $all_product = DB::table('tbl_product')->where('product_status','0')->orderby('product_id', 'desc')->get();
 
         return view('fe.shop1')->with('category',$cate_product )->with('brand',$brand_product)->with('all_product',$all_product);
     }

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use DB;
 use Session;
 use Illuminate\Support\Facades\Redirect;
+use RealRashid\SweetAlert\Facades\Alert;
 session_start();
 class ProductController extends Controller
 {
@@ -106,12 +107,14 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->delete();
         return Redirect::to('all-product');
+
     }
 
     public function unactiveProduct($product_id)
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>1]);
         Session::put('message','Không kích hoạt Sản phẩm' );
+        Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
         return Redirect::to('all-product');
     }
 
@@ -119,7 +122,22 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>0]);
         Session::put('message','Kích hoạt Sản Phẩm' );
+        Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
         return Redirect::to('all-product');
+    }
+
+    //order
+    public function managerOrder(){
+       
+        $all_order = DB::table('tbl_order')
+        ->join('tbl_customers','tbl_order.customer_id','=','tbl_customers.customer_id')
+        ->select('tbl_order.*','tbl_customers.customer_name')
+        ->orderby('tbl_order.order_id','desc')->get();
+        $manager_order = view('admin.order.manager_order')->with('all_order' ,$all_order);
+        return view("admin.layout.layout")->with('admin.order.manager_order', $manager_order);
+    }
+    public function viewOrder($orderId){
+        return view('admin.order.view_order');
     }
 
 }

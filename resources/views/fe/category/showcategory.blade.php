@@ -59,7 +59,7 @@
                                         <!-- End product name -->
                                         <!-- product price -->
                                         <div class="product-price">
-                                            <span class="price">{{number_format($product->product_price).' '.'VNĐ'}}</span>
+                                            <span class="price">{{number_format($product->product_price).''.'$'}}</span>
                                         </div>
                                         <!-- End product price -->
                                         <div class="product-review">
@@ -77,7 +77,6 @@
                                 @endforeach
                             </div>
                         </div>
-                       
                     </div>
                    
 
