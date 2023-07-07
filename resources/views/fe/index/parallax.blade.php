@@ -6,7 +6,7 @@
                         <div class="wrap-text left text-small font-bold">
                             <h2 class="h2 mega-title">Fendi Perfume <br> The best choice for your store</h2>
                             <div class="rte-setting mega-subtitle">As sexy as a cotton mini dress and as elegant as the cocktails at Mama Shelter, leaving you overwhelmed and happy.</div>
-                            <a href="#" class="btn">Purchase Now</a>
+                            <a href="{{URL::to('/shop')}}" class="btn">Purchase Now</a>
                         </div>
                     </div>
                 </div>
