@@ -11,7 +11,7 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <!-- Favicon -->
-    <link rel="shortcut icon" href=" {{asset('/fe/images/favicon.png') }}" />
+     <link rel="shortcut icon" href="{{ asset('/images/favicon1.ico') }}" />
     <!-- Plugins CSS -->
      <link rel="stylesheet" href="{{ asset('/fe/css/plugins.css') }}">
     <!-- Bootstap CSS -->
@@ -22,7 +22,7 @@
  </head>
 <body class="template-index belle template-index-belle home2-default">
    <div id="pre-loader">
-    <img src="{{ asset('/feassets/images/loader.gif' ) }}" alt="Loading..." />
+    <img src="{{ asset('/feassets/images/' ) }}" alt="Loading..." />
    </div>
    <div class="pageWrapper">
 	<!--Search Form Drawer-->
@@ -149,7 +149,7 @@
                 	<!-- <div class="site-cart"> -->
                         	<!-- <i class="icon anm anm-bag-l"></i> -->
                             <!-- <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span> -->
-
+<!-- 
                 	 <div class="site-cart"> 
                         	<i class="icon anm anm-bag-l"></i>
 
@@ -157,7 +157,7 @@
                         </a>
             
                          <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span> 
-
+ -->
 
                         <!--Minicart Popup-->
                          <div id="header-cart" class="block block-cart">
@@ -224,9 +224,9 @@
                         <!--EndMinicart Popup-->
                      </div> 
                     </a>
-                 <div class="site-header__search">
+                 <!-- <div class="site-header__search">
                     	<button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
-                    </div> 
+                    </div>  -->
                 </div>
                 
         	</div>

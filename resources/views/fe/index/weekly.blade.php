@@ -6,8 +6,10 @@
                             <h2 class="h2">Weekly Bestseller</h2>
                             <p>Our most popular products based on sales</p>
                         </div>
+                   
 						<div class="productSlider grid-products">
                             <div class="col-12 item">
+                     
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
@@ -57,12 +59,12 @@
                                 <div class="product-details text-center">
                                     <!-- product name -->
                                     <div class="product-name">
-                                        <a href="product-layout-1.html">dabdbd</a>
+                                        <a href="product-layout-1.html">bfdbf</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="old-price">$500.00</span>
+                                        <span class="old-price">$8000</span>
                                         <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
@@ -336,8 +338,10 @@
                                     <!-- End Variant -->
                                 </div>
                                 <!-- End product details -->
+                               
                             </div>
                         </div>
+                    
                     </div>
             	</div>    
             </div>
