@@ -13,7 +13,7 @@
                             <div class="cover-container text-center">
                                 <img src="{{ asset('/images/user/admin1.png') }}" alt="profile-bg" class="rounded-circle img-fluid">
                                 <div class="profile-detail mt-3">
-                                    <h3>Barry Tech</h3>
+                                    <h3>Pham Ngoc Hai</h3>
                                 </div>
                                 <div class="iq-social d-inline-block align-items-center">
                                     <ul class="list-inline d-flex p-0 mb-0 align-items-center">
@@ -40,14 +40,15 @@
                     </div>
                     <div class="iq-card-body">
                         <ul class="list-inline p-0 mb-0">
-                            
+
                             <li>
                                 <div class="row align-items-center justify-content-between mb-3">
                                     <div class="col-sm-6">
                                         <h6>Address</h6>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p class="mb-0">Landon</p>
+                                        <p class="mb-0">Cach Mang Thang 8
+                                            Ward 11, District 3, Ho Chi Minh City</p>
                                     </div>
                                 </div>
                             </li>
@@ -67,7 +68,7 @@
                                         <h6>Email</h6>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p class="mb-0">Barry@example.com</p>
+                                        <p class="mb-0">hai@gmail.com</p>
                                     </div>
                                 </div>
                             </li>
@@ -77,14 +78,14 @@
                                         <h6>Facebook</h6>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p class="mb-0">@Barry_Tech</p>
+                                        <p class="mb-0">@Ngoc_Hai</p>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
             <div class="col-12 col-md-12 col-lg-8">
             </div>

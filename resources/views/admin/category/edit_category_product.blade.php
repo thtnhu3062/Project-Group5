@@ -1,5 +1,5 @@
 @extends('admin.layout.layout')
-
+@include('sweetalert::alert')
 @section('contents')
 <div id="content-page" class="content-page">
    <div class="container-fluid">

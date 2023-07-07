@@ -184,6 +184,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 

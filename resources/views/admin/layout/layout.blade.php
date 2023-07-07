@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -27,7 +27,6 @@
         <!-- Navbar -->
         @include('admin.layout.partials.top')
         <!-- /.navbar -->
-
         <!-- Main Sidebar Container -->
         @include('admin.layout.partials.sidebar')
 
@@ -38,7 +37,8 @@
         @include('admin.layout.partials.footer')
     </div>
     <!-- ./wrapper -->
-
+    <!--sweetalert-->
+    
     <!-- jQuery -->
     <script src="{{ asset('/js/jquery.min.js') }}"></script>
     <script src="{{ asset('/js/popper.min.js') }}"></script>
@@ -70,4 +70,6 @@
     <script src="{{ asset('/js/chart-custom.js') }}"></script>
     <!-- Custom JavaScript -->
     <script src="{{ asset('/js/custom.js') }}"></script>
+    
+
 </body>

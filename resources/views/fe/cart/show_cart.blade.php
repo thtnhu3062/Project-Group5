@@ -44,31 +44,31 @@
                                     
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item">
-                                        <span class="money">{{$cart->price}} </span>
+                                        <span class="money">{{$cart->price.''.'$'}} </span>
                                     </td>
                                     <td class="cart__update-wrapper cart-flex-item text-right">
-                                    <form action="{{URL::to('/update-quantity')}}" method ="POST">
-                                @csrf 
+                                  
                                         <div class="cart__qty text-center">
-                      
+                                    
                                             <div class="qtyField">
-                                           
-                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>
-                                                <input class="cart__qty-input qty" type="text" name="quantity" value="{{$cart->qty}} ">
-                                                <input class="cart__qty-input qty" type="hidden" name="rowId_cart" value="{{$cart->rowId}} ">
-                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a>
-                                                <button type="submit" name="update" class="btn--link cart-update"><i class="fa fa-refresh"></i> Update</button>
-                                           
-                                            </div>
-                                        
+                                            <form action="{{URL::to('/update-quantity')}}" method ="POST">
+                                @csrf 
+                                                <input type="number" min="1" name="cart_quantity" value="{{$cart->qty}}" >
+                                                <input class="cart__qty-input qty" type="hidden"  name="rowId_cart" value="{{$cart->rowId}}">
+                                                <button type="submit" name="update" class="btn--link cart-update"><i class="fa fa-refresh"></i> Update</button> 
+                                            </form>
+                                            </div> 
+                                             
+                                            
                                         </div>
-                                        </form>
+                                       
+                                        
                                     </td>
                                     <td class="text-right small--hide cart-price">
                                         <div><span class="money">
                                             <?php
                                             $subtotal = $cart->price * $cart->qty;
-                                            echo $subtotal;
+                                            echo $subtotal.''.'$';
                                             ?>
                                         </span></div>
                                     </td>
@@ -80,7 +80,7 @@
                             </tbody>
                     		<tfoot>
                                 <tr>
-                                    <td colspan="3" class="text-left"><a href="http://annimexweb.com/" class="btn--link cart-continue"><i class="icon icon-arrow-circle-left"></i> Continue shopping</a></td>
+                                    <td colspan="3" class="text-left"><a href="{{URL::to('/shop')}}" class="btn--link cart-continue"><i class="icon icon-arrow-circle-left"></i> Continue shopping</a></td>
                                 </tr>
                             </tfoot>
                     </table>
@@ -90,7 +90,7 @@
                     <div class="solid-border">
                       <div class="row">
                       	<span class="col-12 col-sm-6 cart__subtotal-title"><strong>Subtotal</strong></span>
-                        <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">{{Cart::total()}}</span></span>
+                        <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">{{Cart::total(0).''.'$'}}</span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                       <p class="cart_tearm">
