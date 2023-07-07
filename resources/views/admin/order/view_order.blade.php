@@ -8,7 +8,7 @@
             <div class="iq-card">
                <div class="iq-card-header d-flex justify-content-between">
                   <div class="iq-header-title">
-                     <h4 class="card-title">Buyer's name</h4>
+                     <h4 class="card-title">Customer's name</h4>
                   </div>
                </div>
                <div class="iq-card-body">
@@ -44,7 +44,7 @@
             <div class="iq-card">
                <div class="iq-card-header d-flex justify-content-between">
                   <div class="iq-header-title">
-                     <h4 class="card-title">Shipper</h4>
+                     <h4 class="card-title">Shipping Information</h4>
                   </div>
                </div>
                <div class="iq-card-body">
@@ -80,7 +80,7 @@
             <div class="iq-card">
                <div class="iq-card-header d-flex justify-content-between">
                   <div class="iq-header-title">
-                     <h4 class="card-title">Chi tiết đơn hàng</h4>
+                     <h4 class="card-title">Order details</h4>
                   </div>
                </div>
                <div class="iq-card-body">
