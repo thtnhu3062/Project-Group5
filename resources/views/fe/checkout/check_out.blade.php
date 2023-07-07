@@ -43,13 +43,11 @@
                              
                               
                                     <tbody>
-                                        <?php
-                                    $shipping = DB::table('tbl_shipping');
-                                    ?>
+                                    
                                      
                                         <tr>
                                             <td class="text-left"><b>Full Name</b></td>
-                                            <td>{{ $shipping->shipping_name}}</td>
+                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Email</b></td>
