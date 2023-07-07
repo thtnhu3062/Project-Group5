@@ -22,7 +22,7 @@
  </head>
 <body class="template-index belle template-index-belle home2-default">
    <div id="pre-loader">
-    <img src="{{ asset('/feassets/images/loader.gif' ) }}" alt="Loading..." />
+    <img src="{{ asset('/feassets/images/' ) }}" alt="Loading..." />
    </div>
    <div class="pageWrapper">
 	<!--Search Form Drawer-->

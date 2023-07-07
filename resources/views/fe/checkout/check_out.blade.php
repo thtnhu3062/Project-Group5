@@ -87,7 +87,7 @@
                                         <tr>
                                             <th class="text-left">Product Name</th>
                                             <th>Price</th>
-                                            <th>Size</th>
+                                        
                                             <th>Qty</th>
                                             <th>Subtotal</th>
                                         </tr>
@@ -96,21 +96,21 @@
                                         <tr>
                                             <td class="text-left">Spike Jacket</td>
                                             <td>$99</td>
-                                            <td>S</td>
+                                       
                                             <td>1</td>
                                             <td>$99</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left">Argon Sweater</td>
                                             <td>$199</td>
-                                            <td>M</td>
+                                           
                                             <td>2</td>
                                             <td>$298</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left">Babydoll Bow Dress</td>
                                             <td>$299</td>
-                                            <td>XL</td>
+                                           
                                             <td>3</td>
                                             <td>$398</td>
                                         </tr>
