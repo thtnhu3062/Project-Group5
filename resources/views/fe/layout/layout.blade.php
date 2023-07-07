@@ -112,7 +112,6 @@
                      <?php
                      }elseif($customer_id!=null & $shipping_id!=null){
 
-                        
                         ?>
                         <li class="lvl1"><a href="{{URL::to('/payment')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
                          <?php

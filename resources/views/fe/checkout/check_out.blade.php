@@ -11,7 +11,11 @@
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
+
         		<div class="wrapper"><img src="{{ asset('fe/images/checkout.png') }}" alt="" class="khungvien"></div>
+
+        		<div class="wrapper"><h1 class="page-width">Payment</h1></div>
+
       		</div>
 		</div>
         <!--End Page Title-->
@@ -35,7 +39,45 @@
           
             <div class="row billing-fields">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 sm-margin-30px-bottom">
-                    <div class="create-ac-content bg-light-gray padding-20px-all">
+                <div class="your-order">
+                            <h2 class="order-title mb-4">Your Order</h2>
+                           
+                            <div class="table-responsive-sm order-table"> 
+                                <table class="bg-white table table-bordered table-hover text-center">
+                             
+                              
+                                    <tbody>
+                                    
+                                     
+                                        <tr>
+                                            <td class="text-left"><b>Full Name</b></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><b>Email</b></td>
+                                            <td>thanhloi0902@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><b>Phone</b>
+                                            </td>
+                                            <td>090900090</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><b>Address</b></td>
+                                            <td>lllllll</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><b>Note</b></td>
+                                            <td>lllllll</td>
+                                        </tr>
+                             
+                                    </tbody>
+                                  
+                                </table>
+                            </div>
+                            
+                        </div>
+                    <!-- <div class="create-ac-content bg-light-gray padding-20px-all">
                         <form action="{{URL::to('/save-checkout')}}" method="POST">
                         @csrf
                             <fieldset>
@@ -71,7 +113,7 @@
                             </fieldset>
                             
                         </form>
-                    </div>
+                    </div> -->
                 </div>
                 <?php
     $content = Cart::content();
