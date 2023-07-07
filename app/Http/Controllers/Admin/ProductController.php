@@ -106,6 +106,7 @@ class ProductController extends Controller
     public function deleteProduct($product_id)
     {
         DB::table('tbl_product')->where('product_id', $product_id)->delete();
+        Alert::warning('Warning Title', 'Warning Message');
         return Redirect::to('all-product');
 
     }
@@ -114,7 +115,7 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>1]);
         Session::put('message','Không kích hoạt Sản phẩm' );
-        Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
+        alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-product');
     }
 
@@ -122,7 +123,7 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>0]);
         Session::put('message','Kích hoạt Sản Phẩm' );
-        Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
+        alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-product');
     }
 

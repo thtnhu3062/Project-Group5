@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -56,14 +57,16 @@ class BrandController extends Controller
     public function unactiveBrand($brand_product_id)
     {
         DB::table('tbl_brand')->where('brand_id', $brand_product_id)->update(['brand_status'=>1]);
-        Session::put('message','Không kích hoạt Thương Hiệu' );
+         Session::put('message','Không kích hoạt Thương Hiệu' );
+        alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-brand-product');
     }
 
     public function activeBrand($brand_product_id)
     {
         DB::table('tbl_brand')->where('brand_id', $brand_product_id)->update(['brand_status'=>0]);
-        Session::put('message','Kích hoạt Thương Hiệu' );
+         Session::put('message','Kích hoạt Thương Hiệu' );
+        alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-brand-product');
     }
 
