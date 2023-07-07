@@ -57,7 +57,7 @@ class BrandController extends Controller
     public function unactiveBrand($brand_product_id)
     {
         DB::table('tbl_brand')->where('brand_id', $brand_product_id)->update(['brand_status'=>1]);
-         Session::put('message','Không kích hoạt Thương Hiệu' );
+         Session::put('message','Activation failed' );
         alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-brand-product');
     }
