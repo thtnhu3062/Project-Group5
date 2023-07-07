@@ -46,7 +46,6 @@ class HomeController extends Controller
     }
 
 
-
 /*
    $role1 = \Sentinel::getRoleRepository()->createModel()->create([
             'name' => 'Admin',
