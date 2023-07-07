@@ -36,6 +36,7 @@ Route::get('/logout-checkout', [CheckoutController::class, 'logoutCheckout'])->n
 Route::post('/login-customer', [CheckoutController::class, 'loginCustomer'])->name('loginCustomer');
 Route::post('/add-customer', [CheckoutController::class, 'addCustomer'])->name('addCustomer');
 Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
+Route::get('/payment', [CheckoutController::class, 'payment'])->name('payment');
 Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name('saveCheckout');
 Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('orderplace');
 

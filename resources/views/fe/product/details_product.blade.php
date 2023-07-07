@@ -23,6 +23,11 @@
                                             <a href="#" class="btn prlightbox" title="Zoom"><i class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
+                                    <tfoot>
+                                <tr>
+                                    <td colspan="3" class="text-left"><a href="{{URL::to('/shop')}}" class="btn--link cart-continue"><i class="icon icon-arrow-circle-left"></i> Continue shopping</a></td>
+                                </tr>
+                            </tfoot>
                                     <div class="product-thumb product-thumb-1">
                                         <div id="gallery" class="product-dec-slider-1 product-tab-left">
                                             <a data-image="assets/images/product-detail-page/cape-dress-1.jpg" data-zoom-image="assets/images/product-detail-page/cape-dress-1.jpg" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">

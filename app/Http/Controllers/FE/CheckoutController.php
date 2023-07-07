@@ -35,7 +35,15 @@ class CheckoutController extends Controller
     }
     public function checkout(){
         $customer = DB::table('tbl_customers');
-        $manager_product = view('fe.checkout.check_out')->with('customer' ,$customer);
+        $manager_product = view('fe.checkout.shipment_detail')->with('customer' ,$customer);
+        return view ('fe.checkout.shipment_detail')->with('manager_product',$manager_product );
+    }
+    public function payment(){
+        $customer = DB::table('tbl_customers');
+        $shipping = DB::table('tbl_shipping');
+        $manager_product = view('fe.checkout.check_out')->with('customer' ,$customer)->with('shipping' ,$shipping);
+        $shipping_id = DB::table('tbl_shipping')->get();
+        Session::put('shipping_id', $shipping_id );
         return view ('fe.checkout.check_out')->with('manager_product',$manager_product );
     }
     public function saveCheckout(Request $request){
@@ -45,11 +53,9 @@ class CheckoutController extends Controller
         $data['shipping_phone'] = $request->shipping_phone;
         $data['shipping_address'] = $request->shipping_address;
         $data['shipping_note'] = $request->shipping_note;
-
-
        $shipping_id = DB::table('tbl_shipping')->insertGetId($data);
         Session::put('shipping_id', $shipping_id );
-        return Redirect::to('/payment');
+        return view ('fe.checkout.check_out');
     }
 
     public function orderplace(Request $request){
