@@ -1,6 +1,7 @@
  <!--Main Content-->
  @extends('fe.layout_shop')
 @section('product')  
+@include('sweetalert::alert')
  <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
                 	<div class="productList product-load-more">
                     	<!--Toolbar-->
@@ -62,7 +63,9 @@
                                         <!-- Start product button -->
                                         <form class="variants add" action="{{URL::to('/save-cart')}}" method ="POST"> 
                                 @csrf
-                                        <button class="btn btn-add-to-cart" name="add-to-cart"type="sunmit" type="button">Add To Cart</button>
+                                <input type="hidden"  name="qty" value="1" class="product-form__input qty"/>
+                                                    <input type="hidden"  name="productid_hidden" value="{{$product->product_id}}">
+                                        <button class="btn btn-add-to-cart" name="add"type="submit" type="button">Add To Cart</button>
                                         </form>
                                         <!-- <div class="button-set">
                                             <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
@@ -120,7 +123,7 @@
                                         </ul> -->
                                         <!-- End Variant -->
                                     </div>
-                                   
+                                    
                                     <!-- End product details -->
                                     <!-- countdown start -->
                 

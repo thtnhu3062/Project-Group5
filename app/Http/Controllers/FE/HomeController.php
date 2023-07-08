@@ -12,8 +12,8 @@ class HomeController extends Controller
         $cate_product = DB::table('tbl_category_product')->where('category_status','0')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand')->where('brand_status','0')->orderby('brand_id', 'desc')->get();
         $all_product = DB::table('tbl_product')->where('product_status','0')->orderby('product_id', 'desc')->limit(8)->get();
-
-        return view('fe.index')->with('category',$cate_product )->with('brand',$brand_product)->with('all_product',$all_product);
+        $all_new_product = DB::table('tbl_product')->where('product_status','0')->orderby('product_id', 'asc')->limit(5)->get();
+        return view('fe.index')->with('category',$cate_product )->with('brand',$brand_product)->with('all_product',$all_product)->with('all_new_product',$all_new_product);
         
     }
     public function search(Request $request){

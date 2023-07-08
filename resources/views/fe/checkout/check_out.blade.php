@@ -43,30 +43,32 @@
                              
                               
                                     <tbody>
-                                    
-                                     
+                                    <?php
+                                    $shipping = DB::table('tbl_shipping')->get();
+                                    ?>
+                                    @foreach($shipping as $ship)
                                         <tr>
                                             <td class="text-left"><b>Full Name</b></td>
-                                            <td></td>
+                                            <td>{{$ship->shipping_name}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Email</b></td>
-                                            <td>thanhloi0902@gmail.com</td>
+                                            <td>{{$ship->shipping_email}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Phone</b>
                                             </td>
-                                            <td>090900090</td>
+                                            <td>{{$ship->shipping_phone}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Address</b></td>
-                                            <td>lllllll</td>
+                                            <td>{{$ship->shipping_address}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Note</b></td>
-                                            <td>lllllll</td>
+                                            <td>{{$ship->shipping_note}}</td>
                                         </tr>
-                             
+                         @endforeach
                                     </tbody>
                                   
                                 </table>
@@ -132,28 +134,8 @@
                                     </thead>
                                     @foreach($content as $cart)
                                     <tbody>
-                                   
+                        
                                         <tr>
-
-                                            <td class="text-left">Spike Jacket</td>
-                                            <td>$99</td>
-                                       
-                                            <td>1</td>
-                                            <td>$99</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-left">Argon Sweater</td>
-                                            <td>$199</td>
-                                           
-                                            <td>2</td>
-                                            <td>$298</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-left">Babydoll Bow Dress</td>
-                                            <td>$299</td>
-                                           
-                                            <td>3</td>
-                                            <td>$398</td>
 
                                             <td class="text-left">{{$cart->name}}</td>
                                             <td>{{$cart->price}}$</td>
@@ -165,7 +147,6 @@
                                             echo $subtotal.''.'$';
                                             ?>
                                             </td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>

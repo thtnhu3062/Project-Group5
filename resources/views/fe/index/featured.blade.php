@@ -15,7 +15,7 @@
                                     </div>
 
                                     <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
-                                    	<span class="filters-toolbar__product-count"><h2>New Product</h2></span>
+                                    
                                     </div>
                                     <div class="col-4 col-md-4 col-lg-4 text-right">
                                     	<div class="filters-toolbar__item">
@@ -59,6 +59,8 @@
                                         <!-- Start product button -->
                                         <form class="variants add" action="{{URL::to('/save-cart')}}" method ="POST"> 
                                 @csrf
+                                <input type="hidden"  name="qty" value="1" class="product-form__input qty"/>
+                                                    <input type="hidden"  name="productid_hidden" value="{{$product->product_id}}">
                                         <button class="btn btn-add-to-cart" name="add-to-cart"type="sunmit" type="button">Add To Cart</button>
                                         </form>
                                         <!-- <div class="button-set">
@@ -85,7 +87,7 @@
                                     <div class="product-details text-center">
                                         <!-- product name -->
                                         <div class="product-name">
-                                            <a href="#">{{$product->product_name}}</a>
+                                            <h3><b>{{$product->product_name}}</b></h3>
                                         </div>
                                         <!-- End product name -->
                                         <!-- product price -->
@@ -93,7 +95,7 @@
                                             
                                             <span class="old-price">   <?php
                                             $subtotal = $product->product_price * 130/100;
-                                            echo $subtotal;
+                                            echo $subtotal.'$';
                                             ?></span>
                                             <span class="price">{{$product->product_price.''.'$'}}</span>
                                         </div>
