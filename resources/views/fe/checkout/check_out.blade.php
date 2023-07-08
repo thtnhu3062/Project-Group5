@@ -11,7 +11,11 @@
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
+
+        		<div class="wrapper"><img src="{{ asset('fe/images/checkout.png') }}" alt="" class="khungvien"></div>
+
         		<div class="wrapper"><h1 class="page-width">Payment</h1></div>
+
       		</div>
 		</div>
         <!--End Page Title-->
@@ -127,8 +131,7 @@
                                         <tr>
                                             <th class="text-left">Product Name</th>
                                             <th>Price</th>
-
-                                            <th>Qty</th>
+                                            <th>Quantity</th>
                                             <th>Subtotal</th>
                                         </tr>
                                     </thead>
@@ -136,6 +139,7 @@
                                     <tbody>
                         
                                         <tr>
+
 
                                             <td class="text-left">{{$cart->name}}</td>
                                             <td>{{$cart->price}}$</td>
@@ -170,7 +174,7 @@
                             <p class="cart_tearm">
                         <label>
                           <input type="checkbox" name="payment_option" id="cartTearm" class="checkbox" value="tiền mặt" required="">
-                           Thanh Toan bằng tiền mặt</label>
+                           Payment in cash</label>
                       </p>
                         </div>
                         <div class="order-button-payment">
