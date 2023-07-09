@@ -26,7 +26,7 @@ class CartController extends Controller
        $data['price'] = $product_info->product_price;
        $data['options']['image'] = $product_info->product_image;
        Cart::add($data);
-       Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
+       alert()->success('Post Created', 'Successfully');
        return Redirect()->back();
         
     }
@@ -35,7 +35,7 @@ class CartController extends Controller
     }
     public function deleteCart($rowId){
         Cart::update($rowId,0);
-        Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
+        alert()->success('Post Created', 'Successfully');
         return view('fe.cart.show_cart');
     }
     public function updateQuantity(Request $request){

@@ -1,7 +1,6 @@
 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 	<div class="productList product-load-more">
                     	<!--Toolbar-->
-                        <button type="button" class="btn btn-filter d-block d-md-none d-lg-none"> Product Filters</button>
                     	<div class="toolbar">
                         	<div class="filters-toolbar-wrapper">
                             	<div class="row">
@@ -14,9 +13,21 @@
                                         </a> -->
                                     </div>
 
+
                                     <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
-                                    	<span class="filters-toolbar__product-count"><h2>New Product</h2></span>
+                                    
                                     </div>
+
+                                    <div class="row">
+                	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section-header text-center">
+                            <h2 class="h2">Hand-picked Items</h2>
+                            <p>Furniture should always be comfortable.<br>And always have a piece of art that you made somewhere in the home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
                                     <div class="col-4 col-md-4 col-lg-4 text-right">
                                     	<div class="filters-toolbar__item">
                                       		<!-- <label for="SortBy" class="hidden">Sort</label>
@@ -59,6 +70,8 @@
                                         <!-- Start product button -->
                                         <form class="variants add" action="{{URL::to('/save-cart')}}" method ="POST"> 
                                 @csrf
+                                <input type="hidden"  name="qty" value="1" class="product-form__input qty"/>
+                                                    <input type="hidden"  name="productid_hidden" value="{{$product->product_id}}">
                                         <button class="btn btn-add-to-cart" name="add-to-cart"type="sunmit" type="button">Add To Cart</button>
                                         </form>
                                         <!-- <div class="button-set">
@@ -85,7 +98,7 @@
                                     <div class="product-details text-center">
                                         <!-- product name -->
                                         <div class="product-name">
-                                            <a href="#">{{$product->product_name}}</a>
+                                            <h3><b>{{$product->product_name}}</b></h3>
                                         </div>
                                         <!-- End product name -->
                                         <!-- product price -->
@@ -93,7 +106,7 @@
                                             
                                             <span class="old-price">   <?php
                                             $subtotal = $product->product_price * 130/100;
-                                            echo $subtotal;
+                                            echo $subtotal.'$';
                                             ?></span>
                                             <span class="price">{{$product->product_price.''.'$'}}</span>
                                         </div>
@@ -127,7 +140,5 @@
                             </div>
                         </div>
                     </div>
-                    <div class="infinitpaginOuter">
-                     
-                    </div>
+                 
                 </div>

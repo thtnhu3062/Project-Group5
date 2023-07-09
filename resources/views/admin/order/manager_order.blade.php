@@ -8,7 +8,7 @@
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Liệt Kê Đơn Hàng</h4>
+                              <h4 class="card-title">Order Listing</h4>
                            </div>
                            <?php
                               $message= Session::get('message');
@@ -23,9 +23,9 @@
                               <table class="table table-bordered table-responsive-md table-striped text-center">
                                  <thead>
                                     <tr>
-                                       <th>tên người dặt </th>
-                                       <th>Tổng Tiền </th>
-                                       <th>tình trạng </th>
+                                       <th>Orderer's name</th>
+                                       <th>Total amount</th>
+                                       <th>Current</th>
                                        <th>Details</th>
                                        <th>Remove</th>
                                     </tr>

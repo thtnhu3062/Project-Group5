@@ -19,29 +19,7 @@
             <nav class="iq-sidebar-menu">
                <ul id="iq-sidebar-toggle" class="iq-menu">
                   <li class="active active-menu"><a href="{{URL::to('/dashboard')}}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a></li>
-                  <li>
-                     <a href="#ui-elements1" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><i class="las la-user-friends"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                     <ul id="ui-elements1" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                        <li class="elements">
-                           <a href="{{URL::to('/add-category-product')}}"><i class="lab la-wpforms"></i>Add User</a>
-                        </li>
-                        <li class="form">
-                           <a href="{{URL::to('/all-category-product')}}" ><i class="lab la-wpforms"></i>User List</a>
-                        </li>
-                     </ul>
-                  </li>
-
-                  <li>
-                     <a href="#ui-elements2" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><span>Banner</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                     <ul id="ui-elements2" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                        <li class="elements">
-                           <a href="{{URL::to('/add-category-product')}}"><i class="lab la-wpforms"></i>Add Banner</a>
-                        </li>
-                        <li class="form">
-                           <a href="{{URL::to('/all-category-product')}}" ><i class="lab la-wpforms"></i>Banner List</a>
-                        </li>
-                     </ul>
-                  </li>
+      
                   <li>
                      <a href="#ui-elements3" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><span>Category</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                      <ul id="ui-elements3" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">

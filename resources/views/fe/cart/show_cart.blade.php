@@ -101,18 +101,28 @@
                       <!-- <a href="{{URL::to('/login-checkout')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
                         </a> -->
-                        <?php
+     
+
+                    <?php
                     $customer_id = Session::get('customer_id');
-                    if($customer_id!=null){
+                    $shipping_id = Session::get('shipping_id');
+                    if($customer_id!=null & $shipping_id==null){
                     ?>
-                     <li><a href="{{URL::to('/checkout')}}">
+                  <li><a href="{{URL::to('/checkout')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
                         </a></li>
                      <?php
-                    }else{
+                     }elseif($customer_id!=null & $shipping_id!=null){
+
+                        ?>
+                        <li><a href="{{URL::to('/payment')}}">
+                      <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
+                        </a></li>
+                         <?php
+                     }else{
                         
                         ?>
-                        <li><a href="{{URL::to('/login-checkout')}}">
+                       <li><a href="{{URL::to('/login-checkout')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
                         </a></li>
                          <?php

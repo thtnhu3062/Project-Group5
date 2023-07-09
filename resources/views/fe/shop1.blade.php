@@ -1,6 +1,7 @@
  <!--Main Content-->
  @extends('fe.layout_shop')
 @section('product')  
+@include('sweetalert::alert')
  <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
                 	<div class="productList product-load-more">
                     	<!--Toolbar-->
@@ -16,9 +17,9 @@
                                         	<img src="assets/images/list.jpg" alt="List" />
                                         </a> -->
                                     </div>
-
++
                                     <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
-                                    	<span class="filters-toolbar__product-count"><h2>New Product</h2></span>
+                                    	<span class="filters-toolbar__product-count"><img src="{{asset('/fe/images/pro.png') }}" alt="" class="newproduct"></span>
                                     </div>
                                     <div class="col-4 col-md-4 col-lg-4 text-right">
                                     	<div class="filters-toolbar__item">
@@ -62,7 +63,9 @@
                                         <!-- Start product button -->
                                         <form class="variants add" action="{{URL::to('/save-cart')}}" method ="POST"> 
                                 @csrf
-                                        <button class="btn btn-add-to-cart" name="add-to-cart"type="sunmit" type="button">Add To Cart</button>
+                                <input type="hidden"  name="qty" value="1" class="product-form__input qty"/>
+                                                    <input type="hidden"  name="productid_hidden" value="{{$product->product_id}}">
+                                        <button class="btn btn-add-to-cart" name="add"type="submit" type="button">Add To Cart</button>
                                         </form>
                                         <!-- <div class="button-set">
                                             <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
@@ -120,7 +123,7 @@
                                         </ul> -->
                                         <!-- End Variant -->
                                     </div>
-                                   
+                                    
                                     <!-- End product details -->
                                     <!-- countdown start -->
                 

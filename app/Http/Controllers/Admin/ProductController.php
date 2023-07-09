@@ -106,6 +106,7 @@ class ProductController extends Controller
     public function deleteProduct($product_id)
     {
         DB::table('tbl_product')->where('product_id', $product_id)->delete();
+        Alert::warning('Warning Title', 'Warning Message');
         return Redirect::to('all-product');
 
     }
@@ -114,7 +115,7 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>1]);
         Session::put('message','Không kích hoạt Sản phẩm' );
-        Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
+        alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-product');
     }
 
@@ -122,7 +123,7 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>0]);
         Session::put('message','Kích hoạt Sản Phẩm' );
-        Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
+        alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-product');
     }
 
@@ -137,7 +138,13 @@ class ProductController extends Controller
         return view("admin.layout.layout")->with('admin.order.manager_order', $manager_order);
     }
     public function viewOrder($orderId){
-        return view('admin.order.view_order');
+        $order_by_id = DB::table('tbl_order')
+        ->join('tbl_customers','tbl_order.customer_id','=','tbl_customers.customer_id')
+        ->join('tbl_shipping','tbl_order.shipping_id','=','tbl_shipping.shipping_id')
+        ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_id')
+        ->select('tbl_order.*','tbl_customers.*','tbl_shipping.*','tbl_order_details.*')->first();
+        $manager_order_by_id = view('admin.order.view_order')->with('order_by_id' ,$order_by_id);
+        return view("admin.layout.layout")->with('admin.order.view_order', $manager_order_by_id);
     }
 
 }

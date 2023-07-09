@@ -19,10 +19,15 @@
                                         </div>
                                         <div class="product-labels"><span class="lbl on-sale">Sale</span><span class="lbl pr-label1">new</span></div>
                                         <div class="product-buttons">
-                                            <a href="https://www.youtube.com/watch?v=93A2jOW5Mog" class="btn popup-video" title="View Video"><i class="icon anm anm-play-r" aria-hidden="true"></i></a>
+                                            <!-- <a href="https://www.youtube.com/watch?v=93A2jOW5Mog" class="btn popup-video" title="View Video"><i class="icon anm anm-play-r" aria-hidden="true"></i></a> -->
                                             <a href="#" class="btn prlightbox" title="Zoom"><i class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
+                                    <tfoot>
+                                <tr>
+                                    <td colspan="3" class="text-left"><a href="{{URL::to('/shop')}}" class="btn--link cart-continue"><i class="icon icon-arrow-circle-left"></i> Continue shopping</a></td>
+                                </tr>
+                            </tfoot>
                                     <div class="product-thumb product-thumb-1">
                                         <div id="gallery" class="product-dec-slider-1 product-tab-left">
                                             <a data-image="assets/images/product-detail-page/cape-dress-1.jpg" data-zoom-image="assets/images/product-detail-page/cape-dress-1.jpg" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
@@ -59,7 +64,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="product-single__meta">
-                                    <h1 class="product-single__title">{{$details->product_name}}</h1>
+                                    <h1 class="product-single__title" style="text-align:center">{{$details->product_name}}</h1>
                                     <div class="product-single__description rte">
                                     <h3>ID: {{$details->product_id}}</h3>
                                 </div>
@@ -86,16 +91,17 @@
                                             <span class="off">(<span>30</span>%)</span>
                                         </span>  
                                     </p>
-                                <div class="product-single__description rte">
-                                    <h3>Mô tả Sản Phẩm</h3>
-                                    <p>{{$details->product_desc}}</p>
-                                </div>
-                                <div class="product-single__description rte">
+                                    <div class="product-single__description rte">
                                     <h3>Category: {{$details->category_name}} </h3>
                                 </div>
                                 <div class="product-single__description rte">
                                     <h3>Brand: {{$details->brand_name}} </h3>
                                 </div>
+                                <div class="product-single__description rte">
+                                    <h3>Product Description</h3>
+                                    <p>{{$details->product_desc}}</p>
+                                </div>
+                       
                               
                                 <div class="product-action clearfix">
                             
@@ -146,21 +152,40 @@
                                 
                             </div>
                             </form>
-                            	<!--Product Tabs-->
-                                
-                                <!--End Product Tabs-->
+                 
                         	</div>
                     	</div>
-                    <!--End-product-single-->
-                    
+                 
+                    <div class="prFeatures">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
+                                <img src="{{asset('/fe/images/credit-card.png') }}" alt="Safe Payment" title="Safe Payment" />
+                                <div class="details"><h3>Safe Payment</h3>Pay with the world's most payment methods.</div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
+                                <img src="{{asset('/fe/images/shield.png') }}" alt="Confidence" title="Confidence" />
+                                <div class="details"><h3>Confidence</h3>Protection covers your purchase and personal data.</div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
+                                <img src="{{asset('/fe/images/worldwide.png') }}" alt="Worldwide Delivery" title="Worldwide Delivery" />
+                                <div class="details"><h3>Worldwide Delivery</h3>FREE &amp; fast shipping to over 200+ countries &amp; regions.</div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
+                                <img src="{{asset('/fe/images/phone-call.png') }}" alt="Hotline" title="Hotline" />
+                                <div class="details"><h3>Hotline</h3>Talk to help line for your question on 4141 456 789, 4125 666 888</div>
+                            </div>
+                        </div>
+                    </div>
                     <!--Related Product Slider-->
-                  
-                     
-                    <!--End Related Product Slider-->
-                    
-                    <!--Recently Product Slider-->
+                    <div class="related-product grid-products">
+                        <header class="section-header">
+                            <h2 class="section-header__title text-center h2"><span>Related Products</span></h2>
+                            <p class="sub-heading">You can stop autoplay, increase/decrease aniamtion speed and number of grid to show and products from store admin.</p>
+                        </header>
                    
-                	<!--#ProductSection-product-template-->
+                        </div>
+                     
+                 
             	</div>
                 @endforeach
                     @endsection

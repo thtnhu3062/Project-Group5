@@ -57,7 +57,8 @@ class CategoryController extends Controller
     public function unactiveCategory($category_product_id)
     {
         DB::table('tbl_category_product')->where('category_id', $category_product_id)->update(['category_status'=>1]);
-        Session::put('message','Không kích hoạt Danh Mục' );
+        Session::put('message','Activation failed' );
+        alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-category-product');
     }
 
@@ -65,6 +66,7 @@ class CategoryController extends Controller
     {
         DB::table('tbl_category_product')->where('category_id', $category_product_id)->update(['category_status'=>0]);
         Session::put('message','Kích hoạt Danh Mục' );
+        alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-category-product');
     }
 
