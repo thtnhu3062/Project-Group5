@@ -24,14 +24,14 @@
         	<div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
                     <div class="customer-box returning-customer">
-                        <h3><i class="icon anm anm-user-al"></i> Returning customer?</h3>
+                        <h3><i class="icon anm anm-user-al"></i>Shipment Details</h3>
                      
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
                     <div class="customer-box customer-coupon">
-                        <h3 class="font-15 xs-font-13"><i class="icon anm anm-gift-l"></i> Have a coupon? </h3>
+                        <h3 class="font-15 xs-font-13"><i class="icon anm anm-gift-l"></i>Order information </h3>
                       
                     </div>
                 </div>
@@ -40,37 +40,38 @@
             <div class="row billing-fields">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 sm-margin-30px-bottom">
                 <div class="your-order">
-                            <h2 class="order-title mb-4">Your Order</h2>
                            
                             <div class="table-responsive-sm order-table"> 
                                 <table class="bg-white table table-bordered table-hover text-center">
                              
                               
                                     <tbody>
-                                    
-                                     
+                                    <?php
+                                    $shipping = DB::table('tbl_shipping')->orderby('shipping_id', 'asc')->limit(1)->get();;
+                                    ?>
+                                    @foreach($shipping as $ship)
                                         <tr>
                                             <td class="text-left"><b>Full Name</b></td>
-                                            <td></td>
+                                            <td>{{$ship->shipping_name}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Email</b></td>
-                                            <td>thanhloi0902@gmail.com</td>
+                                            <td>{{$ship->shipping_email}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Phone</b>
                                             </td>
-                                            <td>090900090</td>
+                                            <td>{{$ship->shipping_phone}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Address</b></td>
-                                            <td>lllllll</td>
+                                            <td>{{$ship->shipping_address}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left"><b>Note</b></td>
-                                            <td>lllllll</td>
+                                            <td>{{$ship->shipping_note}}</td>
                                         </tr>
-                             
+                         @endforeach
                                     </tbody>
                                   
                                 </table>
@@ -121,8 +122,6 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="your-order-payment">
                         <div class="your-order">
-                            <h2 class="order-title mb-4">Your Order</h2>
-                           
                             <div class="table-responsive-sm order-table"> 
                                 <table class="bg-white table table-bordered table-hover text-center">
                                     <thead>
@@ -135,10 +134,9 @@
                                     </thead>
                                     @foreach($content as $cart)
                                     <tbody>
-                                   
+                        
                                         <tr>
 
-                                    
 
                                             <td class="text-left">{{$cart->name}}</td>
                                             <td>{{$cart->price}}$</td>
@@ -150,7 +148,6 @@
                                             echo $subtotal.''.'$';
                                             ?>
                                             </td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>
