@@ -43,9 +43,10 @@ Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('or
 
 //backend
 Route::get('/admin', [DashboardController::class, 'home'])->name('home');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 Route::get('/login', [DashboardController::class, 'login'])->name('login');
 Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
 Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');

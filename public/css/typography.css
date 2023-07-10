@@ -72,7 +72,7 @@ a, button, input, btn { outline: medium none !important; }
 a { color: #000000; }
 a:hover { color: var(--iq-primary-hover); }
 hr { border-color: var(--iq-border-light); }
-h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0px; line-height: 1.5; color: #ffffff; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; font-weight: 500; margin: 0px; line-height: 1.5; color: #000000; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 label { font-weight: normal; }
 h1 { font-size: 3.052em; }
@@ -212,7 +212,7 @@ Text Color
 .text-info { color: var(--iq-info) !important; }
 .text-light { color: var(--iq-light) !important; }
 .text-dark { color: var(--iq-dark1) !important; }
-.text-white { color: #fff !important; }
+.text-white { color: #000 !important; }
 .text-black { color: var(--iq-black) !important; }
 .text-gray { color: var(--iq-body-text) !important; }
 .text-body { color: var(--iq-body-text) !important; }
