@@ -8,7 +8,7 @@
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Order Listing</h4>
+                              <h4 class="card-title">Customer Listing</h4>
                            </div>
                            <?php
                               $message= Session::get('message');
@@ -23,30 +23,22 @@
                               <table class="table table-bordered table-responsive-md table-striped text-center">
                                  <thead>
                                     <tr>
-                                       <th>Order's name</th>
-                                       <th>Total amount</th>
-                                       <th>Current</th>
-                                       <th>Details</th>
-                                       <th>Remove</th>
+                                       <th>Name</th>
+                                       <th>Email</th>
+                                       <th>Phone</th>
+                                       <th>Block</th>
                                     </tr>
                                  </thead>
                                  <tbody>
-                                    @foreach($all_order as $key => $order)
+                                    @foreach($all_view_cus as $key => $cus)
                                     <tr>
-                                       <td >{{$order->customer_name}}</td>
-                                       <td >{{$order->order_total}}</td>
-                                       <td>{{$order->order_status}}</td>
+                                       <td >{{$cus->customer_name}}</td>
+                                       <td >{{$cus->customer_email}}</td>
+                                       <td>{{$cus->customer_phone}}</td>
                                        <td>
-                                       <a href="{{URL::to('/view-order/'.$order->order_id)}}">
-                                       <span class="table-remove"><button type="button"
-                                             class="btn btn-primary btn-rounded btn-sm my-0">Details</button></span>
-                                       </a>
-                                       </td>
-                                       
-                                       <td>
-                                       <a  href="{{URL::to('/delete-order/'.$order->order_id)}}">
-                                          <button type="button" onclick="return confirm('Are you sure detele')"
-                                             class="btn btn-primary btn-rounded btn-sm my-0">Remove</button>
+                                       <a  href="#">
+                                          <button type="button" onclick="return confirm('Are you sure block')"
+                                             class="btn btn-primary btn-rounded btn-sm my-0">Block</button>
                                              </a>
                                        </td>
                                     </tr>

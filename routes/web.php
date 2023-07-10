@@ -77,4 +77,5 @@ Route::post('/update-product/{product_id}', [ProductController::class, 'updatePr
 
 //order
 Route::get('/manager-order', [ProductController::class, 'managerOrder'])->name('managerOrder');
+Route::get('/view-cus', [ProductController::class, 'viewCustomer'])->name('viewCustomer');
 Route::get('/view-order/{orderId}', [ProductController::class, 'viewOrder'])->name('viewOrder');
