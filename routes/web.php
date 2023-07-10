@@ -43,9 +43,10 @@ Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('or
 
 //backend
 Route::get('/admin', [DashboardController::class, 'home'])->name('home');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 Route::get('/login', [DashboardController::class, 'login'])->name('login');
 Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
 Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
@@ -80,6 +81,7 @@ Route::post('/update-product/{product_id}', [ProductController::class, 'updatePr
 
 //order
 Route::get('/manager-order', [ProductController::class, 'managerOrder'])->name('managerOrder');
+Route::get('/view-cus', [ProductController::class, 'viewCustomer'])->name('viewCustomer');
 Route::get('/view-order/{orderId}', [ProductController::class, 'viewOrder'])->name('viewOrder');
 
 
