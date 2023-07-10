@@ -2,7 +2,7 @@
 @section('product')  
 <div class="col-12 col-sm-9 col-md-9 col-lg-9 main-col">
 @foreach($brand_name as $key => $name_brand)
-                    <h2>{{$name_brand->brand_name}}</h2>
+                    <h2 style="text-align:center">{{$name_brand->brand_name}}</h2>
                     <hr>
                    
                 	<div class="productList product-load-more">

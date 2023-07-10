@@ -11,7 +11,7 @@
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width">Shipment Details</h1></div>
+        		<div class="wrapper"> <img src="{{ asset('/fe/images/checkout.png') }}" alt="" class="khungvien"`></div>
       		</div>
 		</div>
         <!--End Page Title-->

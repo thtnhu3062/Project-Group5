@@ -147,4 +147,11 @@ class ProductController extends Controller
         return view("admin.layout.layout")->with('admin.order.view_order', $manager_order_by_id);
     }
 
+    public function viewCustomer(){
+       
+        $all_view_cus = DB::table('tbl_customers')->get();
+        $manager_cus = view('admin.order.view_customer')->with('all_view_cus' ,$all_view_cus);
+        return view("admin.layout.layout")->with('admin.order.view_customer', $manager_cus);
+    }
+
 }

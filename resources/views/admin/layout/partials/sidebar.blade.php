@@ -63,7 +63,7 @@
                      
                         </li>
                         <li>
-                           <a href="#"><i class="ri-pantone-line"></i><span>Customer List</span></a>
+                           <a href="{{URL::to('/view-cus')}}"><i class="ri-pantone-line"></i><span>Customer List</span></a>
                         </li>
                      </ul>
                   </li>
