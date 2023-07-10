@@ -34,7 +34,7 @@
                                  <input type="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email" autocomplete="off" required>
                               </div>
                               <div class="form-group">                                 
-                                 <input type="password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password" required>
+                                 <input type="password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password" required minlength="6" maxlength="18">
                               </div>
                                  <div class="sign-info">
                                     <button type="submit" class="btn btn-primary"><a href="{{ Route('home') }}">Sign in</a></button>

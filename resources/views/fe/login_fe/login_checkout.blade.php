@@ -25,13 +25,13 @@
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerEmail">Email</label>
-                                    <input type="email" name="email_account" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="">
+                                    <input type="email" name="email_account" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerPassword">Password</label>
-                                    <input type="password" value="" name="password_account" placeholder="" id="CustomerPassword" class="">                        	
+                                    <input type="password" value="" name="password_account" placeholder="" id="CustomerPassword" class="" required minlength="6" maxlength="18">                        	
                                 </div>
                             </div>
                           </div>
