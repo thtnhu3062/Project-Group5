@@ -93,11 +93,11 @@
                         <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">{{Cart::total(0).''.'$'}}</span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
-                      <p class="cart_tearm">
+                      <!-- <p class="cart_tearm">
                         <label>
                           <input type="checkbox" name="tearm" id="cartTearm" class="checkbox" value="tearm" required="">
                            I agree with the terms and conditions</label>
-                      </p>
+                      </p> -->
                       <!-- <a href="{{URL::to('/login-checkout')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
                         </a> -->
@@ -113,14 +113,12 @@
                         </a></li>
                      <?php
                      }elseif($customer_id!=null & $shipping_id!=null){
-
                         ?>
                         <li><a href="{{URL::to('/payment')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
                         </a></li>
                          <?php
-                     }else{
-                        
+                     }else{                      
                         ?>
                        <li><a href="{{URL::to('/login-checkout')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
