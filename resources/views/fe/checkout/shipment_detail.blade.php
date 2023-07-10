@@ -32,21 +32,21 @@
                                 <div class="row">
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-firstname"><span class="required-f">Full name</span>*</label>
-                                        <input name="shipping_name" value=" " id="input-firstname" type="text">
+                                        <input name="shipping_name" value=" " id="input-firstname" type="text" required>
                                     </div>
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-address-1">Address <span class="required-f">*</span></label>
-                                        <input name="shipping_address" value="" id="input-address-1" type="text">
+                                        <input name="shipping_address" value="" id="input-address-1" type="text" required minlength="6">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-email">E-Mail <span class="required-f">*</span></label>
-                                        <input name="shipping_email" value="" id="input-email" type="email">
+                                        <input name="shipping_email" value="" id="input-email" type="email" required>
                                     </div>
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-telephone">Telephone <span class="required-f">*</span></label>
-                                        <input name="shipping_phone" value="" id="input-telephone" type="tel">
+                                        <input name="shipping_phone" value="" id="input-telephone" type="tel" required pattern="[0]{1}[0-9]{9}">
                                     </div>
                                 </div>
                             </fieldset>
@@ -54,7 +54,7 @@
                                 <div class="row">
                                     <div class="form-group col-md-12 col-lg-12 col-xl-12">
                                         <label for="input-company">Order Notes <span class="required-f">*</span></label>
-                                        <textarea name="shipping_note" class="form-control resize-both" rows="3"></textarea>
+                                        <textarea name="shipping_note" class="form-control resize-both" rows="3" required></textarea>
                                     </div>
                                 </div>
                             </fieldset>

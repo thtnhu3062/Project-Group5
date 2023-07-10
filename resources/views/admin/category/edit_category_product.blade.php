@@ -26,7 +26,7 @@
                         <label for="exampleFormControlTextarea1">Category Description</label>
                         <textarea class="form-control" name="category_product_desc" id="exampleFormControlTextarea1" rows="5">{{$edit_value -> category_desc}} </textarea>
                      </div>
-                     <button type="submit" name="update_category_product" class="btn btn-primary">Update catalog</button>
+                     <button type="submit" name="update_category_product" class="btn btn-primary">Update Category</button>
                   </form>
                   @endforeach
                </div>

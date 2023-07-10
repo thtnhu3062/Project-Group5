@@ -45,7 +45,7 @@
                                        
                                        <td>
                                        <a  href="{{URL::to('/delete-order/'.$order->order_id)}}">
-                                          <button type="button" onclick="return confirm('Are you sure detele')"
+                                          <button type="button" onclick="return confirm('Are you sure of this deletion')"
                                              class="btn btn-primary btn-rounded btn-sm my-0">Remove</button>
                                              </a>
                                        </td>
