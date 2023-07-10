@@ -4005,8 +4005,8 @@ input[type=submit].btn-block {
 }
 
 .custom-control-input:checked~.custom-control-label::before {
-	color: #fff;
-	border-color: #50b5ff;
+	color: #000;
+	border-color: #000000;
 	background-color: #50b5ff
 }
 
@@ -4050,7 +4050,7 @@ input[type=submit].btn-block {
 	pointer-events: none;
 	content: "";
 	background-color: #fff;
-	border: #adb5bd solid 1px
+	border: #000000 solid 1px
 }
 
 .custom-control-label::after {
