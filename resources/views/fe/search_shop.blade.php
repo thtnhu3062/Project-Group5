@@ -65,7 +65,7 @@
                                 @csrf
                                         <button class="btn btn-add-to-cart" name="add-to-cart"type="sunmit" type="button">Add To Cart</button>
                                         </form>
-                                        <div class="button-set">
+                                        <!-- <div class="button-set">
                                             <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
                                                 <i class="icon anm anm-search-plus-r"></i>
                                             </a>
@@ -79,7 +79,7 @@
                                                     <i class="icon anm anm-random-r"></i>
                                                 </a>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end product button -->
                                     </div>
                                     <!-- end product image -->
@@ -104,8 +104,8 @@
                                             <i class="font-13 fa fa-star"></i>
                                             <i class="font-13 fa fa-star"></i>
                                             <i class="font-13 fa fa-star"></i>
-                                            <i class="font-13 fa fa-star-o"></i>
-                                            <i class="font-13 fa fa-star-o"></i>
+                                            <i class="font-13 fa fa-star"></i>
+                                            <i class="font-13 fa fa-star"></i>
                                         </div>
                                         <!-- Variant -->
                                         <!-- <ul class="swatches">
