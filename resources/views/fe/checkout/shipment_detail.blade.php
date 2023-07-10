@@ -11,7 +11,7 @@
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
-        		<div class="wrapper"> <img src="{{ asset('/fe/images/checkout.png') }}" alt="" class="khungvien"></div>
+        		<div class="wrapper"> <img src="{{ asset('/fe/images/checkout.png') }}" alt="" class="khungvien"`></div>
       		</div>
 		</div>
         <!--End Page Title-->

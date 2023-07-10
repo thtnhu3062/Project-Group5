@@ -14,15 +14,13 @@
                                     </div>
 
 
-                                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
-                                    
-                                    </div>
+                              
 
                                     <div class="row">
                 	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="section-header text-center">
-                            <h2 class="h2">Hand-picked Items</h2>
-                            <p>Furniture should always be comfortable.<br>And always have a piece of art that you made somewhere in the home.</p>
+                        <div class="section-header text-center pnh" >
+                            <h2 class="">Hand-picked Items</h2>
+                            <p >Furniture should always be comfortable.<br>And always have a piece of art that you made somewhere in the home.</p>
                         </div>
                     </div>
                 </div>
