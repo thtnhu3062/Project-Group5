@@ -18,7 +18,7 @@
                                     </div>
 
                                     <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
-                                    	<span class="filters-toolbar__product-count"><h2>Kết Quả Tìm Kiếm</h2></span>
+                                    <span class="filters-toolbar__product-count"><img src="{{asset('/fe/images/pro.png') }}" alt="" class="newproduct"></span>
                                     </div>
                      
                                     <div class="col-4 col-md-4 col-lg-4 text-right">
