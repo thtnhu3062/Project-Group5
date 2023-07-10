@@ -91,6 +91,7 @@
                                     <div class="product-details text-center">
                                         <!-- product name -->
                                         <div class="product-name">
+                                        
                                             <a href="#">{{$product->product_name}}</a>
                                         </div>
                                         <!-- End product name -->
