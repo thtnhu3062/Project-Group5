@@ -61,19 +61,19 @@ l<!-- Page Content  -->
                                         <div class=" row align-items-center">
                                             <div class="form-group col-sm-6">
                                                 <label for="fname">First Name: <span class="required-f">*</span></label>
-                                                <input type="text" class="form-control" id="fname" value="Barry" required>
+                                                <input type="text" class="form-control" id="fname" value="Ngoc" required>
                                             </div>
                                             <div class="form-group col-sm-6">
                                                 <label for="lname">Last Name: <span class="required-f">*</span></label>
-                                                <input type="text" class="form-control" id="lname" value="Tech" required>
+                                                <input type="text" class="form-control" id="lname" value="Hai" required>
                                             </div>
                                             <div class="form-group col-sm-6">
                                                 <label for="uname">Username: <span class="required-f">*</span></label>
-                                                <input type="text" class="form-control" id="uname" value="Barry@01" required>
+                                                <input type="text" class="form-control" id="uname" value="Ngochai" require>
                                             </div>
                                             <div class="form-group col-sm-6">
                                                 <label for="cname">City:</label>
-                                                <input type="text" class="form-control" id="cname" value="Atlanta">
+                                                <input type="text" class="form-control" id="cname" value="Ho Chi Minh">
                                             </div>
                                             <div class="form-group col-sm-6">
                                                 <label class="d-block">Gender: <span class="required-f">*</span></label>
