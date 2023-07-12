@@ -35,12 +35,20 @@
                                        <td >{{$cus->customer_name}}</td>
                                        <td >{{$cus->customer_email}}</td>
                                        <td>{{$cus->customer_phone}}</td>
-                                       <td>
-                                       <a  href="#">
-                                          <button type="button" onclick="return confirm('Are you sure block')"
-                                             class="btn btn-primary btn-rounded btn-sm my-0">Block</button>
-                                             </a>
-                                       </td>
+                                       <td><span>
+                                    <?php
+                                    if ($cus->customer_status == 0) {
+                                    ?>
+                                       <a href="{{URL::to('/unactive-customer/'.$cus->customer_id)}}"><span style="color:red; font-size: 25px; " class="fa fa-thumbs-up"></span></a>
+                                    <?php
+                                    } else {
+                                    ?>
+                                       <a href="{{URL::to('/active-customer/'.$cus->customer_id)}}"><span style="color:blue; font-size: 25px;" class=" fa fa-thumbs-down"></span></a>
+                                    <?php
+                                    }
+                                    ?>
+
+                                 </span></td>
                                     </tr>
                                     @endforeach
                                  </tbody>

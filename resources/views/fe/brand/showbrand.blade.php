@@ -1,5 +1,6 @@
 @extends('fe.layout_shop')
 @section('product')  
+@include('sweetalert::alert')
 <div class="col-12 col-sm-9 col-md-9 col-lg-9 main-col">
 @foreach($brand_name as $key => $name_brand)
 
@@ -55,8 +56,11 @@
                                         <!-- end product image -->
 
                                         <!-- Start product button -->
-                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                            <button class="btn btn-addto-cart" type="button">Add To Cart</button>
+                                        <form class="variants add" action="{{URL::to('/save-cart')}}" method ="POST"> 
+                                @csrf
+                                <input type="hidden"  name="qty" value="1" class="product-form__input qty"/>
+                                                    <input type="hidden"  name="productid_hidden" value="{{$product->product_id}}">
+                                        <button class="btn btn-add-to-cart" name="add"type="submit" type="button">Add To Cart</button>
                                         </form>
                                         <!-- <div class="button-set">
                                             <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">

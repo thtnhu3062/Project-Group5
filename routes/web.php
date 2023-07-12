@@ -8,6 +8,7 @@ use App\Http\Controllers\FE\CartController;
 use App\Http\Controllers\FE\CheckoutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\OrderController;
 
 
 
@@ -16,7 +17,7 @@ use App\Http\Controllers\Admin\BrandController;
 //frontend
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/search', [HomeController::class, 'search'])->name('search');
-
+Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 Route::get('/category/{category_id}', [HomeController::class, 'showCategory'])->name('showCategory');
 Route::get('/brand/{brand_id}', [HomeController::class, 'showBrand'])->name('showBrand');
@@ -39,18 +40,19 @@ Route::post('/add-customer', [CheckoutController::class, 'addCustomer'])->name('
 Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
 Route::get('/payment', [CheckoutController::class, 'payment'])->name('payment');
 Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name('saveCheckout');
+Route::post('/comfim-checkout', [CheckoutController::class, 'comfimOrder'])->name('comfimOrder');
 Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('orderplace');
 
 //backend
-Route::get('/admin', [DashboardController::class, 'home'])->name('home');
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
-Route::get('/login', [DashboardController::class, 'login'])->name('login');
-Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
-Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
+
+Route::get('/admin', [DashboardController::class, 'index'])->name('index');
+Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('showDashboard');
+Route::post('/admin-dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+
+
+   
 //Category
+Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
 Route::get('/add-category-product', [CategoryController::class, 'addCategory'])->name('addCategory');
 Route::get('/edit-category-product/{category_product_id}', [CategoryController::class, 'editCategory'])->name('editCategory');
 Route::get('/delete-category-product/{category_product_id}', [CategoryController::class, 'deleteCategory'])->name('deleteCategory');
@@ -80,11 +82,15 @@ Route::post('/save-product', [ProductController::class, 'saveProduct'])->name('s
 Route::post('/update-product/{product_id}', [ProductController::class, 'updateProduct'])->name('updateProduct');
 
 //order
-Route::get('/manager-order', [ProductController::class, 'managerOrder'])->name('managerOrder');
 Route::get('/view-cus', [ProductController::class, 'viewCustomer'])->name('viewCustomer');
-Route::get('/view-order/{orderId}', [ProductController::class, 'viewOrder'])->name('viewOrder');
+Route::get('/manager-order', [OrderController::class, 'managerOrder'])->name('managerOrder');
+Route::get('/view-order/{order_code}', [OrderController::class, 'viewOrder'])->name('viewOrder');
+Route::get('/delete-order/{order_code}', [OrderController::class, 'deleteOrder'])->name('deleteOrder');
+Route::get('/unactive-customer/{customer_id}', [OrderController::class, 'unactiveCustomer'])->name('unactiveProduct');
+Route::get('/active-customer/{customer_id}', [OrderController::class, 'activeCustomer'])->name('activeCustomer');
+//
+Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
+Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
 
 
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

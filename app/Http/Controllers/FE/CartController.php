@@ -45,18 +45,18 @@ class CartController extends Controller
         return Redirect::to('/show-cart');
     }
     
-public function increaseQuantity($rowId)
-{
-    $product = Cart::instance('cart')->get($rowId);
-    $qty = $product->qty + 1;
-    Cart::instance('cart')->update($rowId,$qty);                
-}
+// public function increaseQuantity($rowId)
+// {
+//     $product = Cart::instance('cart')->get($rowId);
+//     $qty = $product->qty + 1;
+//     Cart::instance('cart')->update($rowId,$qty);                
+// }
 
-public function decreaseQuantity($rowId)
-{
-    $product = Cart::instance('cart')->get($rowId);
-    $qty = $product->qty - 1;
-    Cart::instance('cart')->update($rowId,$qty);        
-}
+// public function decreaseQuantity($rowId)
+// {
+//     $product = Cart::instance('cart')->get($rowId);
+//     $qty = $product->qty - 1;
+//     Cart::instance('cart')->update($rowId,$qty);        
+// }
 
 }

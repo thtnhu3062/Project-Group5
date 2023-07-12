@@ -1,4 +1,5 @@
 <!-- TOP Nav Bar -->
+
 <div class="iq-top-navbar">
          <div class="iq-navbar-custom">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -39,6 +40,12 @@
                            <div class="iq-card shadow-none m-0">
                               <div class="iq-card-body p-0 ">
                                  <div class="bg-primary p-3">
+                                 < <?php
+                  $name = Session::get('admin_name');
+                  if ($name) {
+                     echo $name;
+                  }
+                  ?>
                                     <h5 class="mb-0 text-white line-height">Pham Ngoc Hai</h5>
                                  </div>
                                  <a href="{{ Route('profile') }}" class="iq-sub-card iq-bg-primary-hover">
@@ -66,7 +73,7 @@
                                  
                                  
                                  <div class="d-inline-block w-100 text-center p-3">
-                                    <a class="bg-primary iq-sign-btn" href="{{ Route('login') }}" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
+                                    <a class="bg-primary iq-sign-btn" href="{{ URL::to('/logout') }}" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                  </div>
                               </div>
                            </div>

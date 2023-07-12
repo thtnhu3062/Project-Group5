@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tbl_payment', function (Blueprint $table) {
-            $table->bigIncrements('payment_id');
-            $table->string('payment_method');
-            $table->integer('payment_status');
+        Schema::create('tbl_admin', function (Blueprint $table) {
+            $table->Increments('admin_id');
+            $table->string('admin_email');
+            $table->string('admin_password');
+            $table->string('admin_name');
+            $table->string('admin_phone');
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tbl_payment');
+        Schema::dropIfExists('tbl_admin');
     }
 };

@@ -29,7 +29,7 @@ class CategoryController extends Controller
         $data['category_status'] = $request->category_product_status;
 
         DB::table('tbl_category_product')->insert($data);
-        Session::put('message','Thêm Danh Mục Thành Công' );
+        Session::put('message','Successfully Added Category' );
         return Redirect::to('all-category-product');
     }
 
@@ -45,7 +45,7 @@ class CategoryController extends Controller
         $data['category_name'] = $request->category_product_name;
         $data['category_desc'] = $request->category_product_desc;
         DB::table('tbl_category_product')->where('category_id', $category_product_id)->update($data);
-        Session::put('message','Cập Nhật Danh Mục Thành Công' );
+        Session::put('message','Successful Update' );
         return Redirect::to('all-category-product');
     }
     public function deleteCategory($category_product_id)
@@ -65,7 +65,7 @@ class CategoryController extends Controller
     public function activeCategory($category_product_id)
     {
         DB::table('tbl_category_product')->where('category_id', $category_product_id)->update(['category_status'=>0]);
-        Session::put('message','Kích hoạt Danh Mục' );
+        Session::put('message','Successful Activation' );
         alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-category-product');
     }
