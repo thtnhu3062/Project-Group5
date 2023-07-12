@@ -60,23 +60,23 @@ l<!-- Page Content  -->
                                         </div>
                                         <div class=" row align-items-center">
                                             <div class="form-group col-sm-6">
-                                                <label for="fname">First Name:</label>
-                                                <input type="text" class="form-control" id="fname" value="Barry">
+                                                <label for="fname">First Name: <span class="required-f">*</span></label>
+                                                <input type="text" class="form-control" id="fname" value="Ngoc" required>
                                             </div>
                                             <div class="form-group col-sm-6">
-                                                <label for="lname">Last Name:</label>
-                                                <input type="text" class="form-control" id="lname" value="Tech">
+                                                <label for="lname">Last Name: <span class="required-f">*</span></label>
+                                                <input type="text" class="form-control" id="lname" value="Hai" required>
                                             </div>
                                             <div class="form-group col-sm-6">
-                                                <label for="uname">User Name:</label>
-                                                <input type="text" class="form-control" id="uname" value="Barry@01">
+                                                <label for="uname">Username: <span class="required-f">*</span></label>
+                                                <input type="text" class="form-control" id="uname" value="Ngochai" require>
                                             </div>
                                             <div class="form-group col-sm-6">
                                                 <label for="cname">City:</label>
-                                                <input type="text" class="form-control" id="cname" value="Atlanta">
+                                                <input type="text" class="form-control" id="cname" value="Ho Chi Minh">
                                             </div>
                                             <div class="form-group col-sm-6">
-                                                <label class="d-block">Gender:</label>
+                                                <label class="d-block">Gender: <span class="required-f">*</span></label>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadio6" name="customRadio1" class="custom-control-input" checked="">
                                                     <label class="custom-control-label" for="customRadio6"> Male </label>
@@ -99,7 +99,7 @@ l<!-- Page Content  -->
                                             </div>
 
                                             <div class="form-group col-sm-6">
-                                                <label>Country:</label>
+                                                <label>Country: <span class="required-f">*</span></label>
                                                 <select class="form-control" id="exampleFormControlSelect3">
                                                     <option>Caneda</option>
                                                     <option>Noida</option>
@@ -133,17 +133,17 @@ Ward 11, District 3, Ho Chi Minh City.
                                 <div class="iq-card-body">
                                     <form>
                                         <div class="form-group">
-                                            <label for="cpass">Current Password:</label>
+                                            <label for="cpass">Current Password: <span class="required-f">*</span></label>
                                             <a href="javascripe:void();" class="float-right">Forgot Password</a>
-                                            <input type="Password" class="form-control" id="cpass" value="">
+                                            <input type="Password" class="form-control" id="cpass" value="" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="npass">New Password:</label>
-                                            <input type="Password" class="form-control" id="npass" value="">
+                                            <label for="npass">New Password: <span class="required-f">*</span></label>
+                                            <input type="Password" class="form-control" id="npass" value="" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="vpass">Verify Password:</label>
-                                            <input type="Password" class="form-control" id="vpass" value="">
+                                            <label for="vpass">Verify Password: <span class="required-f">*</span></label>
+                                            <input type="Password" class="form-control" id="vpass" value="" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                         <button type="reset" class="btn iq-bg-danger">Cancel</button>
@@ -224,12 +224,12 @@ Ward 11, District 3, Ho Chi Minh City.
                                 <div class="iq-card-body">
                                     <form>
                                         <div class="form-group">
-                                            <label for="cno">Contact Number:</label>
-                                            <input type="text" class="form-control" id="cno" value="001 2536 123 458">
+                                            <label for="cno">Contact Number: <span class="required-f">*</span></label>
+                                            <input type="tel" pattern="[0]{1}[0-9]{9}" placeholder="0#########" class="form-control" id="cno" value="0536123458" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="email">Email:</label>
-                                            <input type="text" class="form-control" id="email" value="Hai@gmail.com">
+                                            <label for="email">Email: <span class="required-f">*</span></label>
+                                            <input type="email" placeholder="email@site.org" class="form-control" id="email" value="Hai@gmail.com" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                         <button type="reset" class="btn iq-bg-danger">Cancel</button>

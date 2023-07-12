@@ -66,7 +66,6 @@
                                        </div>
                                        <div class="media-body ml-3">
                                           <h6 class="mb-0 ">Edit Profile</h6>
-                                          <p class="mb-0 font-size-12">Modify your personal details.</p>
                                        </div>
                                     </div>
                                  </a>
