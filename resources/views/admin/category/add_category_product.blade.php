@@ -19,15 +19,15 @@
                      @csrf
                      <div class="form-group">
                         <label for="name">Name List</label>
-                        <input type="text" placeholder="Enter name..." name="category_product_name" class="form-control" id="name1" required>
+                        <input type="text" placeholder="Enter name..." name="category_product_name" class="form-control" id="name1" required="">
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlTextarea1">Category Description</label>
-                        <textarea class="form-control" placeholder="Enter a description..." name="category_product_desc" id="exampleFormControlTextarea1" rows="5" required></textarea>
+                        <textarea class="form-control" placeholder="Enter a description..." name="category_product_desc" id="exampleFormControlTextarea1" rows="5" required=""></textarea>
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlSelect1">Display</label>
-                        <select class="form-control" id="exampleFormControlSelect1" name="category_product_status" required>
+                        <select class="form-control" id="exampleFormControlSelect1" name="category_product_status" required="">
                            <option value="0">Public</option>
                            <option value="1">Private</option>
                         </select>

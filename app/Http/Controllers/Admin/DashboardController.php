@@ -10,14 +10,14 @@ session_start();
 
 class DashboardController extends Controller
 {
-    public function Auth(){
-        $admin_id = Session::get('admin_id');
-        if($admin_id){
-            return Redirect::to('dashboard');
-        }else{
-            return Redirect::to('admin')->send();
-        }
-    }
+    // public function Auth(){
+    //     $admin_id = Session::get('admin_id');
+    //     if($admin_id){
+    //         return Redirect::to('dashboard');
+    //     }else{
+    //         return Redirect::to('admin')->send();
+    //     }
+    // }
     public function dashboard(Request $request)
     {
         $admin_email = $request->admin_email;

@@ -15,14 +15,6 @@ session_start();
 class ProductController extends Controller
 {
 
-    public function index()
-    {
-        $prods = Product::all();
-        // return view('admin.product.index')->with([
-        //     'prods' => $prods
-        // ]);
-        return view('admin.product.index', compact('prods'));
-    }
 
     public function addProduct()
     {
