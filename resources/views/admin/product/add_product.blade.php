@@ -22,7 +22,7 @@
                               </div>
                               <div class="form-group">
                                  <label for="name">Product Price</label>
-                                 <input type="number" placeholder="Enter amount of dollars..." name="product_price" class="form-control" id="name1" required="">
+                                 <input type="number" min="1" max="9999" placeholder="Enter amount of dollars..." name="product_price" class="form-control" id="name1" required="">
                               </div>
                               <div class="form-group">
                                  <label for="name">Product Pictures</label>
