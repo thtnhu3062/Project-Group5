@@ -25,6 +25,9 @@ Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/contactus', [HomeController::class, 'contactus'])->name('contactus');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/blog1', [HomeController::class, 'blog1'])->name('blog1');
+Route::get('/blog3', [HomeController::class, 'blog3'])->name('blog3');
+Route::get('/blog4', [HomeController::class, 'blog4'])->name('blog4');
 //frontend-cart
 Route::post('/update-quantity', [CartController::class, 'updateQuantity'])->name('updateQuantity');
 Route::post('/save-cart', [CartController::class, 'saveCart'])->name('saveCart');
