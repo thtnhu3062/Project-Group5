@@ -47,15 +47,13 @@ Route::post('/comfim-checkout', [CheckoutController::class, 'comfimOrder'])->nam
 Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('orderplace');
 
 //backend
-
+Route::prefix('')->group(function () {
 Route::get('/admin', [DashboardController::class, 'index'])->name('index');
-Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('showDashboard');
 Route::post('/admin-dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-
-
-   
-//Category
-Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
+Route::middleware(['checkadmin'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('showDashboard');
+    Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
+    //Category
 Route::get('/add-category-product', [CategoryController::class, 'addCategory'])->name('addCategory');
 Route::get('/edit-category-product/{category_product_id}', [CategoryController::class, 'editCategory'])->name('editCategory');
 Route::get('/delete-category-product/{category_product_id}', [CategoryController::class, 'deleteCategory'])->name('deleteCategory');
@@ -95,5 +93,5 @@ Route::get('/active-customer/{customer_id}', [OrderController::class, 'activeCus
 Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
 Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
 
-
-
+});
+});

@@ -50,8 +50,17 @@ class CategoryController extends Controller
     }
     public function deleteCategory($category_product_id)
     {
-        DB::table('tbl_category_product')->where('category_id', $category_product_id)->delete();
-        return Redirect::to('all-category-product');
+        $products = DB::table('tbl_product')->where('category_id', $category_product_id)->count();
+    if($products > 0){
+         return Redirect::to('all-category-product')
+                ->with('message', 'Something went wrong');
+    }
+    else{
+        $category_product_id= DB::table('tbl_category_product')->where('category_id', $category_product_id)->delete();
+        return Redirect::to('all-category-product')
+                    ->with('message', 'Category Deleted');
+    }
+        
     }
 
     public function unactiveCategory($category_product_id)

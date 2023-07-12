@@ -49,14 +49,7 @@
                                     }
                                     ?>
 
-                                 </span></td>
-
-                                       <td>
-                                       <a  href="#">
-                                          <button type="button" onclick="return confirm('Block this user?')"
-                                             class="btn btn-primary btn-rounded btn-sm my-0">Block</button>
-                                             </a>
-                                       </td>
+                                 </span>
 
                                     </tr>
                                     @endforeach

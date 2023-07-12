@@ -12,6 +12,14 @@ use Illuminate\Support\Facades\Redirect;
 session_start();
 class BrandController extends Controller
 {
+    public function Auth(){
+        $admin_id = Session::get('admin_id');
+        if($admin_id){
+            return Redirect::to('/dashboard');
+        }else{
+            return Redirect::to('/admin');
+        }
+    }
     
     public function addBrand()
     { 
@@ -52,8 +60,17 @@ class BrandController extends Controller
     }
     public function deleteBrand($brand_product_id)
     {
-        DB::table('tbl_brand')->where('brand_id', $brand_product_id)->delete();
-        return Redirect::to('all-brand-product');
+        $products = DB::table('tbl_product')->where('brand_id', $brand_product_id)->count();
+    if($products > 0){
+         return Redirect::to('all-brand-product')
+                ->with('message', 'Something went wrong');
+    }
+    else{
+        $brand_product_id= DB::table('tbl_brand')->where('brand_id', $brand_product_id)->delete();
+        return Redirect::to('all-brand-product')
+                    ->with('message', 'Brand Deleted');
+    }
+        
     }
     public function unactiveBrand($brand_product_id)
     {

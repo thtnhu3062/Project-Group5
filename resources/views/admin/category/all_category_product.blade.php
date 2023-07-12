@@ -54,9 +54,9 @@
                               </td>
 
                               <td>
-                                 <a href="{{URL::to('/delete-category-product/'.$cate_pro->category_id)}}">
+                              <a href="{{URL::to('/delete-category-product/'.$cate_pro->category_id)}}">
                                     <button type="button" onclick="return confirm('Are you sure of this deletion')" class="btn btn-primary btn-rounded btn-sm my-0">Remove</button>
-                                 </a>
+                                 </a>         
                               </td>
                            </tr>
                            @endforeach
