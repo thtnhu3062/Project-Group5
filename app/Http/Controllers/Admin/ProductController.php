@@ -15,14 +15,6 @@ session_start();
 class ProductController extends Controller
 {
 
-    public function index()
-    {
-        $prods = Product::all();
-        // return view('admin.product.index')->with([
-        //     'prods' => $prods
-        // ]);
-        return view('admin.product.index', compact('prods'));
-    }
 
     public function addProduct()
     {
@@ -59,12 +51,12 @@ class ProductController extends Controller
                 $get_image ->move('public/uploads/product', $new_image);
                 $data['product_image'] = $new_image;
                 DB::table('tbl_product')->insert($data);
-                Session::put('message','Thêm Sản Phẩm Thành Công' );
+                // Session::put('message','Thêm Sản Phẩm Thành Công' );
                 return Redirect::to('all-product');
         }
         $data['product_image'] = '';
         DB::table('tbl_product')->insert($data);
-        Session::put('message','Thêm Danh Mục Thành Công' );
+        // Session::put('message','Thêm Danh Mục Thành Công' );
         return Redirect::to('all-product');
     }
 
@@ -96,17 +88,16 @@ class ProductController extends Controller
             $get_image ->move('public/uploads/product', $new_image);
             $data['product_image'] = $new_image;
             DB::table('tbl_product')->where('product_id', $product_id)->update($data);
-            Session::put('message','Thêm Sản Phẩm Thành Công' );
+            Session::put('message','Successfully Added Product' );
             return Redirect::to('all-product');
         }
         DB::table('tbl_product')->where('product_id', $product_id)->update($data);
-        Session::put('message','Cập nhật Sản Phẩm Thành Công' );
+        Session::put('message','Successful Update' );
         return Redirect::to('all-product');
     }
     public function deleteProduct($product_id)
     {
         DB::table('tbl_product')->where('product_id', $product_id)->delete();
-        Alert::warning('Warning Title', 'Warning Message');
         return Redirect::to('all-product');
 
     }
@@ -114,7 +105,7 @@ class ProductController extends Controller
     public function unactiveProduct($product_id)
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>1]);
-        Session::put('message','Không kích hoạt Sản phẩm' );
+        Session::put('message','Activation Failed' );
         alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-product');
     }
@@ -122,31 +113,12 @@ class ProductController extends Controller
     public function activeProduct($product_id)
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>0]);
-        Session::put('message','Kích hoạt Sản Phẩm' );
+        Session::put('message','Successful Activation' );
         alert()->success('Post Created', 'Successfully');
         return Redirect::to('all-product');
     }
 
-    //order
-    public function managerOrder(){
-       
-        $all_order = DB::table('tbl_order')
-        ->join('tbl_customers','tbl_order.customer_id','=','tbl_customers.customer_id')
-        ->select('tbl_order.*','tbl_customers.customer_name')
-        ->orderby('tbl_order.order_id','desc')->get();
-        $manager_order = view('admin.order.manager_order')->with('all_order' ,$all_order);
-        return view("admin.layout.layout")->with('admin.order.manager_order', $manager_order);
-    }
-    public function viewOrder($orderId){
-        $order_by_id = DB::table('tbl_order')
-        ->join('tbl_customers','tbl_order.customer_id','=','tbl_customers.customer_id')
-        ->join('tbl_shipping','tbl_order.shipping_id','=','tbl_shipping.shipping_id')
-        ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_id')
-        ->select('tbl_order.*','tbl_customers.*','tbl_shipping.*','tbl_order_details.*')->first();
-        $manager_order_by_id = view('admin.order.view_order')->with('order_by_id' ,$order_by_id);
-        return view("admin.layout.layout")->with('admin.order.view_order', $manager_order_by_id);
-    }
-
+    
     public function viewCustomer(){
        
         $all_view_cus = DB::table('tbl_customers')->get();

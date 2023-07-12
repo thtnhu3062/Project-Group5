@@ -6,7 +6,7 @@
       		</div>
 		</div>
 <div>
-<h1>Thanks You</h1>
+<h2>Thank you for your order. Your order will be delivered within 3 days at the earliest</h2>
 </div>
 
 @endsection
