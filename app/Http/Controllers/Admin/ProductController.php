@@ -125,7 +125,7 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>1]);
         Session::put('message','Activation Failed' );
-        alert()->success('Post Created', 'Successfully');
+        Alert::warning('Not activated', 'Product');
         return Redirect::to('all-product');
     }
 
@@ -133,7 +133,7 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>0]);
         Session::put('message','Successful Activation' );
-        alert()->success('Post Created', 'Successfully');
+        alert()->success('Activation Product', 'Successfully');
         return Redirect::to('all-product');
     }
 

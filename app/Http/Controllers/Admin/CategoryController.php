@@ -26,8 +26,6 @@ class CategoryController extends Controller
         $data = array();
         $data['category_name'] = $request->category_product_name;
         $data['category_desc'] = $request->category_product_desc;
-        $data['category_status'] = $request->category_product_status;
-
         DB::table('tbl_category_product')->insert($data);
         Session::put('message','Successfully Added Category' );
         return Redirect::to('all-category-product');
@@ -61,22 +59,6 @@ class CategoryController extends Controller
                     ->with('message', 'Category Deleted');
     }
         
-    }
-
-    public function unactiveCategory($category_product_id)
-    {
-        DB::table('tbl_category_product')->where('category_id', $category_product_id)->update(['category_status'=>1]);
-        Session::put('message','Activation failed' );
-        alert()->success('Post Created', 'Successfully');
-        return Redirect::to('all-category-product');
-    }
-
-    public function activeCategory($category_product_id)
-    {
-        DB::table('tbl_category_product')->where('category_id', $category_product_id)->update(['category_status'=>0]);
-        Session::put('message','Successful Activation' );
-        alert()->success('Post Created', 'Successfully');
-        return Redirect::to('all-category-product');
     }
 
 }

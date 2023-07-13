@@ -15,8 +15,6 @@ return new class extends Migration
             $table->Increments('category_id');
             $table->string('category_name');
             $table->text('category_desc');
-            $table->Integer('category_status');
-
             $table->timestamps();
         });
     }

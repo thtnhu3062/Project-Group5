@@ -16,7 +16,8 @@
                      </a>
                   </div>
                </div>
-               
+               <div class="iq-search-bar ml-auto">
+               </div>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-label="Toggle navigation">
                   <i class="ri-menu-3-line"></i>
                </button>
@@ -35,18 +36,19 @@
                      <li class="line-height pt-3">
                         <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
                            <img src="{{ asset('/images/user/admin1.png') }}" class="img-fluid rounded-circle mr-3" alt="user">
+                           <span>  <h5 class="mb-0 text-white line-height">                  
+                                         <?php
+                                          $name = Session::get('admin_name');
+                                          if ($name) {
+                                             echo $name;
+                                          }
+                                          ?></h5></span>
                         </a>
                         <div class="iq-sub-dropdown iq-user-dropdown">
                            <div class="iq-card shadow-none m-0">
                               <div class="iq-card-body p-0 ">
                                  <div class="bg-primary p-3">
-                                 < <?php
-                  $name = Session::get('admin_name');
-                  if ($name) {
-                     echo $name;
-                  }
-                  ?>
-                                    <h5 class="mb-0 text-white line-height">Pham Ngoc Hai</h5>
+                                  
                                  </div>
                                  <a href="{{ Route('profile') }}" class="iq-sub-card iq-bg-primary-hover">
                                     <div class="media align-items-center">
