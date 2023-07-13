@@ -288,9 +288,9 @@
                     	<div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                         	<h4 class="h4">Quick Shop</h4>
                             <ul>
-                            	<li><a href="#">Women</a></li>
-                                <li><a href="#">Men</a></li>
-                                <li><a href="#">Unisex</a></li>
+                            	<li><a href="{{URL::to('/shop')}}">Women</a></li>
+                                <li><a href="{{URL::to('/shop')}}">Men</a></li>
+                                <li><a href="{{URL::to('/shop')}}">Unisex</a></li>
                            
                             </ul>
                         </div>

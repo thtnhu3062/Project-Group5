@@ -16,10 +16,11 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // $admin= Session::get('admin_id');
-        // if($admin){
-        //     return $next($request);
-        // }
-        // return redirect::to('/admin');
+        $admin_id = Session::get('admin_id');
+        if($admin_id){
+            return $next($request);
+        }else{
+            return Redirect::to('/admin');
+        }
     }
 }

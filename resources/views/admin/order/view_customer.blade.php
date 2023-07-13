@@ -1,6 +1,6 @@
 @extends('admin.layout.layout')
-@include('sweetalert::alert')
 @section('contents')
+@include('sweetalert::alert')
 <div id="content-page" class="content-page">
             <div class="container-fluid">
                <div class="row">
@@ -26,7 +26,7 @@
                                        <th>Name</th>
                                        <th>Email</th>
                                        <th>Phone</th>
-                                       <th>Block</th>
+                                       <th>Status</th>
                                     </tr>
                                  </thead>
                                  <tbody>
@@ -49,14 +49,7 @@
                                     }
                                     ?>
 
-                                 </span></td>
-
-                                       <td>
-                                       <a  href="#">
-                                          <button type="button" onclick="return confirm('Block this user?')"
-                                             class="btn btn-primary btn-rounded btn-sm my-0">Block</button>
-                                             </a>
-                                       </td>
+                                 </span>
 
                                     </tr>
                                     @endforeach

@@ -14,24 +14,24 @@ use RealRashid\SweetAlert\Facades\Alert;
 session_start();
 class ProductController extends Controller
 {
-
-    public function index()
-    {
-        $prods = Product::all();
-        // return view('admin.product.index')->with([
-        //     'prods' => $prods
-        // ]);
-        return view('admin.product.index', compact('prods'));
+    public function Auth(){
+        $admin_id = Session::get('admin_id');
+        if($admin_id){
+            return Redirect::to('/dashboard');
+        }else{
+            return Redirect::to('/admin')->send();
+        }
     }
 
     public function addProduct()
     {
+
         $cate_product = DB::table('tbl_category_product')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand')->orderby('brand_id', 'desc')->get();
         return view("admin.product.add_product")->with('cate_product', $cate_product)->with('brand_product', $brand_product);
     }
     public function allProduct()
-    {
+    { 
         $all_product = DB::table('tbl_product')
         ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
         ->join('tbl_brand','tbl_brand.brand_id','=','tbl_product.brand_id')
@@ -59,17 +59,15 @@ class ProductController extends Controller
                 $get_image ->move('public/uploads/product', $new_image);
                 $data['product_image'] = $new_image;
                 DB::table('tbl_product')->insert($data);
-                // Session::put('message','Thêm Sản Phẩm Thành Công' );
                 return Redirect::to('all-product');
         }
         $data['product_image'] = '';
         DB::table('tbl_product')->insert($data);
-        // Session::put('message','Thêm Danh Mục Thành Công' );
         return Redirect::to('all-product');
     }
 
     public function editProduct($product_id)
-    {   
+    {  
         $cate_product = DB::table('tbl_category_product')->orderby('category_id', 'desc')->get();
         $brand_product = DB::table('tbl_brand')->orderby('brand_id', 'desc')->get();
 
@@ -79,7 +77,7 @@ class ProductController extends Controller
         return view("admin.layout.layout")->with('admin.product.edit_product', $manager_product);
     }
     public function updateProduct(Request $request, $product_id)
-    {
+    { 
         $data = array();
         $data['product_name'] = $request->product_name;
         $data['product_price'] = $request->product_price;
@@ -104,9 +102,22 @@ class ProductController extends Controller
         return Redirect::to('all-product');
     }
     public function deleteProduct($product_id)
-    {
-        DB::table('tbl_product')->where('product_id', $product_id)->delete();
-        return Redirect::to('all-product');
+    { 
+        // DB::table('tbl_product')->where('product_id', $product_id)->delete();
+        // return Redirect::to('all-product');
+        {
+            $order = DB::table('tbl_order_details')->where('product_id', $product_id)->count();
+        if($order > 0){
+             return Redirect::to('all-product')
+                    ->with('message', 'Something went wrong');
+        }
+        else{
+            $product_id= DB::table('tbl_product')->where('product_id', $product_id)->delete();
+            return Redirect::to('all-product')
+                        ->with('message', 'Product Deleted');
+        }
+            
+        }
 
     }
 
@@ -114,7 +125,7 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>1]);
         Session::put('message','Activation Failed' );
-        alert()->success('Post Created', 'Successfully');
+        Alert::warning('Not activated', 'Product');
         return Redirect::to('all-product');
     }
 
@@ -122,7 +133,7 @@ class ProductController extends Controller
     {
         DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status'=>0]);
         Session::put('message','Successful Activation' );
-        alert()->success('Post Created', 'Successfully');
+        alert()->success('Activation Product', 'Successfully');
         return Redirect::to('all-product');
     }
 

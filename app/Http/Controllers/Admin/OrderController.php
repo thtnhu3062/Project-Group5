@@ -36,7 +36,6 @@ class OrderController extends Controller
     public function deleteOrder($order_code)
     {
         DB::table('tbl_order')->where('order_code', $order_code)->delete();
-        // Alert::warning('Warning Title', 'Warning Message');
         return Redirect::to('manager-order');
 
     }
@@ -44,7 +43,7 @@ class OrderController extends Controller
     {
         DB::table('tbl_customers')->where('customer_id', $customer_id)->update(['customer_status'=>1]);
          Session::put('message','Activation Failed' );
-        alert()->success('Post Created', 'Successfully');
+         Alert::warning('Not activated', '');
         return Redirect::to('view-cus');
     }
 
@@ -52,7 +51,7 @@ class OrderController extends Controller
     {
         DB::table('tbl_customers')->where('customer_id', $customer_id)->update(['customer_status'=>0]);
          Session::put('message','Successful Activation ' );
-        alert()->success('Post Created', 'Successfully');
+        alert()->success('Activated Successfully', '');
         return Redirect::to('view-cus');
     }
 }

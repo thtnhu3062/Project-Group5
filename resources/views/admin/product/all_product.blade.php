@@ -8,7 +8,7 @@
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">List Product Brand</h4>
+                              <h4 class="card-title">List Product</h4>
                            </div>
                            <?php
                               $message= Session::get('message');

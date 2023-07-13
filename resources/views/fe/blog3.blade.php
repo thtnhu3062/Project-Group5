@@ -26,15 +26,15 @@
                     <div class="blog--list-view">
                     	<div class="article"> 
                             <!-- Article Image --> 
-                             <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="{{ asset ('/fe/images/blog/blog1.jpg') }}" src="{{ asset ('/fe/images/blog/blog1.jpg') }}" alt="It's all about how you wear"></a> 
-                            <h1>Fragrance oil harmony between style</h1>
+                             <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="{{ asset ('/fe/images/blog/blogg3.jpg') }}" src="{{ asset ('/fe/images/blog/blogg3.jpg') }}" alt="It's all about how you wear"></a> 
+                            <h1>How to Wear The Folds Trend Four Ways</h1>
                             <ul class="publish-detail">                      
                                 <li><i class="anm anm-user-al" aria-hidden="true"></i>  Melanie</li>
                                 <li><i class="icon anm anm-clock-r"></i> <time datetime="2017-05-02">May 06, 2023</time></li>
                             </ul>
                             <div class="rte"> 
-                              <p>Perfumes to wear with pride – living our authentic lives and celebrating being our true selves in scented form – is always important, of course, but this year it seems more vital than ever to wear them with Pride.</p>
-                              <p>Now, these scent suggestions aren’t merely for those celebrating to give each other as gifts (though of course that’s a lovely idea!) but as jumping-off points for some new perfumes everyone should explore. Which symbol and year takes your fancy in these fragrances…?</p>
+                              <p>Following on from our feature on the first five wedding anniversary scents, based on the symbols traditionally used to mark their occasion, this week we are continuing the theme with a look at years six through to ten, each rendered in fragrant form.</p>
+                              <p>Shay & Blue have a really great History of Pride blog, and say: ‘As a company we are restlessly focused on inclusion and celebrating YOU. Our scents are for all genders. There are no outsiders, all are welcome, always and we support everyone’s right to express themselves fully.’</p>
                                 <h3>Scent Suggestion – Electimuss Mercurial Cashmere</h3>
                                 <ul class="list-items">
                                 	<li>A fragrance to ride with us amidst a marriage’s moods, maybe? ‘The most popular of the gods, Mercury was adored for his irresistible charm and wit and the inspiration for this sensuous and seductive scent.’</li>
@@ -93,8 +93,8 @@
                                   
                                     <div class="grid__item">
                                       <div class="mini-list-item">
-                                        <div class="mini-view_image"> <a class="grid-view-item__link" href="{{ Route('blog3') }}"><img class="grid-view-item__image blur-up lazyload" data-src="{{ asset ('/fe/images/blog/blog4.jpg') }}" src="{{ asset ('/fe/images/blog/blog4.jpg') }}" alt="" /></a> </div>
-                                        <div class="details"> <a class="grid-view-item__title" href="{{ Route('blog3') }}">How to Wear The Folds Trend Four Ways</a>
+                                        <div class="mini-view_image"> <a class="grid-view-item__link" href="{{ Route('blog') }}"><img class="grid-view-item__image blur-up lazyload" data-src="{{ asset ('/fe/images/blog/ws.jpg') }}" src="{{ asset ('/fe/images/blog/ws.jpg') }}" alt="" /></a> </div>
+                                        <div class="details"> <a class="grid-view-item__title" href="{{ Route('blog') }}">Fragrance oil harmony between style</a>
                                           <div class="grid-view-item__meta"><span class="article__date"> <time datetime="2017-05-02T14:14:00Z">May 02, 2023</time> </span></div>
                                         </div>
                                       </div>
