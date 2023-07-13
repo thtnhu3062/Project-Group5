@@ -94,7 +94,7 @@
                               <div class="iq-card-body p-0 ">
                                  <div class="bg-primary p-3">
                                   
->>>>>>> 9c95bbec67e8ca7b5c07715579290244bfd3e4eb
+
                                  </div>
                                  <div class="media-body ml-3">
                                     <h6 class="mb-0 ">My Profile</h6>
