@@ -107,9 +107,9 @@ class CheckoutController extends Controller
     public function loginCustomer(Request $request){
         $email = $request->email_account;
         $password = md5($request->password_account);
-        $result = DB::table('tbl_customers')->where('customer_email',$email)->where('customer_password',$password)->where('customer_status',$customer_status=0)->first();
-        if($result){
-            Session::put('customer_id', $result->customer_id );
+        $result1 = DB::table('tbl_customers')->where('customer_email',$email)->where('customer_password',$password)->where('customer_status',$customer_status=0)->first();
+        if($result1){
+            Session::put('customer_id', $result1->customer_id );
             return Redirect::to('/checkout');
         }else{
             return Redirect::to('/login-checkout');

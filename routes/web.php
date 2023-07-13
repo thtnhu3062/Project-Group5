@@ -82,15 +82,15 @@ Route::prefix('')->group(function () {
             Route::post('/save-product', [ProductController::class, 'saveProduct'])->name('saveProduct');
             Route::post('/update-product/{product_id}', [ProductController::class, 'updateProduct'])->name('updateProduct');
 
-            //order
-            Route::get('/view-cus', [ProductController::class, 'viewCustomer'])->name('viewCustomer');
-            Route::get('/manager-order', [OrderController::class, 'managerOrder'])->name('managerOrder');
-            Route::get('/view-order/{order_code}', [OrderController::class, 'viewOrder'])->name('viewOrder');
-            Route::get('/delete-order/{order_code}', [OrderController::class, 'deleteOrder'])->name('deleteOrder');
-            Route::get('/unactive-customer/{customer_id}', [OrderController::class, 'unactiveCustomer'])->name('unactiveProduct');
-            Route::get('/active-customer/{customer_id}', [OrderController::class, 'activeCustomer'])->name('activeCustomer');
-            //
+    
             Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
             Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
     });
-});
+});  
+//order
+Route::get('/view-cus', [ProductController::class, 'viewCustomer'])->name('viewCustomer');
+Route::get('/manager-order', [OrderController::class, 'managerOrder'])->name('managerOrder');
+Route::get('/view-order/{order_code}', [OrderController::class, 'viewOrder'])->name('viewOrder');
+Route::get('/delete-order/{order_code}', [OrderController::class, 'deleteOrder'])->name('deleteOrder');
+Route::get('/unactive-customer/{customer_id}', [OrderController::class, 'unactiveCustomer'])->name('unactiveProduct');
+Route::get('/active-customer/{customer_id}', [OrderController::class, 'activeCustomer'])->name('activeCustomer');
