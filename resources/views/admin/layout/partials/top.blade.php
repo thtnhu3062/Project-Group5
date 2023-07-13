@@ -25,54 +25,6 @@
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto navbar-list">
              
-                     <!-- <li class="nav-item nav-icon">
-                        <a href="#" class="search-toggle iq-waves-effect text-gray rounded">
-                           <i class="ri-notification-2-line"></i>
-                           <span class="bg-primary dots"></span>
-                        </a>
-                        <div class="iq-sub-dropdown">
-                           <div class="iq-card shadow-none m-0">
-                              <div class="iq-card-body p-0">
-                                 <div class="bg-primary p-3">
-                                    <h5 class="mb-0 text-white">All Notifications<small class="badge  badge-light float-right pt-1">1</small></h5>
-                                 </div>
-                                 <a href="#" class="iq-sub-card" >
-                                    <div class="media align-items-center">
-                                       <div class="">
-                                          <img class="avatar-40 rounded" src="{{ asset('/images/user/01.jpg') }}" alt="">
-                                       </div>
-                                    </div>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </li> -->
-                     <!-- <li class="nav-item nav-icon dropdown">
-                        <a href="#" class="search-toggle iq-waves-effect text-gray rounded">
-                           <i class="ri-mail-line"></i>
-                           <span class="bg-primary dots"></span>
-                        </a>
-                        <div class="iq-sub-dropdown">
-                           <div class="iq-card shadow-none m-0">
-                              <div class="iq-card-body p-0 ">
-                                 <div class="bg-primary p-3">
-                                    <h5 class="mb-0 text-white">All Messages<small class="badge  badge-light float-right pt-1">1</small></h5>
-                                 </div>
-                                 <a href="#" class="iq-sub-card">
-                                    <div class="media align-items-center">
-                                       <div class="">
-                                          <img class="avatar-40 rounded" src="{{ asset('/images/user/05.jpg') }}" alt="">
-                                       </div>
-                                       <div class="media-body ml-3">
-                                          <h6 class="mb-0 ">Lorem Ipsum generators</h6>
-                                          <small class="float-left font-size-12">5 Dec</small>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </li> -->
                      <li class="line-height pt-3">
                         <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
                            <img src="{{ asset('/images/user/admin1.png') }}" class="img-fluid rounded-circle mr-3" alt="user">
@@ -125,5 +77,5 @@
          </div>
 
       </div>
-      <!-- TOP Nav Bar END -->
+   
 
