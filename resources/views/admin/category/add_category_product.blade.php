@@ -23,7 +23,7 @@
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlTextarea1">Category Description</label>
-                        <textarea class="form-control" placeholder="Enter a description..." name="category_product_desc" id="exampleFormControlTextarea1" rows="5" required=""></textarea>
+                        <textarea class="form-control" placeholder="Enter a description..." name="category_product_desc" id="exampleFormControlTextarea1" maxlength="500" rows="5" required=""></textarea>
                      </div>
                      <!-- <div class="form-group">
                         <label for="exampleFormControlSelect1">Display</label>

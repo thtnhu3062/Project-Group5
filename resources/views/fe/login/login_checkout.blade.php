@@ -25,7 +25,7 @@
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerEmail">Email</label>
-                                    <input type="email" name="email_account" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="" required="">
+                                    <input type="email" name="email_account" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" maxlength="100" autofocus="" required="">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">

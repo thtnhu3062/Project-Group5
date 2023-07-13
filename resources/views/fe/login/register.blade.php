@@ -28,14 +28,14 @@
 	                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="FirstName">Name</label>
-                                    <input type="text" name="customer_name" placeholder="" id="FirstName" autofocus="" required="">
+                                    <input type="text" name="customer_name" placeholder="" id="FirstName" autofocus="" maxlength="100" required="">
                                 </div>
                                </div>
                          
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerEmail">Email</label>
-                                    <input type="email" name="customer_email" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="" required="">
+                                    <input type="email" name="customer_email" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="" maxlength="100" required="">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">

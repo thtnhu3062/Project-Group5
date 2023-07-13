@@ -229,7 +229,7 @@ Ward 11, District 3, Ho Chi Minh City.
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email: <span class="required-f">*</span></label>
-                                            <input type="email" placeholder="email@site.org" class="form-control" id="email" value="Hai@gmail.com" required>
+                                            <input type="email" placeholder="email@site.org" class="form-control" id="email" value="Hai@gmail.com" maxlength="100" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                         <button type="reset" class="btn iq-bg-danger">Cancel</button>
