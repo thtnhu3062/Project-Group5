@@ -55,7 +55,6 @@ Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPass
 Route::prefix('')->group(function () {
     Route::get('/admin', [DashboardController::class, 'index'])->name('index');
     Route::get('/dashboard/myprofile', [DashboardController::class])->name('myprofile');
-    Route::get('/dashboard/editprofile', [DashboardController::class])->name('editprofile');
     Route::post('/admin-dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::middleware(['checkadmin'])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('showDashboard');
