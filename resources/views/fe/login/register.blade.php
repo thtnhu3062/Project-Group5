@@ -47,7 +47,7 @@
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerPassword">Password</label>
-                                    <input type="password" value="" name="password" placeholder="" id="1stPassword" class="" required minlength="6" maxlength="18">                        	
+                                    <input type="password" value="" name="customer_password" placeholder="" id="1stPassword" class="" required minlength="6" maxlength="18">                        	
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
