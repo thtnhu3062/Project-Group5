@@ -26,6 +26,7 @@ class CategoryController extends Controller
         $data = array();
         $data['category_name'] = $request->category_product_name;
         $data['category_desc'] = $request->category_product_desc;
+        $data['category_status'] = $request->category_status = 0;
         DB::table('tbl_category_product')->insert($data);
         Session::put('message','Successfully Added Category' );
         return Redirect::to('all-category-product');

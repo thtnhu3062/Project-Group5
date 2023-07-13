@@ -36,6 +36,7 @@ class BrandController extends Controller
         $data = array();
         $data['brand_name'] = $request->brand_product_name;
         $data['brand_desc'] = $request->brand_product_desc;
+        $data['brand_status'] = $request->brand_status = 0;
         DB::table('tbl_brand')->insert($data);
         Session::put('message',' Successfully Added Brand' );
         return Redirect::to('all-brand-product');
