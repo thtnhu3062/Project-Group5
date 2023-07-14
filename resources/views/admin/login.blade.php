@@ -41,10 +41,10 @@
                         <form class="mt-4" action="{{URL::to('/admin-dashboard')}}" method="post">
                            @csrf
                            <div class="form-group">
-                              <input type="email" name = "admin_email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email" autocomplete="off" required="">
+                              <input type="email" name = "admin_email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email" autocomplete="off" maxlength="100" required="">
                            </div>
                            <div class="form-group">
-                              <input type="password" name ="admin_password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password" required="">
+                              <input type="password" name ="admin_password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password" minlength="6" maxlength="18" required="">
                            </div>
                            <div class="sign-info">
                               <button type="submit" class="btn btn-primary">Sign in</button>

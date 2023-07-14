@@ -53,7 +53,7 @@
                                             <div class="qtyField">
                                             <form action="{{URL::to('/update-quantity')}}" method ="POST">
                                 @csrf 
-                                                <input type="number" min="1" name="cart_quantity" value="{{$cart->qty}}" >
+                                                <input type="number" min="1" max="20" name="cart_quantity" value="{{$cart->qty}}" >
                                                 <input class="cart__qty-input qty" type="hidden"  name="rowId_cart" value="{{$cart->rowId}}">
                                                 <button type="submit" name="update" class="btn--link cart-update"><i class="fa fa-refresh"></i> Update</button> 
                                             </form>

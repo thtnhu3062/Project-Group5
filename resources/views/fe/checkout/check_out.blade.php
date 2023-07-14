@@ -45,30 +45,30 @@
                                 <h2 class="login-title mb-3">Billing details</h2>
                                 <div class="row">
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                        <label for="input-firstname"><span class="required-f">Full name</span>*</label>
-                                        <input name="shipping_name" value=" " id="input-firstname" type="text">
+                                        <label for="input-firstname">Full name <span class="required-f">*</span></label>
+                                        <input name="shipping_name" value=" " id="input-firstname" required type="text" maxlength="100">
                                     </div>
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-address-1">Address <span class="required-f">*</span></label>
-                                        <input name="shipping_address" value="" id="input-address-1" type="text">
+                                        <input name="shipping_address" value="" id="input-address-1" required type="text" maxlength="150">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-email">E-Mail <span class="required-f">*</span></label>
-                                        <input name="shipping_email" value="" id="input-email" type="email">
+                                        <input name="shipping_email" value="" id="input-email" required type="email" maxlength="100">
                                     </div>
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-telephone">Telephone <span class="required-f">*</span></label>
-                                        <input name="shipping_phone" value="" id="input-telephone" type="tel">
+                                        <input name="shipping_phone" value="" id="input-telephone" required pattern="[0]{1}[0-9]{9}" type="tel">
                                     </div>
                                 </div>
                             </fieldset>
                             <fieldset>
                                 <div class="row">
                                     <div class="form-group col-md-12 col-lg-12 col-xl-12">
-                                        <label for="input-company">Order Notes <span class="required-f">*</span></label>
-                                        <textarea name="shipping_note" class="form-control resize-both" rows="2"></textarea>
+                                        <label for="input-company">Order Notes</label>
+                                        <textarea name="shipping_note" class="form-control resize-both" maxlength="250" rows="2"></textarea>
                                     </div>
                                 </div>
                             </fieldset>

@@ -18,7 +18,7 @@
                            @csrf
                               <div class="form-group">
                                  <label for="name">Product Name</label>
-                                 <input type="text" placeholder="Enter product name..." name="product_name" class="form-control" id="name1" required="">
+                                 <input type="text" placeholder="Enter product name..." name="product_name" class="form-control" id="name1" maxlength="100" required="">
                               </div>
                               <div class="form-group">
                                  <label for="name">Product Price</label>
@@ -30,11 +30,11 @@
                               </div>
                               <div class="form-group">
                                  <label for="exampleFormControlTextarea1">Product Description</label>
-                                 <textarea class="form-control" placeholder="Enter a description..." required="" name="product_desc" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                                 <textarea class="form-control" placeholder="Enter a description..." required="" name="product_desc" id="exampleFormControlTextarea1" rows="3" maxlength="2000" required></textarea>
                               </div>
                               <div class="form-group">
                                  <label for="exampleFormControlTextarea1">Product Contents</label>
-                                 <textarea class="form-control" placeholder="Enter content data..." name="product_content" required="" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                                 <textarea class="form-control" placeholder="Enter content data..." name="product_content" required="" id="exampleFormControlTextarea1" rows="3" maxlength="1000" required></textarea>
                               </div>
                               <div class="form-group">
                                  <label for="exampleFormControlSelect1">Product Portfolio</label>
