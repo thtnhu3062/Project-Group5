@@ -17,6 +17,15 @@
         <!--End Page Title-->
         <div class="container">
         	<div class="row">
+            @if(session()->has('message'))
+                    <div >
+                        <h1> <span style="color:Green;font-weight:bold" width ="100%">{!!session()->get('message')!!}</span></h1>
+                    </div>
+                    @elseif(session()->has('erro'))
+                    <div>
+                        <h1><span style="color:red;font-weight:bold" width ="100%">{!!session()->get('erro')!!}</span></h1>   
+                    </div>
+                    @endif
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
                 	<div class="mb-4">
                        <form method="post" action="{{URL::to('/login-customer')}}"  accept-charset="UTF-8" class="contact-form">	

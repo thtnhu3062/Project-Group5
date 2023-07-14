@@ -109,7 +109,7 @@ class ProductController extends Controller
             $order = DB::table('tbl_order_details')->where('product_id', $product_id)->count();
         if($order > 0){
              return Redirect::to('all-product')
-                    ->with('message', 'Something went wrong');
+                    ->with('message', 'Cannot delete because the product is already in the order');
         }
         else{
             $product_id= DB::table('tbl_product')->where('product_id', $product_id)->delete();

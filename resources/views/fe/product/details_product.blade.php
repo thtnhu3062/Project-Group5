@@ -85,8 +85,7 @@
                                                     <input type="hidden"  name="productid_hidden" value="{{$details->product_id}}">
                                                     <a class="qtyBtn plus"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
                                                 </div>
-                                                <!-- <input type="number" name="qty" min="1" value="1" >
-                                                <input type="hidden"  name="productid_hidden" value="{{$details->product_id}}"> -->
+                                              
                                             </div>
                                         </div>      
                                         

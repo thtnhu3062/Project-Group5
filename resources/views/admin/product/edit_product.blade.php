@@ -8,7 +8,7 @@
             <div class="iq-card">
                <div class="iq-card-header d-flex justify-content-between">
                   <div class="iq-header-title">
-                     <h4 class="card-title">Add Product</h4>
+                     <h4 class="card-title">Update Product</h4>
                   </div>
                </div>
                <div class="card-title">
@@ -40,7 +40,7 @@
                         <textarea class="form-control" name="product_content" id="exampleFormControlTextarea1" rows="2" required>{{$pro->product_content}}</textarea>
                      </div>
                      <div class="form-group">
-                        <label for="exampleFormControlSelect1">Product Portfolio</label>
+                        <label for="exampleFormControlSelect1">Categorys</label>
                         <select class="form-control" id="exampleFormControlSelect1" name="product_cate" required>
                            @foreach($cate_product as $key => $cate)
                            @if($cate->category_id == $pro->category_id)
@@ -52,7 +52,7 @@
                         </select>
                      </div>
                      <div class="form-group">
-                        <label for="exampleFormControlSelect1">Product Brands</label>
+                        <label for="exampleFormControlSelect1">Brands</label>
                         <select class="form-control" id="exampleFormControlSelect1" name="product_brand" required>
                            @foreach($brand_product as $key => $brand)
                            @if($brand->brand_id == $pro->brand_id)

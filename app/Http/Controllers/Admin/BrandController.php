@@ -62,7 +62,7 @@ class BrandController extends Controller
         $products = DB::table('tbl_product')->where('brand_id', $brand_product_id)->count();
     if($products > 0){
          return Redirect::to('all-brand-product')
-                ->with('message', 'Something went wrong');
+                ->with('message', 'Can not delete because the brand exists products');
     }
     else{
         $brand_product_id= DB::table('tbl_brand')->where('brand_id', $brand_product_id)->delete();

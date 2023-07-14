@@ -52,7 +52,7 @@ class CategoryController extends Controller
         $products = DB::table('tbl_product')->where('category_id', $category_product_id)->count();
     if($products > 0){
          return Redirect::to('all-category-product')
-                ->with('message', 'Something went wrong');
+                ->with('message', 'Can not delete because the category exists products');
     }
     else{
         $category_product_id= DB::table('tbl_category_product')->where('category_id', $category_product_id)->delete();

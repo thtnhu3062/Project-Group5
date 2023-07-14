@@ -8,7 +8,7 @@
             <div class="iq-card">
                <div class="iq-card-header d-flex justify-content-between">
                   <div class="iq-header-title">
-                     <h4 class="card-title">Update Brand Product</h4>
+                     <h4 class="card-title">Update Brand</h4>
                   </div>
                </div>
                <div class="card-title">
@@ -23,10 +23,10 @@
                         <input type="text" value="{{$edit_value -> brand_name}}" name="brand_product_name" class="form-control" id="name1" required="">
                      </div>
                      <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Category Description</label>
+                        <label for="exampleFormControlTextarea1">Brand Description</label>
                         <textarea class="form-control" name="brand_product_desc" required="" id="exampleFormControlTextarea1" rows="5">{{$edit_value -> brand_desc}} </textarea>
                      </div>
-                     <button type="submit" name="update_brand_product" class="btn btn-primary">Update Directory</button>
+                     <button type="submit" name="update_brand_product" class="btn btn-primary">Update Brand</button>
                   </form>
                   @endforeach
                </div>

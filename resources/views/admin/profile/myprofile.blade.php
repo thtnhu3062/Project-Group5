@@ -6,18 +6,22 @@
 <div id="content-page" class="content-page">
     <div class="container-fluid">
         <div class="row profile-content">
-            <div class="col-12 col-md-12 col-lg-4">
+            <div class="col-12 col-md-12 col-lg-12">
                 <div class="iq-card">
                     <div class="iq-card-body profile-page">
                         <div class="profile-header">
                             <div class="cover-container text-center">
                                 <img src="{{ asset('/images/user/admin1.png') }}" alt="profile-bg" class="rounded-circle img-fluid">
                                 <div class="profile-detail mt-3">
-                                    <h3>Pham Ngoc Hai</h3>
+                                    <span>  <h3 class="mb-0 text-white line-height">                  
+                                         <?php
+                                          $name = Session::get('admin_name');
+                                          if ($name) {
+                                             echo $name;
+                                          }
+                                          ?></h3></span>
                                 </div>
-                                <div class="iq-social d-inline-block align-items-center">
-                                    
-                                </div>
+
                             </div>
                         </div>
                     </div>
