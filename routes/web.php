@@ -42,10 +42,15 @@ Route::get('/logout-checkout', [CheckoutController::class, 'logoutCheckout'])->n
 Route::post('/login-customer', [CheckoutController::class, 'loginCustomer'])->name('loginCustomer');
 Route::post('/add-customer', [CheckoutController::class, 'addCustomer'])->name('addCustomer');
 Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
-Route::get('/payment', [CheckoutController::class, 'payment'])->name('payment');
-Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name('saveCheckout');
-Route::post('/comfim-checkout', [CheckoutController::class, 'comfimOrder'])->name('comfimOrder');
-Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('orderplace');
+
+
+
+Route::middleware(['checkcus'])->group(function () {
+    Route::get('/payment', [CheckoutController::class, 'payment'])->name('payment');
+    Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('orderplace');
+    Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name('saveCheckout');
+    Route::post('/comfim-checkout', [CheckoutController::class, 'comfimOrder'])->name('comfimOrder');
+});
 //resset password
 Route::get('/forget-password', [ForgotPasswordController::class, 'forgetPassword'])->name('forgetPassword');
 Route::get('/update-email', [ForgotPasswordController::class, 'updateNewpass'])->name('updateNewpassget');
