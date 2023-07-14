@@ -47,10 +47,10 @@ Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout'])->name
 Route::post('/comfim-checkout', [CheckoutController::class, 'comfimOrder'])->name('comfimOrder');
 Route::post('/order-place', [CheckoutController::class, 'orderplace'])->name('orderplace');
 //resset password
-Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
-Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post');
-Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
-Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+Route::get('/forget-password', [ForgotPasswordController::class, 'forgetPassword'])->name('forgetPassword');
+Route::get('/update-email', [ForgotPasswordController::class, 'updateNewpass'])->name('updateNewpassget');
+Route::post('/reset-pass', [ForgotPasswordController::class, 'resetPass'])->name('resetPass');
+Route::post('/recover_password', [ForgotPasswordController::class, 'recoverPassword'])->name('recoverPassword'); 
 //backend
 Route::prefix('')->group(function () {
     Route::get('/admin', [DashboardController::class, 'index'])->name('index');
@@ -60,6 +60,8 @@ Route::prefix('')->group(function () {
     Route::middleware(['checkadmin'])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('showDashboard');
         Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
+        Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
+        Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
         //Category
         Route::get('/add-category-product', [CategoryController::class, 'addCategory'])->name('addCategory');
         Route::get('/edit-category-product/{category_product_id}', [CategoryController::class, 'editCategory'])->name('editCategory');
@@ -83,16 +85,14 @@ Route::prefix('')->group(function () {
         Route::get('/active-product/{product_id}', [ProductController::class, 'activeProduct'])->name('activeProduct');
         Route::post('/save-product', [ProductController::class, 'saveProduct'])->name('saveProduct');
         Route::post('/update-product/{product_id}', [ProductController::class, 'updateProduct'])->name('updateProduct');
-
-
-        Route::get('/dashboard/myprofile', [DashboardController::class, 'profile'])->name('profile');
-        Route::get('/dashboard/editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
+        //order
+        Route::get('/view-cus', [ProductController::class, 'viewCustomer'])->name('viewCustomer');
+        Route::get('/manager-order', [OrderController::class, 'managerOrder'])->name('managerOrder');
+        Route::get('/view-order/{order_code}', [OrderController::class, 'viewOrder'])->name('viewOrder');
+        Route::get('/delete-order/{order_code}', [OrderController::class, 'deleteOrder'])->name('deleteOrder');
+        Route::get('/unactive-customer/{customer_id}', [OrderController::class, 'unactiveCustomer'])->name('unactiveProduct');
+        Route::get('/active-customer/{customer_id}', [OrderController::class, 'activeCustomer'])->name('activeCustomer');
     });
 });
-//order
-Route::get('/view-cus', [ProductController::class, 'viewCustomer'])->name('viewCustomer');
-Route::get('/manager-order', [OrderController::class, 'managerOrder'])->name('managerOrder');
-Route::get('/view-order/{order_code}', [OrderController::class, 'viewOrder'])->name('viewOrder');
-Route::get('/delete-order/{order_code}', [OrderController::class, 'deleteOrder'])->name('deleteOrder');
-Route::get('/unactive-customer/{customer_id}', [OrderController::class, 'unactiveCustomer'])->name('unactiveProduct');
-Route::get('/active-customer/{customer_id}', [OrderController::class, 'activeCustomer'])->name('activeCustomer');
+
+

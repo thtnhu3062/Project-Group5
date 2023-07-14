@@ -35,8 +35,7 @@ class CartController extends Controller
     }
     public function deleteCart($rowId){
         Cart::update($rowId,0);
-        alert()->success('Post Created', 'Successfully');
-        return view('fe.cart.show_cart');
+        return Redirect::to('/show-cart');
     }
     public function updateQuantity(Request $request){
         $rowId = $request->rowId_cart;

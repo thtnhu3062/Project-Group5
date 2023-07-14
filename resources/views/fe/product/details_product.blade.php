@@ -12,7 +12,7 @@
                     <div class="product-single product-single-1">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="product-details-img product-single__photos bottom">
+                                <div class="product-details-img product-single__photos bottom" >
                                     <div class="zoompro-wrap product-zoom-right pl-20">
                                         <div class="zoompro-span">
                                             <img class="blur-up lazyload zoompro" data-zoom-image="{{URL::to('public/uploads/product/'.$details->product_image)}}" alt="" src="{{URL::to('public/uploads/product/'.$details->product_image)}}" />               

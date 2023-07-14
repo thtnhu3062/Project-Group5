@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('customer_phone');
             $table->string('customer_password');
             $table->integer('customer_status');
+            $table->string('customer_token')->nullable();
             $table->timestamps();
         });
     }
