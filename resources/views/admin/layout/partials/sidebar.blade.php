@@ -19,7 +19,8 @@
             <nav class="iq-sidebar-menu">
                <ul id="iq-sidebar-toggle" class="iq-menu">
                   <li class="active active-menu"><a href="{{URL::to('/dashboard')}}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a></li>
-      
+                
+                  
                   <li>
                      <a href="#ui-elements3" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><span>Category</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                      <ul id="ui-elements3" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
@@ -56,17 +57,13 @@
                      </ul>
                   </li>
                   <li>
-                     <a href="#pages3" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-file-alt iq-arrow-left"></i><span>Order</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                     <ul id="pages3" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                        <li>
-                           <a href="{{URL::to('/manager-order')}}"><i class="ri-pages-line"></i><span>Manager Order</span></a>
-                     
-                        </li>
-                        <li>
-                           <a href="#"><i class="ri-pantone-line"></i><span>Customer List</span></a>
-                        </li>
-                     </ul>
+                           <a href="{{URL::to('/view-cus')}}"><i class="ri-pantone-line"></i><span>Customer List</span></a>
                   </li>
+                  <li>
+                     <a href="{{URL::to('/manager-order')}}"><i class="ri-pages-line"></i><span>Manager Order</span></a>
+                     
+                  </li>
+               
                </ul>
 
             </nav>

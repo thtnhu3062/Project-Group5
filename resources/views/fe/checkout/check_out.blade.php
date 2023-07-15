@@ -14,7 +14,6 @@
 
         		<div class="wrapper"><img src="{{ asset('fe/images/checkout.png') }}" alt="" class="khungvien"></div>
 
-        		<div class="wrapper"><h1 class="page-width">Payment</h1></div>
 
       		</div>
 		</div>
@@ -39,45 +38,45 @@
           
             <div class="row billing-fields">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 sm-margin-30px-bottom">
-                <div class="your-order">
-                           
-                            <div class="table-responsive-sm order-table"> 
-                                <table class="bg-white table table-bordered table-hover text-center">
-                             
-                              
-                                    <tbody>
-                                    <?php
-                                    $shipping = DB::table('tbl_shipping')->orderby('shipping_id', 'asc')->limit(1)->get();;
-                                    ?>
-                                    @foreach($shipping as $ship)
-                                        <tr>
-                                            <td class="text-left"><b>Full Name</b></td>
-                                            <td>{{$ship->shipping_name}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-left"><b>Email</b></td>
-                                            <td>{{$ship->shipping_email}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-left"><b>Phone</b>
-                                            </td>
-                                            <td>{{$ship->shipping_phone}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-left"><b>Address</b></td>
-                                            <td>{{$ship->shipping_address}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-left"><b>Note</b></td>
-                                            <td>{{$ship->shipping_note}}</td>
-                                        </tr>
-                         @endforeach
-                                    </tbody>
-                                  
-                                </table>
-                            </div>
-                            
-                        </div>
+                <div class="create-ac-content bg-light-gray padding-20px-all">
+                        <form action="{{URL::to('/comfim-checkout')}}" method="POST">
+                        @csrf
+                            <fieldset>
+                                <h2 class="login-title mb-3">Billing details</h2>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-firstname">Full name <span class="required-f">*</span></label>
+                                        <input name="shipping_name" value="" id="input-firstname" required type="text" maxlength="100">
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-address-1">Address <span class="required-f">*</span></label>
+                                        <input name="shipping_address" value="" id="input-address-1" required type="text" maxlength="150">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-email">E-Mail <span class="required-f">*</span></label>
+                                        <input name="shipping_email" value="" id="input-email" required type="email" maxlength="100">
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                        <label for="input-telephone">Telephone <span class="required-f">*</span></label>
+                                        <input name="shipping_phone" value="" id="input-telephone" required pattern="[0]{1}[0-9]{9}" type="tel">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="form-group col-md-12 col-lg-12 col-xl-12">
+                                        <label for="input-company">Order Notes</label>
+                                        <textarea name="shipping_note" class="form-control resize-both" required maxlength="250" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="order-button-payment">
+                                    <button class="btn" value="Place order" type="submit">Place order</button>
+                                </div>
+                        </form>
+                    </div>
                     <!-- <div class="create-ac-content bg-light-gray padding-20px-all">
                         <form action="{{URL::to('/save-checkout')}}" method="POST">
                         @csrf
@@ -164,20 +163,11 @@
                         </div>
                         
                         <hr />
-                        <form action="{{URL::to('/order-place')}}" method="POST">
-                            @csrf
+
                         <div class="your-payment">
-                            <h2 class="payment-title mb-3">payment method</h2>
-                            <p class="cart_tearm">
-                        <label>
-                          <input type="checkbox" name="payment_option" id="cartTearm" class="checkbox" value="tiền mặt" required="">
-                           Payment in cash</label>
-                      </p>
+                            <h2 class="payment-title mb-3">Payment in cash</h2>
                         </div>
-                        <div class="order-button-payment">
-                                    <button class="btn" value="Place order" type="submit">Place order</button>
-                                </div>
-                        </form>
+
                                 
 
                                

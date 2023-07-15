@@ -53,7 +53,7 @@
                                             <div class="qtyField">
                                             <form action="{{URL::to('/update-quantity')}}" method ="POST">
                                 @csrf 
-                                                <input type="number" min="1" name="cart_quantity" value="{{$cart->qty}}" >
+                                                <input type="number" min="1" max="20" name="cart_quantity" value="{{$cart->qty}}" >
                                                 <input class="cart__qty-input qty" type="hidden"  name="rowId_cart" value="{{$cart->rowId}}">
                                                 <button type="submit" name="update" class="btn--link cart-update"><i class="fa fa-refresh"></i> Update</button> 
                                             </form>
@@ -93,11 +93,11 @@
                         <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">{{Cart::total(0).''.'$'}}</span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
-                      <p class="cart_tearm">
+                      <!-- <p class="cart_tearm">
                         <label>
                           <input type="checkbox" name="tearm" id="cartTearm" class="checkbox" value="tearm" required="">
                            I agree with the terms and conditions</label>
-                      </p>
+                      </p> -->
                       <!-- <a href="{{URL::to('/login-checkout')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
                         </a> -->
@@ -105,29 +105,20 @@
 
                     <?php
                     $customer_id = Session::get('customer_id');
-                    $shipping_id = Session::get('shipping_id');
-                    if($customer_id!=null & $shipping_id==null){
+                    if($customer_id!=null){
                     ?>
-                  <li><a href="{{URL::to('/checkout')}}">
+                         <li><a href="{{URL::to('/payment')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
                         </a></li>
                      <?php
-                     }elseif($customer_id!=null & $shipping_id!=null){
-
-                        ?>
-                        <li><a href="{{URL::to('/payment')}}">
-                      <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
-                        </a></li>
-                         <?php
                      }else{
-                        
                         ?>
-                       <li><a href="{{URL::to('/login-checkout')}}">
+                         <li><a href="{{URL::to('/login-checkout')}}">
                       <input name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
                         </a></li>
                          <?php
-                    }
-                    ?>
+                     }                    
+                        ?>
                     </div>
 
                 </div>

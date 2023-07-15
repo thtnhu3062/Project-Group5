@@ -102,26 +102,22 @@
                             <li class="lvl1 parent dropdown"><a href="{{URL::to('/show-cart')}}"><img src="{{asset('/fe/images/giohang.png') }}" alt="" class="imagegiohang"> <i class="anm anm-angle-down-l"></i></a></li>
 
                             <li class="lvl1 parent dropdown"><a href="{{ Route('blog') }}">Blog <i class="anm anm-angle-down-l"></i></a></li>
-
-                            <?php
+                           <?php
                     $customer_id = Session::get('customer_id');
-                    $shipping_id = Session::get('shipping_id');
-                    if($customer_id!=null & $shipping_id==null){
+                    if($customer_id!=null){
                     ?>
-                     <li class="lvl1"><a href="{{URL::to('/checkout')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
+                         <li><a href="{{URL::to('/payment')}}">
+                         <li class="lvl1"><a href="{{URL::to('/payment')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
+                        </a></li>
                      <?php
-                     }elseif($customer_id!=null & $shipping_id!=null){
-
-                        ?>
-                        <li class="lvl1"><a href="{{URL::to('/payment')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
-                         <?php
                      }else{
-                        
                         ?>
-                        <li class="lvl1"><a href="{{URL::to('/login-checkout')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
+                         <li><a href="{{URL::to('/login-checkout')}}">
+                         <li class="lvl1"><a href="{{URL::to('/login-checkout')}}"><b>Payment!</b> <i class="anm anm-angle-down-l"></i></a></li>
+                        </a></li>
                          <?php
-                    }
-                    ?>
+                     }                    
+                        ?>
                            <!-- <li class="lvl1"><a href="{{URL::to('/checkout')}}"><b>Buy Now!</b> <i class="anm anm-angle-down-l"></i></a></li> -->
                         </ul>
                     </nav>
@@ -292,9 +288,9 @@
                     	<div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                         	<h4 class="h4">Quick Shop</h4>
                             <ul>
-                            	<li><a href="#">Women</a></li>
-                                <li><a href="#">Men</a></li>
-                                <li><a href="#">Unisex</a></li>
+                            	<li><a href="{{URL::to('/shop')}}">Women</a></li>
+                                <li><a href="{{URL::to('/shop')}}">Men</a></li>
+                                <li><a href="{{URL::to('/shop')}}">Unisex</a></li>
                            
                             </ul>
                         </div>

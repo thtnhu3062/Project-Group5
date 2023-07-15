@@ -19,20 +19,13 @@
                      @csrf
                      <div class="form-group">
                         <label for="name">Brand Name</label>
-                        <input type="text" name="brand_product_name" class="form-control" id="name1">
+                        <input type="text" placeholder="Enter name..." name="brand_product_name" class="form-control" id="name1" required="">
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlTextarea1">Brand Description</label>
-                        <textarea class="form-control" name="brand_product_desc" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <textarea class="form-control" placeholder="Enter a description..." name="brand_product_desc" id="exampleFormControlTextarea1" rows="5" maxlength="1000" required=""></textarea>
                      </div>
-                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Display</label>
-                        <select class="form-control" id="exampleFormControlSelect1" name="brand_product_status">
-                           <option value="0">Presently</option>
-                           <option value="1">Hide</option>
-                        </select>
-                     </div>
-                     <button type="submit" name="add_brand_product" class="btn btn-primary">More Brands</button>
+                     <button type="submit" name="add_brand_product" class="btn btn-primary">Add Brand</button>
                   </form>
                </div>
             </div>
