@@ -46,7 +46,7 @@
                                 <div class="row">
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-firstname">Full name <span class="required-f">*</span></label>
-                                        <input name="shipping_name" value=" " id="input-firstname" required type="text" maxlength="100">
+                                        <input name="shipping_name" value="" id="input-firstname" required type="text" maxlength="100">
                                     </div>
                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                         <label for="input-address-1">Address <span class="required-f">*</span></label>
@@ -68,7 +68,7 @@
                                 <div class="row">
                                     <div class="form-group col-md-12 col-lg-12 col-xl-12">
                                         <label for="input-company">Order Notes</label>
-                                        <textarea name="shipping_note" class="form-control resize-both" maxlength="250" rows="2"></textarea>
+                                        <textarea name="shipping_note" class="form-control resize-both" required maxlength="250" rows="2"></textarea>
                                     </div>
                                 </div>
                             </fieldset>
