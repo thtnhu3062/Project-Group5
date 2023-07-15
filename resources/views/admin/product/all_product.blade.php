@@ -8,7 +8,7 @@
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">List Product</h4>
+                              <h4 class="card-title">List Product Brand</h4>
                            </div>
                            <?php
                               $message= Session::get('message');
@@ -65,7 +65,7 @@
                                        <td>
                                        <a href="{{URL::to('/delete-product/'.$pro->product_id)}}">
                                           <button type="button" 
-                                             class="btn btn-primary btn-rounded btn-sm my-0" onclick="return confirm('Are you sure of this deletion?')">Remove</button>
+                                             class="btn btn-primary btn-rounded btn-sm my-0"onclick="return confirm('Are you sure detele')">Remove</button>
                                              </a>
                                        </td>
                                     </tr>

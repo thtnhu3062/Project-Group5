@@ -28,39 +28,32 @@
 	                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="FirstName">Name</label>
-                                    <input type="text" name="customer_name" placeholder="" id="FirstName" autofocus="" maxlength="100" required="">
+                                    <input type="text" name="customer_name" placeholder="" id="FirstName" autofocus="">
                                 </div>
                                </div>
                          
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerEmail">Email</label>
-                                    <input type="email" name="customer_email" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="" maxlength="100" required="">
+                                    <input type="email" name="customer_email" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="LastName">Phone</label>
-                                    <input type="tel" pattern="[0]{1}[0-9]{9}" name="customer_phone" placeholder="" id="LastName" required="">
+                                    <input type="text" name="customer_phone" placeholder="" id="LastName">
                                 </div>
                                </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerPassword">Password</label>
-                                    <input type="password" value="" name="customer_password" placeholder="" id="1stPassword" class="" required minlength="6" maxlength="18">                        	
+                                    <input type="password" value="" name="customer_password" placeholder="" id="CustomerPassword" class="">                        	
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group">
-                                    <label for="CustomerPassword">Confirm Password</label>
-                                    <input type="password"   value="" name="" placeholder="" id="ConfirmPassword" class="" required minlength="6" maxlength="18">                        	
-                                </div>
-                            </div>
-                            <span id='message'></span>
                           </div>
                           <div class="row">
                             <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
-                                <input type="submit" id="btnSubmit" class="btn mb-3" onclick="return Validate()" value="Create">
+                                <input type="submit" class="btn mb-3" value="Create">
                             </div>
                          </div>
                      </form>
@@ -70,16 +63,5 @@
         </div>
         
     </div>
- <script type="text/javascript">
-        function Validate() {
-            var password = document.getElementById("1stPassword").value;
-            var confirmPassword = document.getElementById("ConfirmPassword").value;
-            if (password != confirmPassword) {
-                alert("You first Passwords is not similar with 2nd password. Please enter same password in both");
-                return false;
-            }
-            return true;
-        }
-    </script>
     <!--End Body Content-->
 @endsection

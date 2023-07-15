@@ -11,15 +11,15 @@
       </div>
     </div>
     <div class="row">
-
-
+      
+      
       <div class="col-sm-12">
         <div class="iq-card">
           <div class="iq-card-header d-flex justify-content-between">
             <div class="iq-header-title">
               <h4 class="card-title">Recently Viewed Items</h4>
             </div>
-
+            
           </div>
           <div class="iq-card-body">
             <div class="table-responsive">
@@ -96,48 +96,6 @@
                     </td>
                     <td>subcriber</td>
                     <td>12 June,2023</td>
-                    <td><i class="las la-heart text-primary"></i></td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="media align-items-center">
-                        <div class="iq-movie">
-                          <a href="javascript:void(0);"><img src="{{ asset('/images/show-thumb/gucci.png') }}" class="img-border-radius avatar-40 img-fluid" alt=""></a>
-                        </div>
-                        <div class="media-body text-white text-left ml-3">
-                          <p class="mb-0">Gucci Flora</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td><i class="lar la-star mr-2"></i>12.0</td>
-                    <td>Gucci</td>
-                    <td>
-                      <i class="lar la-eye "></i>
-                    </td>
-                    <td>subcriber</td>
-                    <td>11 July,2023</td>
-                    <td><i class="las la-heart text-primary"></i></td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="media align-items-center">
-                        <div class="iq-movie">
-                          <a href="javascript:void(0);"><img src="{{ asset('/images/show-thumb/versace.png') }}" class="img-border-radius avatar-40 img-fluid" alt=""></a>
-                        </div>
-                        <div class="media-body text-white text-left ml-3">
-                          <p class="mb-0">Versace Bright Crystal</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td><i class="lar la-star mr-2"></i>6.0</td>
-                    <td>Versace</td>
-                    <td>
-                      <i class="lar la-eye "></i>
-                    </td>
-                    <td>subcriber</td>
-                    <td>11 July,2023</td>
                     <td><i class="las la-heart text-primary"></i></td>
                   </tr>
                 </tbody>

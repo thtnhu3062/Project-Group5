@@ -28,26 +28,26 @@
 	                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="FirstName">Name</label>
-                                    <input type="text" name="customer_name" placeholder="" id="FirstName" autofocus="" maxlength="100" required>
+                                    <input type="text" name="customer_name" placeholder="" id="FirstName" autofocus="">
                                 </div>
                                </div>
                          
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerEmail">Email</label>
-                                    <input type="email" name="customer_email" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="" maxlength="100" required>
+                                    <input type="email" name="customer_email" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="LastName">Phone</label>
-                                    <input type="text" name="customer_phone" placeholder="" id="LastName" required>
+                                    <input type="text" name="customer_phone" placeholder="" id="LastName">
                                 </div>
                                </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerPassword">Password</label>
-                                    <input type="password" value="" name="customer_password" placeholder="" id="CustomerPassword" class="" required minlength="6" maxlength="18">                        	
+                                    <input type="password" value="" name="customer_password" placeholder="" id="CustomerPassword" class="">                        	
                                 </div>
                             </div>
                           </div>

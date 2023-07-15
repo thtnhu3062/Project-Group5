@@ -1,42 +1,12 @@
 @extends('fe.layout_shop')
 @section('product')  
-@include('sweetalert::alert')
 <div class="col-12 col-sm-9 col-md-9 col-lg-9 main-col">
 @foreach($category_name as $key => $name)
-
-                  
+                    <h2>{{$name->category_name}}</h2>
                  
                 	<div class="productList product-load-more">
                     	<!--Toolbar-->
-                        <div class="toolbar">
-                        	<div class="filters-toolbar-wrapper">
-                            	<div class="row">
-                                	<div class="col-4 col-md-4 col-lg-4 ">
-                                    	<!-- <a href="shop-left-sidebar.html" title="Grid View" class="change-view change-view--active">
-                                        	<img src="assets/images/grid.jpg" alt="Grid" />
-                                        </a>
-                                        <a href="shop-listview.html" title="List View" class="change-view">
-                                        	<img src="assets/images/list.jpg" alt="List" />
-                                        </a> -->
-                                    </div>
-                                    <div class="col-4 col-md-4 col-lg-4 text-center ">
-                                    	<span class="filters-toolbar__product-count"><img src="{{asset('/fe/images/pro.png') }}" alt="">  <h2>{{$name->category_name}}</h2></span>
-                                    </div>
-                                    <!-- <div class="col-4 col-md-4 col-lg-4 text-right">
-                                    	<div class="filters-toolbar__item">
-                                      		<label for="SortBy" class="hidden">Sort</label>
-                                      		<select name="SortBy" id="SortBy" class="filters-toolbar__input filters-toolbar__input--sort">
-                                                <option value="title-ascending" selected="selected">Sort</option>
-                                                <option>Best Selling</option>
-                                      		</select>
-                                      		<input class="collection-header__default-sort" type="hidden" value="manual">
-                                        </div>
-                                    </div> -->
-                                  
-                                </div>
-                            </div>
-                        </div>
-                
+             
                         <!--End Toolbar-->
                        
                         <div class="grid-products grid--view-items">
@@ -54,16 +24,12 @@
                                             <!-- Hover image -->
                                             <img class="hover blur-up lazyload" data-src="{{URL::to('public/uploads/product/'.$product->product_image)}}" src="{{URL::to('public/uploads/product/'.$product->product_image)}}" alt="image" title="product">
                                             <!-- End hover image -->
-                                            <div class="product-labels rectangular"><span class="lbl on-sale">-30%</span> <span class="lbl pr-label1">new</span></div>
                                         </a>
                                         <!-- end product image -->
 
                                         <!-- Start product button -->
-                                        <form class="variants add" action="{{URL::to('/save-cart')}}" method ="POST"> 
-                                @csrf
-                                <input type="hidden"  name="qty" value="1" class="product-form__input qty"/>
-                                                    <input type="hidden"  name="productid_hidden" value="{{$product->product_id}}">
-                                        <button class="btn btn-add-to-cart" name="add"type="submit" type="button">Add To Cart</button>
+                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                            <button class="btn btn-addto-cart" type="button">Add To Cart</button>
                                         </form>
                                         <!-- <div class="button-set">
                                             <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">

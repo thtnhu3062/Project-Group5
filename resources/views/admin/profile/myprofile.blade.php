@@ -16,7 +16,17 @@
                                     <h3>Pham Ngoc Hai</h3>
                                 </div>
                                 <div class="iq-social d-inline-block align-items-center">
-                                    
+                                    <ul class="list-inline d-flex p-0 mb-0 align-items-center">
+                                        <li>
+                                            <a href="#" class="avatar-40 rounded-circle bg-primary mr-2 facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="avatar-40 rounded-circle bg-primary mr-2 youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="avatar-40 rounded-circle bg-primary pinterest"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

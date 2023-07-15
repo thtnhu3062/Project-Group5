@@ -18,27 +18,27 @@
                            @csrf
                               <div class="form-group">
                                  <label for="name">Product Name</label>
-                                 <input type="text" placeholder="Enter product name..." name="product_name" class="form-control" id="name1" maxlength="100" required="">
+                                 <input type="text" name="product_name"class="form-control" id="name1">
                               </div>
                               <div class="form-group">
                                  <label for="name">Product Price</label>
-                                 <input type="number" min="1" max="9999" placeholder="Enter amount of dollars..." name="product_price" class="form-control" id="name1" required="">
+                                 <input type="text" name="product_price"class="form-control" id="name1">
                               </div>
                               <div class="form-group">
                                  <label for="name">Product Pictures</label>
-                                 <input type="file" name="product_image" class="form-control" id="name1" required>
+                                 <input type="file" name="product_image"class="form-control" id="name1">
                               </div>
                               <div class="form-group">
                                  <label for="exampleFormControlTextarea1">Product Description</label>
-                                 <textarea class="form-control" placeholder="Enter a description..." required="" name="product_desc" id="exampleFormControlTextarea1" rows="3" maxlength="2000" required></textarea>
+                                 <textarea class="form-control" name="product_desc" id="exampleFormControlTextarea1" rows="2"></textarea>
                               </div>
                               <div class="form-group">
                                  <label for="exampleFormControlTextarea1">Product Contents</label>
-                                 <textarea class="form-control" placeholder="Enter content data..." name="product_content" required="" id="exampleFormControlTextarea1" rows="3" maxlength="1000" required></textarea>
+                                 <textarea class="form-control" name="product_content" id="exampleFormControlTextarea1" rows="2"></textarea>
                               </div>
                               <div class="form-group">
                                  <label for="exampleFormControlSelect1">Product Portfolio</label>
-                                 <select class="form-control" id="exampleFormControlSelect1" name="product_cate" required="">
+                                 <select class="form-control" id="exampleFormControlSelect1" name="product_cate">
                                  @foreach($cate_product as $key => $cate)
                                  <option value ="{{$cate->category_id}}">{{$cate->category_name}}</option>
                                   @endforeach
@@ -46,7 +46,7 @@
                               </div>
                               <div class="form-group">
                                  <label for="exampleFormControlSelect1">Product Brands</label>
-                                 <select class="form-control" id="exampleFormControlSelect1" name="product_brand" required="">
+                                 <select class="form-control" id="exampleFormControlSelect1" name="product_brand">
                                  @foreach($brand_product as $key => $brand)
                                  <option value ="{{$brand->brand_id}}">{{$brand->brand_name}}</option>
                                   @endforeach
@@ -54,12 +54,13 @@
                               </div>
                               <div class="form-group">
                                  <label for="exampleFormControlSelect1">Display</label>
-                                 <select class="form-control" id="exampleFormControlSelect1" name="product_status" required="">
-                                    <option value ="0">Public</option>
-                                    <option value ="1">Private</option>
+                                 <select class="form-control" id="exampleFormControlSelect1" name="product_status">
+                                    <option value ="0">Presently</option>
+                                    <option value ="1">Hide</option>
                                  </select>
                               </div>
-                              <button type="submit" name="add_category_product" class="btn btn-primary">Add Product</button>
+                              <button type="submit" name="add_category_product" class="btn btn-primary">More Products</button>
+
                            </form>
                         </div>
                      </div>

@@ -20,13 +20,13 @@
                      @csrf
                      <div class="form-group">
                         <label for="name">Name List</label>
-                        <input type="text" value="{{$edit_value -> category_name}}" name="category_product_name" class="form-control" id="name1" required="">
+                        <input type="text" value="{{$edit_value -> category_name}}" name="category_product_name" class="form-control" id="name1">
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlTextarea1">Category Description</label>
-                        <textarea class="form-control" name="category_product_desc" id="exampleFormControlTextarea1" required="" rows="5">{{$edit_value -> category_desc}} </textarea>
+                        <textarea class="form-control" name="category_product_desc" id="exampleFormControlTextarea1" rows="5">{{$edit_value -> category_desc}} </textarea>
                      </div>
-                     <button type="submit" name="update_category_product" class="btn btn-primary">Update Category</button>
+                     <button type="submit" name="update_category_product" class="btn btn-primary">Update catalog</button>
                   </form>
                   @endforeach
                </div>

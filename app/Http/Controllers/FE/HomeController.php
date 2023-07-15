@@ -95,18 +95,6 @@ class HomeController extends Controller
         return view('fe.blog') ; 
     }
 
-    public function blog3() 
-    { 
-        return view('fe.blog3') ; 
-    }
-    public function blog4() 
-    { 
-        return view('fe.blog4') ; 
-    }
-    public function blog1() 
-    { 
-        return view('fe.blog1') ; 
-    }
     public function aboutus() 
     { 
         return view('fe.aboutus') ; 
