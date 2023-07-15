@@ -15,15 +15,6 @@
       		</div>
 		</div>
         <!--End Page Title-->
-        <?php
-            
-            require ('validation.php');
-
-            if(isset($_POST['submit'])){
-                $validation = new UserValidate($_POST);
-                $errors = $validation->validateForm();
-            }
-        ?>
         <div class="container">
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
